@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>注册</title>
+        <script src="./../js//flexble.js"></script>
+        <script src="./../js/jquery.min.js"></script>
+        <script src="./../js/utils.js"></script>
+        <link href="./../style/common.css" rel="stylesheet">
+        <link href="./../style/login.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://at.alicdn.com/t/font_1070953_deg0dcw208s.css">
+</head>
+<body>
+    <div class="login-container">
+        <img src="./../images/logo_mzz@2x.png" class="logo">
+        <div class="switch-wrap">
+            <span id="person" class="base-color">个人注册</span>
+            <span id="seller">商家入驻</span>
+        </div>
+        <div class="input-wrap">
+            <i class="iconfont icon-shouji"></i>
+            <input id="tel" type="text" placeholder="请输入手机号" maxlength="11">
+            <i class="iconfont icon-closes" id="clearTel" style="font-size: 0.3rem"></i>
+        </div>
+        <div class="input-wrap">
+            <i class="iconfont icon-yaoqingma"></i>
+            <input id="password2" type="password" placeholder="请设置密码">
+            <i class="iconfont icon-kejian" id="open2"></i>
+            <i class="iconfont icon-kejian" id="hide2" style="display: none"></i>
+        </div>
+        <div class="input-wrap">
+            <i class="iconfont icon-yaoqingma"></i>
+            <input id="password" type="password" placeholder="请确认密码">
+            <i class="iconfont icon-kejian" id="open"></i>
+            <i class="iconfont icon-kejian" id="hide" style="display: none"></i>
+        </div>
+        <div id="companyShow" style="display: none;">
+            <div class="input-wrap">
+                <i class="iconfont icon-qiyemingcheng"></i>
+                <input id="company" type="text" placeholder="请输入企业名称">
+            </div>
+        </div>
+        <div class="input-wrap" id="selectArea">
+            <i class="iconfont icon-shouji"></i>
+            <div id="area" class="area-selected">请选择地址</div>
+            <i class="iconfont icon-dizhi"></i>
+        </div>
+        <div class="input-wrap">
+            <i class="iconfont icon-yanzhengma"></i>
+            <input id="yqm" type="text" placeholder="请输入邀请码">
+        </div>
+        <div class="agreement">
+            <div class="agreement-circle"></div>
+            <div class="agreement-circle-selected" style="display: none"><i class="iconfont icon-gouxuan"></i></div>
+            <div>同意 《用户协议》</div>
+        </div>
+        <div class="sub-button" style="margin-top: .3rem">注册</div>
+        <div class="links">
+            <a href=""><i class="iconfont icon-zuoyou1"></i> 返回登录</a>
+        </div>
+    </div>
+    <!-- 地址选择模态框，PHP抽公共 -->
+    <div class="area-modal" id="areaModal" style="display: none;">
+        <div class="area-content">
+            <div class="area-titel">
+                <span>选择地址</span>
+                <i class="area-modal-close iconfont icon-closes"></i>
+            </div>
+            <div class="area-level-select-bar">
+                <!-- 一期默认四川省？ -->
+                <div id="province" class="area-level">四川省</div>
+                <div id="area" class="area-level">请选择</div>
+                <div id="city" class="area-level">请选择</div>
+            </div>
+            <div class="area-city-group">
+                <div class="area-item">121212</div>
+            </div>
+        </div>
+    </div>
+    <!-- 地址模态框的JS -->
+    <script>
+        var nowLevel = 'province';
+        $('.area-modal-close').click(function() {
+            $('#areaModal').css('display', 'none');
+        });
+        // 选了层级，渲染面板
+        $('.area-level').click(function() {
+            $('.area-level').removeClass('bot-line');
+            $(this).addClass('bot-line');
+            nowLevel = $(this)[0].id;
+        });
+        $('.area-item').click(function() {
+            // 根据nowLevel做处理，如果是city级别，输出值，关闭弹框，其他则更新面板。
+        });
+    </script>
+    <script>
+        $(function() {
+           var regType = 'person'; // 注册方式
+           $('#person').click(function() {
+              loginType = 'person';
+              $(this).addClass('base-color');
+              $('#seller').removeClass('base-color');
+              $('#companyShow').css('display', 'none');
+           });
+           $('#seller').click(function() {
+              loginType = 'seller';
+              $(this).addClass('base-color');
+              $('#person').removeClass('base-color');
+              $('#companyShow').css('display', 'block');
+           });
+           
+        //    input框的前端效果
+           $('#clearTel').click(function () { 
+               $('#tel').val('');
+            });
+            $('#open').click(function() {
+                $(this).css('display', 'none');
+                $('#hide').css('display', 'block');
+                $('#password').attr('type', 'text');
+            });
+            $('#open2').click(function() {
+                $(this).css('display', 'none');
+                $('#hide2').css('display', 'block');
+                $('#password2').attr('type', 'text');
+            });
+            $('#hide').click(function() {
+                $(this).css('display', 'none');
+                $('#open').css('display', 'block');
+                $('#password').attr('type', 'password');
+            });
+            $('#hide2').click(function() {
+                $(this).css('display', 'none');
+                $('#open2').css('display', 'block');
+                $('#password2').attr('type', 'password');
+            });
+            // 同意注册
+            $('.agreement-circle').click(function() {
+                $('.agreement-circle-selected').css('display', 'flex');
+                $(this).css('display', 'none');
+            });
+            $('.agreement-circle-selected').click(function() {
+                $('.agreement-circle').css('display', 'flex');
+                $(this).css('display', 'none');
+            });
+
+            $('#selectArea').click(function() {
+                // 打开地址选择模态框
+                $('#areaModal').css('display', 'block');
+            })
+        });
+    </script>
+</body>
+</html>

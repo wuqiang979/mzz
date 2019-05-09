@@ -1,0 +1,282 @@
+body {
+  margin: 0 auto;
+  width: 10rem;
+  line-height: 1.5;
+  min-height: 100vh;
+  padding-bottom: 1.6rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #f2f2f2; }
+
+.font-order-header {
+  position: relative;
+  width: 100%;
+  height: 3.6rem;
+  padding: 0.18667rem 0.26667rem;
+  background: linear-gradient(-32deg, #ff6c00 0%, #ff9600 100%); }
+  .font-order-header .icon-zuoyou1 {
+    position: absolute;
+    top: 0.26667rem;
+    left: 0.26667rem;
+    font-size: 0.46667rem;
+    color: #FFF; }
+  .font-order-header__switch {
+    margin: 0 auto;
+    width: 4.53333rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 0.4rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    overflow: hidden; }
+    .font-order-header__switch span {
+      width: 50%;
+      height: 0.8rem;
+      line-height: 0.8rem;
+      text-align: center;
+      border-radius: 0.4rem;
+      overflow: hidden;
+      font-size: 0.37333rem;
+      font-weight: 400;
+      color: #FFF; }
+    .font-order-header__switch .is_active {
+      background-color: #FFF;
+      color: #FF6C00; }
+  .font-order-header__address {
+    display: block;
+    position: relative;
+    margin-top: 0.53333rem; }
+    .font-order-header__address .address {
+      font-size: 0.45333rem;
+      font-weight: 600;
+      color: #FFF; }
+    .font-order-header__address .name {
+      margin-top: 0.16rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      font-size: 0.37333rem;
+      font-weight: 600;
+      color: #FFF; }
+      .font-order-header__address .name span:first-child {
+        margin-right: 0.61333rem; }
+    .font-order-header__address i {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 0.45333rem;
+      font-weight: 600;
+      color: #FFF; }
+
+.font-order-box {
+  position: relative;
+  z-index: 100;
+  margin: -0.66667rem auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 9.46667rem;
+  border-radius: 0.13333rem;
+  overflow: hidden; }
+  .font-order-box__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 0.4rem;
+    height: 1.33333rem;
+    background-color: #FFF; }
+    .font-order-box__header span:first-child {
+      font-size: 0.42667rem;
+      font-weight: bold;
+      color: #666; }
+    .font-order-box__header span:last-child {
+      font-size: 0.42667rem;
+      font-weight: 600;
+      color: #FF6C00; }
+  .font-order-box__footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 0.4rem;
+    height: 1.33333rem;
+    background-color: #FFF; }
+    .font-order-box__footer span {
+      font-size: 0.42667rem;
+      font-weight: bold;
+      color: #333; }
+    .font-order-box__footer input {
+      width: 5.86667rem;
+      text-align: right;
+      vertical-align: middle;
+      border: none;
+      outline: none;
+      font-size: 0.4rem;
+      font-weight: 400;
+      color: #999; }
+
+.font-order-details {
+  margin: 0.26667rem 0;
+  padding: 0 0.4rem;
+  background-color: #FFF; }
+  .font-order-details__header {
+    height: 1.17333rem;
+    line-height: 1.17333rem;
+    border-bottom: 0.02667rem solid #f2f2f2;
+    font-size: 0.45333rem;
+    font-weight: bold;
+    color: #333; }
+  .font-order-details__footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 1.17333rem;
+    border-bottom: 0.02667rem solid #f2f2f2;
+    font-size: 0.37333rem;
+    font-weight: 400;
+    color: #333; }
+    .font-order-details__footer .sign {
+      font-weight: bold; }
+    .font-order-details__footer .price {
+      font-size: 0.48rem;
+      font-weight: bold; }
+  .font-order-details__list_item {
+    position: relative;
+    height: 1.6rem;
+    border-bottom: 0.02667rem solid #f2f2f2;
+    padding: 0.13333rem 0 0.13333rem 1.64rem; }
+    .font-order-details__list_item img {
+      position: absolute;
+      top: 0.13333rem;
+      left: 0rem;
+      width: 1.33333rem;
+      height: 1.33333rem; }
+    .font-order-details__list_item .product {
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .font-order-details__list_item .product .name {
+        font-size: 0.4rem;
+        font-weight: 400;
+        color: #333; }
+      .font-order-details__list_item .product .num {
+        position: absolute;
+        top: 0;
+        left: 4.8rem;
+        font-size: 0.37333rem;
+        font-weight: 400;
+        color: #333; }
+      .font-order-details__list_item .product .price {
+        font-size: 0.37333rem;
+        font-weight: 600;
+        color: #333; }
+    .font-order-details__list_item .txt {
+      position: absolute;
+      bottom: 0.13333rem;
+      left: 1.64rem;
+      font-size: 0.32rem;
+      font-weight: 600;
+      color: #999; }
+  .font-order-details__list_footer {
+    position: relative;
+    height: 1.17333rem;
+    border-bottom: 0.02667rem solid #f2f2f2;
+    padding: 0.32rem 0 0.32rem 1.64rem; }
+    .font-order-details__list_footer .cell {
+      position: absolute;
+      left: 0;
+      top: 0.25333rem;
+      width: 1.33333rem;
+      height: 0.66667rem;
+      line-height: 0.66667rem;
+      text-align: center;
+      border-radius: 0.33333rem;
+      background-color: rgba(255, 108, 0, 0.1);
+      font-size: 0.32rem;
+      font-weight: 400;
+      color: #FF6C00; }
+    .font-order-details__list_footer p {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .font-order-details__list_footer .name {
+      font-size: 0.4rem;
+      font-weight: 400;
+      color: #333; }
+    .font-order-details__list_footer .price {
+      font-size: 0.37333rem;
+      font-weight: 600;
+      color: #333; }
+
+.font-order-footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 2000;
+  width: 10rem;
+  height: 1.30667rem;
+  padding: 0 0.26667rem 0 0.74667rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #FFF; }
+  .font-order-footer span {
+    font-size: 0.48rem;
+    font-weight: bold;
+    color: #FF6C00; }
+  .font-order-footer button {
+    width: 2.66667rem;
+    height: 1.06667rem;
+    border-radius: 0.53333rem;
+    border: 0;
+    background: -webkit-gradient(linear, left top, right top, from(#fe7602), to(#ff4b02));
+    background: linear-gradient(90deg, #fe7602 0%, #ff4b02 100%);
+    font-size: 0.4rem;
+    font-weight: 400;
+    color: #FFF; }

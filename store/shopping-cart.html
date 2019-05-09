@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>购物车</title>
+  <link href="../style/common.css" rel="stylesheet" />
+  <link href="../style/common-store.css" rel="stylesheet" />
+  <link href="../style/shopping-cart.css" rel="stylesheet" />
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_1070953_z67miwzb5m.css" />
+  <script src="../js//flexble.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/utils.js"></script>
+</head>
+
+<body>
+  <!-- 内容区域 -->
+  <div class="content-box">
+    <div class='btn-box'>
+      <span class="btn-option btn-edit">编辑</span>
+      <span class="btn-option btn-compelete">取消</span>
+    </div>
+    <!-- 商店订单列表 -->
+    <div class="item-store-order">
+      <!-- 商店名称 -->
+      <div class="item-order-store-info">
+        <span class="item-order-left">
+          <i class="iconfont icon-weixuanzhong item-select item-selected-one-store"></i>
+        </span>
+        <div class="item-order-right">
+          <div class="shop-face-name">
+            <img class="img-store-face" src="../images/store/goods-img.png" alt="" />
+            <span class="store-name">maydear迪美旗舰店</span>
+          </div>
+          <span>
+            <i class="iconfont icon-zuoyou"></i>
+          </span>
+        </div>
+      </div>
+      <!-- 订单列表 -->
+      <div class="item-order-list">
+        <div class="item-order-content">
+          <span class="item-order-left">
+            <i class="iconfont icon-weixuanzhong item-select item-selected-one-order"></i>
+          </span>
+          <div class="item-order-right">
+            <img class="order-goods-img" src="../images//store/goods-img.png" alt="" />
+            <div class="order-goods-info">
+              <h2 class="order-goods-title">
+                41寸初学者吉他学生38寸新手民 他国行版金色 学者吉他学生 …
+              </h2>
+              <p class="order-goods-selcted">颜色：<span>38寸古铜色</span></p>
+              <div class="order-goods-option">
+                <span class="money">￥ <span class="money-num">6.00</span></span>
+                <div class="option-box">
+                  <i class="iconfont icon-jian1"></i>
+                  <input type="number" class="goods-num" min="1" max="999" value="19"
+                    oninput="value=value.replace(/[^\d]/g, 1).slice(0,3)" />
+                  <i class="iconfont icon-jiajian"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="btn-delete-order">删除</span>
+      </div>
+      <div class="item-order-list">
+        <div class="item-order-content">
+          <span class="item-order-left">
+            <i class="iconfont icon-weixuanzhong item-select item-selected-one-order"></i>
+          </span>
+          <div class="item-order-right">
+            <img class="order-goods-img" src="../images//store/goods-img.png" alt="" />
+            <div class="order-goods-info">
+              <h2 class="order-goods-title">
+                41寸初学者吉他学生38寸新手民 他国行版金色 学者吉他学生 …
+              </h2>
+              <p class="order-goods-selcted">颜色：<span>38寸古铜色</span></p>
+              <div class="order-goods-option">
+                <span class="money">￥ <span class="money-num">6.00</span></span>
+                <div class="option-box">
+                  <i class="iconfont icon-jian1"></i>
+                  <input type="number" class="goods-num" min="1" max="999" value="19"
+                    oninput="value=value.replace(/[^\d]/g, 1).slice(0,3)" />
+                  <i class="iconfont icon-jiajian"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="btn-delete-order">删除</span>
+      </div>
+      <div class="item-order-list">
+        <div class="item-order-content">
+          <span class="item-order-left">
+            <i class="iconfont icon-weixuanzhong item-select item-selected-one-order"></i>
+          </span>
+          <div class="item-order-right">
+            <img class="order-goods-img" src="../images//store/goods-img.png" alt="" />
+            <div class="order-goods-info">
+              <h2 class="order-goods-title">
+                41寸初学者吉他学生38寸新手民 他国行版金色 学者吉他学生 …
+              </h2>
+              <p class="order-goods-selcted">颜色：<span>38寸古铜色</span></p>
+              <div class="order-goods-option">
+                <span class="money">￥ <span class="money-num">6.00</span></span>
+                <div class="option-box">
+                  <i class="iconfont icon-jian1"></i>
+                  <input type="number" class="goods-num" min="1" max="999" value="19"
+                    oninput="value=value.replace(/[^\d]/g, 1).slice(0,3)" />
+                  <i class="iconfont icon-jiajian"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="btn-delete-order">删除</span>
+      </div>
+    </div>
+    <div class="item-store-order">
+      <!-- 商店名称 -->
+      <div class="item-order-store-info">
+        <span class="item-order-left">
+          <i class="iconfont icon-weixuanzhong item-select item-selected-one-store"></i>
+        </span>
+        <div class="item-order-right">
+          <div class="shop-face-name">
+            <img class="img-store-face" src="../images/store/goods-img.png" alt="" />
+            <span class="store-name">maydear迪美旗舰店</span>
+          </div>
+          <span>
+            <i class="iconfont icon-zuoyou"></i>
+          </span>
+        </div>
+      </div>
+      <!-- 订单列表 -->
+      <div class="item-order-list">
+        <div class="item-order-content">
+          <span class="item-order-left">
+            <i class="iconfont icon-weixuanzhong item-select item-selected-one-order"></i>
+          </span>
+          <div class="item-order-right">
+            <img class="order-goods-img" src="../images//store/goods-img.png" alt="" />
+            <div class="order-goods-info">
+              <h2 class="order-goods-title">
+                41寸初学者吉他学生38寸新手民 他国行版金色 学者吉他学生 …
+              </h2>
+              <p class="order-goods-selcted">颜色：<span>38寸古铜色</span></p>
+              <div class="order-goods-option">
+                <span class="money">￥ <span class="money-num">6.00</span></span>
+                <div class="option-box">
+                  <i class="iconfont icon-jian1"></i>
+                  <input type="number" class="goods-num" min="1" max="999" value="19"
+                    oninput="value=value.replace(/[^\d]/g, 1).slice(0,3)" />
+                  <i class="iconfont icon-jiajian"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="btn-delete-order">删除</span>
+      </div>
+      <div class="item-order-list">
+        <div class="item-order-content">
+          <span class="item-order-left">
+            <i class="iconfont icon-weixuanzhong item-select item-selected-one-order"></i>
+          </span>
+          <div class="item-order-right">
+            <img class="order-goods-img" src="../images//store/goods-img.png" alt="" />
+            <div class="order-goods-info">
+              <h2 class="order-goods-title">
+                41寸初学者吉他学生38寸新手民 他国行版金色 学者吉他学生 …
+              </h2>
+              <p class="order-goods-selcted">颜色：<span>38寸古铜色</span></p>
+              <div class="order-goods-option">
+                <span class="money">￥ <span class="money-num">6.00</span></span>
+                <div class="option-box">
+                  <i class="iconfont icon-jian1"></i>
+                  <input type="number" class="goods-num" min="1" max="999" value="19"
+                    oninput="value=value.replace(/[^\d]/g, 1).slice(0,3)" />
+                  <i class="iconfont icon-jiajian"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="btn-delete-order">删除</span>
+      </div>
+      <div class="item-order-list">
+        <div class="item-order-content">
+          <span class="item-order-left">
+            <i class="iconfont icon-weixuanzhong item-select item-selected-one-order"></i>
+          </span>
+          <div class="item-order-right">
+            <img class="order-goods-img" src="../images//store/goods-img.png" alt="" />
+            <div class="order-goods-info">
+              <h2 class="order-goods-title">
+                41寸初学者吉他学生38寸新手民 他国行版金色 学者吉他学生 …
+              </h2>
+              <p class="order-goods-selcted">颜色：<span>38寸古铜色</span></p>
+              <div class="order-goods-option">
+                <span class="money">￥ <span class="money-num">6.00</span></span>
+                <div class="option-box">
+                  <i class="iconfont icon-jian1"></i>
+                  <input type="number" class="goods-num" min="1" max="999" value="19"
+                    oninput="value=value.replace(/[^\d]/g, 1).slice(0,3)" />
+                  <i class="iconfont icon-jiajian"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="btn-delete-order">删除</span>
+      </div>
+    </div>
+  </div>
+  <footer class="footer-box">
+    <nav class="nav-box">
+      <div class="footer-option">
+        <i class="iconfont icon-weixuanzhong item-select item-selected-all"></i>
+        <span>全选</span>
+      </div>
+      <div class="money-and-option">
+        <div class="flex-box">
+          <div>
+            合计<span class="total-money">￥<span id="total_money">0.00</span></span>
+          </div>
+          <span class="btn-submit-order">提交订单</span>
+
+        </div>
+      </div>
+      <div class="footer-delete">
+        <div class="flex-box">
+          <span class="btn-footer-delete">删除</span>
+        </div>
+      </div>
+    </nav>
+  </footer>
+  <script>
+    $(document).ready(function () {
+      // 勾选单个订单
+      $('body').on('click', '.item-selected-one-order', function () {
+        if ($(this).hasClass('icon-weixuanzhong')) {
+          $(this).removeClass('icon-weixuanzhong')
+          $(this).addClass('icon-xuanzhong')
+        } else {
+          $(this).addClass('icon-weixuanzhong')
+          $(this).removeClass('icon-xuanzhong')
+        }
+        isStoreGoodsSelectedAll(this)
+        coutTotalMoney()
+      })
+      // 勾选此店的订单
+      $('body').on('click', '.item-selected-one-store', function () {
+        if ($(this).hasClass('icon-weixuanzhong')) {
+          $(this).removeClass('icon-weixuanzhong')
+          $(this).addClass('icon-xuanzhong')
+          $(this)
+            .parents('.item-order-store-info')
+            .siblings()
+            .find('.item-selected-one-order')
+            .removeClass('icon-weixuanzhong')
+          $(this)
+            .parents('.item-order-store-info')
+            .siblings()
+            .find('.item-selected-one-order')
+            .addClass('icon-xuanzhong')
+        } else {
+          $(this).addClass('icon-weixuanzhong')
+          $(this).removeClass('icon-xuanzhong')
+          $(this)
+            .parents('.item-order-store-info')
+            .siblings()
+            .find('.item-selected-one-order')
+            .addClass('icon-weixuanzhong')
+          $(this)
+            .parents('.item-order-store-info')
+            .siblings()
+            .find('.item-selected-one-order')
+            .removeClass('icon-xuanzhong')
+        }
+        isStoreGoodsSelectedAll()
+        coutTotalMoney()
+      })
+      // 勾选全部
+      $('body').on('click', '.footer-option', function () {
+        var iconDom = $(this).find('.item-selected-all')
+        if (iconDom.hasClass('icon-weixuanzhong')) {
+          $('.item-select').removeClass('icon-weixuanzhong')
+          $('.item-select').addClass('icon-xuanzhong')
+        } else {
+          $('.item-select').addClass('icon-weixuanzhong')
+          $('.item-select').removeClass('icon-xuanzhong')
+        }
+        coutTotalMoney()
+      })
+      // 商品减减
+      $('body').on('click', '.icon-jian1', function () {
+        var thisGoodsNum =
+          $(this)
+          .next()
+          .val() * 1
+        if (thisGoodsNum > 1) {
+          thisGoodsNum--
+          $(this)
+            .next()
+            .val(thisGoodsNum)
+          coutTotalMoney()
+        } else {
+          _utils.toast('已是最少数量了')
+        }
+      })
+
+      // 商品加加
+      $('body').on('click', '.icon-jiajian', function () {
+        var thisGoodsNum =
+          $(this)
+          .prev()
+          .val() * 1
+        console.log(thisGoodsNum)
+        if (thisGoodsNum < 999) {
+          thisGoodsNum++
+          $(this)
+            .prev()
+            .val(thisGoodsNum)
+          coutTotalMoney()
+        } else {
+          _utils.toast('请慎重购买')
+        }
+      })
+
+      // $('body').on('oninput','.good-num',function() {
+      // console.log(4444);
+      // })
+      // 商品输入框change事件
+      $('body').on('change', '.goods-num', function () {
+        coutTotalMoney()
+      })
+
+      // 监听滑动对象的滑动开始事件
+      $('body').on('touchstart', '.item-order-content', function (e) {
+        _utils.touchStart(e)
+      })
+      // 监听滑动对象的滑动结束事件
+      $('body').on('touchend', '.item-order-content', function (e) {
+        var _this = this
+        _utils.touchEnd(e, function (res) {
+          if (res.x > 0 && Math.abs(res.x) > 20) {
+            if ($(_this).hasClass('translate-left')) {
+              $(_this).removeClass('translate-left')
+            }
+          } else if (res.x < 0 && Math.abs(res.x) > 20) {
+            $('.item-order-content.translate-left').removeClass(
+              'translate-left'
+            )
+            $(_this).addClass('translate-left')
+          }
+        })
+      })
+      // 删除单个订单
+      $('body').on('click', '.btn-delete-order', function () {
+        _utils.comConfirm.open('确认删除订单？', function () {
+          deleteOrder(123);
+        });
+      })
+
+      // 顶部右侧操作按钮 打开选择删除订单
+      $('.btn-edit').click(function (params) {
+        $(this).hide();
+        $('.money-and-option').hide();
+        $('.btn-compelete').show();
+        $('.footer-delete').show();
+        cancelAllselected();
+      })
+      // 点击取消
+      $('.btn-compelete').click(function (params) {
+        $(this).hide();
+        $('.footer-delete').hide();
+        $('.btn-edit').show();
+        $('.money-and-option').show();
+        cancelAllselected();
+        coutTotalMoney();
+      })
+    })
+
+    // 计算总价钱
+    function coutTotalMoney() {
+      var totalMoney = 0
+      $('.item-selected-one-order.icon-xuanzhong').each(function (
+        index,
+        item
+      ) {
+        var goodsMoney = $(item)
+          .parents('.item-order-list')
+          .find('.money-num')
+          .text()
+        var goodsNum = $(item)
+          .parents('.item-order-list')
+          .find('.goods-num')
+          .val()
+        totalMoney = Number(goodsMoney * goodsNum) + totalMoney
+      })
+      $('#total_money').text(totalMoney.toFixed(2))
+    }
+    // 计算是否全选
+    function isStoreGoodsSelectedAll(dom) {
+      // 通过计算选中的订单数量是否等于所有的订单数判断是否全部选中
+      var itemSelectedDoms = $('.item-order-list').find('.icon-xuanzhong')
+      var allItemOrderDoms = $('.item-order-list')
+      if (itemSelectedDoms.length == allItemOrderDoms.length) {
+        $('.item-selected-all').removeClass('icon-weixuanzhong')
+        $('.item-selected-all').addClass('icon-xuanzhong')
+      } else {
+        $('.item-selected-all').removeClass('icon-xuanzhong')
+        $('.item-selected-all').addClass('icon-weixuanzhong')
+      }
+
+      // 判断当前操作订单所在商店是否全选
+      if (dom && $(dom).hasClass('item-selected-one-order')) {
+        var storeItemSelectedDoms = $(dom)
+          .parents('.item-store-order')
+          .find('.item-order-list .icon-xuanzhong')
+        var storeAllItemOrderDoms = $(dom)
+          .parents('.item-store-order')
+          .find('.item-order-list')
+        if (storeAllItemOrderDoms.length == storeItemSelectedDoms.length) {
+          $(dom)
+            .parents('.item-store-order')
+            .find('.item-selected-one-store')
+            .removeClass('icon-weixuanzhong')
+          $(dom)
+            .parents('.item-store-order')
+            .find('.item-selected-one-store')
+            .addClass('icon-xuanzhong')
+        } else {
+          $(dom)
+            .parents('.item-store-order')
+            .find('.item-selected-one-store')
+            .removeClass('icon-xuanzhong')
+          $(dom)
+            .parents('.item-store-order')
+            .find('.item-selected-one-store')
+            .addClass('icon-weixuanzhong')
+        }
+      }
+    }
+    // 删除订单
+    function deleteOrder(id) {
+      console.log('订单id=' + id);
+    }
+
+    // 取消所有选中
+    function cancelAllselected() {
+      $('.item-select').removeClass('icon-xuanzhong');
+      $('.item-select').addClass('icon-weixuanzhong');
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+@import './function.scss';
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: $__base__bg__color;
+    min-height: 100vh;
+    padding-top: px2rem(25);
+}
+
+div {
+    .give-detail {
+        padding-left: px2rem(18);
+        border-bottom: px2rem(1) solid $inputBgColor;
+        font-size: px2rem(30);
+        color: #222222;
+        height: px2rem(72);
+        line-height: px2rem(72);
+        width: 100%;
+    }
+
+    ul {
+
+        li {
+            width: 100%;
+            height: px2rem(100);
+            border-bottom: px2rem(1) solid #F2F2F2;
+            .title {
+                font-size: px2rem(30);
+                color: #222222;
+                padding-left: px2rem(18);
+                margin-top: px2rem(15);
+                display: block;
+            }
+
+            .time {
+                font-size: px2rem(22);
+                color: #999999;
+                display: block;
+                padding-left: px2rem(18);
+                margin-bottom: px2rem(18);
+                margin-top: px2rem(20);
+            }
+
+            .num {
+                font-size: px2rem(24);
+                color: #333333;
+                float: right;
+                margin-top: px2rem(-75);
+                padding-right: px2rem(23);
+            }
+
+            
+
+        }
+    }
+
+    background-color: #FFFFFF;
+
+}

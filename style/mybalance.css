@@ -1,0 +1,208 @@
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f2f2f2; }
+
+.this-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 3.46667rem;
+  background-image: url("../images/person/ac_bg.png");
+  background-size: cover; }
+  .this-banner .total-balance {
+    margin-top: 0.84rem;
+    font-size: 0.42667rem;
+    color: white;
+    top: 0.84rem; }
+  .this-banner .balance-num {
+    text-align: center;
+    font-size: 0.48rem;
+    color: white; }
+
+.detail-float {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 9.04rem;
+  height: 1.6rem;
+  background: white;
+  -webkit-box-shadow: -0.06667rem 0px 0.13333rem 0px rgba(0, 0, 0, 0.05);
+  box-shadow: -0.06667rem 0px 0.13333rem 0px rgba(0, 0, 0, 0.05);
+  border-radius: 0.13333rem;
+  margin-top: -0.82667rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .detail-float .balance-num {
+    font-size: 0.4rem;
+    color: #666; }
+  .detail-float .balance-title {
+    font-size: 0.37333rem;
+    color: #666; }
+  .detail-float li {
+    width: 2.98667rem;
+    text-align: center; }
+  .detail-float .line {
+    margin: 0;
+    background-color: #f2f2f2;
+    width: 0.05333rem;
+    height: 0.70667rem; }
+
+.yefl ul {
+  background-color: white;
+  margin-top: 1.06667rem; }
+  .yefl ul img {
+    width: 0.32rem;
+    height: 0.32rem; }
+  .yefl ul li {
+    border-bottom: 0.01333rem solid #F2F2F2;
+    height: 1.17333rem; }
+    .yefl ul li span {
+      margin-left: 0.28rem;
+      display: inline-block;
+      margin-top: 0.26667rem;
+      font-size: 0.4rem;
+      color: #222222; }
+    .yefl ul li .mingxi {
+      font-size: 0.32rem;
+      color: #999999; }
+  .yefl ul .yefl-title {
+    height: 1.02667rem; }
+    .yefl ul .yefl-title span {
+      margin-left: 0.28rem;
+      font-size: 0.4rem;
+      color: #333333; }
+  .yefl ul a {
+    float: right;
+    margin-right: 0.26667rem; }
+
+.tixianzhuanzhang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 2.13333rem; }
+  .tixianzhuanzhang .zhuanzeng {
+    width: 4rem;
+    height: 1.06667rem;
+    background: -webkit-gradient(linear, left top, right top, from(#ffc802), to(#ff9504));
+    background: linear-gradient(90deg, #ffc802 0%, #ff9504 100%);
+    border-radius: 0.53333rem 0 0 0.53333rem;
+    border: 0;
+    font-size: 0.4rem;
+    color: white; }
+  .tixianzhuanzhang .tixian {
+    width: 4rem;
+    height: 1.06667rem;
+    background: -webkit-gradient(linear, left top, right top, from(#ff7602), to(#ff4b02));
+    background: linear-gradient(90deg, #ff7602 0%, #ff4b02 100%);
+    border-radius: 0 0.53333rem 0.53333rem 0;
+    border: 0;
+    font-size: 0.4rem;
+    color: white; }
+
+.ksyye {
+  font-size: 0.32rem;
+  color: #999999;
+  line-height: 0.32rem;
+  margin-top: 0.4rem; }
+
+._fengexian {
+  background-color: #E2E2E2;
+  width: 100%;
+  height: 0.02667rem; }
+
+.short-modal-content {
+  text-align: center; }
+  .short-modal-content .zzbz-input {
+    height: 2.66667rem;
+    text-align: left; }
+  .short-modal-content div {
+    margin-top: 0.4rem; }
+    .short-modal-content div input {
+      padding-left: 0.53333rem;
+      height: 1.06667rem;
+      width: 8rem;
+      background: white;
+      border: 0.02667rem solid #bfbfbf;
+      border-radius: 0.53333rem;
+      font-size: 0.42667rem;
+      margin: 0 auto; }
+  .short-modal-content .sub-button {
+    display: block;
+    margin: 0 auto;
+    width: 5.33333rem;
+    height: 0.88rem;
+    background: linear-gradient(243deg, #ff6c00 0%, #ff9600 100%);
+    -webkit-box-shadow: 0 0.01333rem 1.25333rem 0 #ff6c00;
+    box-shadow: 0 0.01333rem 1.25333rem 0 #ff6c00;
+    border-radius: 0.6rem;
+    color: white;
+    margin-top: 1.33333rem;
+    text-align: center;
+    line-height: 0.88rem; }
+
+#extract .area-titel {
+  line-height: 0.42667rem; }
+  #extract .area-titel span {
+    font-size: 0.29333rem;
+    color: #999999; }
+
+#extract .area-content {
+  height: 13.33333rem; }
+
+#extract .txchoice {
+  margin-top: 0rem;
+  width: 100%;
+  height: 1.17333rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+  #extract .txchoice .txtitle {
+    font-size: 0.37333rem; }
+  #extract .txchoice .txnum {
+    font-size: 0.29333rem;
+    color: #999999; }
+  #extract .txchoice .tixianyye {
+    float: left;
+    margin-left: 1.78667rem; }
+    #extract .txchoice .tixianyye .txtitle {
+      color: #FF6C00; }
+  #extract .txchoice .tixiansy {
+    float: right;
+    margin-right: 1.78667rem; }
+    #extract .txchoice .tixiansy .txtitle {
+      color: #333333; }
+  #extract .txchoice .choice_fgx {
+    background-color: #BFBFBF;
+    width: 0.01333rem;
+    height: 0.70667rem;
+    margin-top: 0.53333rem; }
+
+#extract .shurukuang {
+  -webkit-margin-after: 1.86667rem;
+  margin-block-end: 1.86667rem; }

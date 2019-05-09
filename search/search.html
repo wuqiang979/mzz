@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>搜索</title>
+    <script src="./../js/flexble.js"></script>
+    <script src="./../js/jquery.min.js"></script>
+    <script src="./../js/utils.js"></script>
+    <link href="./../style/common.css" rel="stylesheet">
+    <link href="./../style/search.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1070953_dp7bcf1e9kq.css">
+</head>
+<body>
+    <!-- 头部搜索框 -->
+    <header class="home-header">
+        <i class="iconfont icon-zuoyou1" data-click="back"></i>
+        <div class="home-header__switch" data-click="switch">
+            <span>美食商家</span>
+            <i class="iconfont icon-arrDown"></i>
+        </div>
+
+        <div class="home-header__input">
+            <i class="iconfont icon-sousuo-copy"></i>
+            <input type="text" data-search="input" placeholder="请输入搜索内容">
+            <i class="iconfont icon-shanchu" style="display: none" data-search="delete"></i>
+        </div>
+        <span class="search" data-click="search">搜索</span>
+
+        <div class="home-header__list">
+            <i class="iconfont icon-zuoyou2"></i>
+            <p data-click="select" data-type="2">美食商家</p>
+            <p data-click="select" data-type="3" class="border-top">线上商品</p>
+        </div>
+    </header>
+
+    <ul class="search-history" style="display: none">
+    </ul>
+
+    <!--推荐美食商品 -->
+    <div class="recommond-food" style="display: none">
+        <ul class="recommond-food__nav position-sticky" data-click="sort">
+            <li data-type="1" class="recommond-food__nav_li recommond-food__nav_li_active">综合排序</li>
+            <li data-type="2" class="recommond-food__nav_li">销量排序</li>
+            <li data-type="3" class="recommond-food__nav_li">距离最近</li>
+        </ul>
+
+        <ul class="recommond-food__list">
+            <li class="recommond-food__item">
+                <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                <p class="title">川魂冒牌货冒菜(师范店）</p>
+                <p class="cell">
+                    <span>10年老店</span>
+                    <span>祖传秘方</span>
+                </p>
+                <p class="price">
+                    <span>起送￥5</span>
+                    <span>配送￥5</span>
+                </p>
+                <p class="time">营业时间: 8:00-22:00</p>
+
+                <span class="comment">好评90%</span>
+
+                <span class="distance">1.2km</span>
+
+                <i class="iconfont icon-dayang"></i>
+            </li>
+
+            <li class="recommond-food__item">
+                <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                <p class="title">川魂冒牌货冒菜(师范店）</p>
+                <p class="cell">
+                    <span>10年老店</span>
+                    <span>祖传秘方</span>
+                </p>
+                <p class="price">
+                    <span>起送￥5</span>
+                    <span>配送￥5</span>
+                </p>
+                <p class="time">营业时间: 8:00-22:00</p>
+
+                <span class="comment">好评90%</span>
+
+                <span class="distance">1.2km</span>
+            </li>
+
+            <li class="recommond-food__item">
+                <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                <p class="title">川魂冒牌货冒菜(师范店）</p>
+                <p class="cell">
+                    <span>10年老店</span>
+                    <span>祖传秘方</span>
+                </p>
+                <p class="price">
+                    <span>起送￥5</span>
+                    <span>配送￥5</span>
+                </p>
+                <p class="time">营业时间: 8:00-22:00</p>
+
+                <span class="comment">好评90%</span>
+
+                <span class="distance">1.2km</span>
+            </li>
+
+            <li class="recommond-food__item">
+                <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                <p class="title">川魂冒牌货冒菜(师范店）</p>
+                <p class="cell">
+                    <span>10年老店</span>
+                    <span>祖传秘方</span>
+                </p>
+                <p class="price">
+                    <span>起送￥5</span>
+                    <span>配送￥5</span>
+                </p>
+                <p class="time">营业时间: 8:00-22:00</p>
+
+                <span class="comment">好评90%</span>
+
+                <span class="distance">1.2km</span>
+            </li>
+
+            <li class="recommond-food__item">
+                <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                <p class="title">川魂冒牌货冒菜(师范店）</p>
+                <p class="cell">
+                    <span>10年老店</span>
+                    <span>祖传秘方</span>
+                </p>
+                <p class="price">
+                    <span>起送￥5</span>
+                    <span>配送￥5</span>
+                </p>
+                <p class="time">营业时间: 8:00-22:00</p>
+
+                <span class="comment">好评90%</span>
+
+                <span class="distance">1.2km</span>
+            </li>
+
+            <li class="recommond-food__item">
+                <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                <p class="title">川魂冒牌货冒菜(师范店）</p>
+                <p class="cell">
+                    <span>10年老店</span>
+                    <span>祖传秘方</span>
+                </p>
+                <p class="price">
+                    <span>起送￥5</span>
+                    <span>配送￥5</span>
+                </p>
+                <p class="time">营业时间: 8:00-22:00</p>
+
+                <span class="comment">好评90%</span>
+
+                <span class="distance">1.2km</span>
+            </li>
+
+            <li class="recommond-food__item">
+                <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                <p class="title">川魂冒牌货冒菜(师范店）</p>
+                <p class="cell">
+                    <span>10年老店</span>
+                    <span>祖传秘方</span>
+                </p>
+                <p class="price">
+                    <span>起送￥5</span>
+                    <span>配送￥5</span>
+                </p>
+                <p class="time">营业时间: 8:00-22:00</p>
+
+                <span class="comment">好评90%</span>
+
+                <span class="distance">1.2km</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="store-box">
+        <div class="nav-box position-sticky">
+            <nav class='store-index-nav'>
+                <a class='btn-nav selected' href="javascript:void(0)">综合排序</a>
+                <a class='btn-nav' href="javascript:void(0)">销量</a>
+                <a class='btn-nav price-sort' href="javascript:void(0)">
+                <span>价格</span>
+                <span class='sort-box'>
+                    <i class="iconfont icon-arr-top icon-sort"></i>
+                    <i class="iconfont icon-arr-down icon-sort "></i>
+                </span>
+                </a>
+                <a class='btn-nav store-index-btn-more' href="javascript:void(0)">分类<i class="iconfont icon-arr-down"></i></a>
+            </nav>
+            <!-- 更多 -->
+            <div class='nav-more'>
+                <!-- 多套一层，样式需要 -->
+                <div class='items-box'>
+                    <span class='nav-item-more'>电器</span>
+                    <span class='nav-item-more'>配饰</span>
+                    <span class='nav-item-more'>女装</span>
+                    <span class='nav-item-more'>书籍</span>
+                    <span class='nav-item-more'>用品办公用品办公办公用品办公</span>
+                    <span class='nav-item-more'>家具</span>
+                    <span class='nav-item-more'>家电</span>
+                    <span class='nav-item-more'>家电</span>
+                    <span class='nav-item-more'>手机</span>
+                    <!-- 最后两个必须要 用来占位置 -->
+                    <span style="visibility: hidden;"></span>
+                    <span style="visibility: hidden;"></span>
+                </div>
+            </div>
+        </div>
+        <!-- 商品列表 -->
+        <div class="store-index-goods-box">
+    
+            <div class="item-goods">
+                <div class="goods-img px2rem300">
+                    <img src="../images/store/goods-img.png" alt="">
+                </div>
+                <p class="goods-title px2rem300">欧式台灯姿矫正器防 近视坐姿快来抢购…</p>
+                <p class="goods-info px2rem300">iPhone X 64G 白色款白色…</p>
+                <p class="goods-discount px2rem300"><span>可抵扣100积分</span></p>
+                <div class="goods-money px2rem300">
+                    <span class="money">￥699</span>
+                    <span>2453条评价</span>
+                </div>
+            </div>
+
+            <div class="item-goods">
+                <div class="goods-img px2rem300">
+                    <img src="../images/store/goods-img.png" alt="">
+                </div>
+                <p class="goods-title px2rem300">欧式台灯姿矫正器防 近视坐姿快来抢购…</p>
+                <p class="goods-info px2rem300">iPhone X 64G 白色款白色…</p>
+                <p class="goods-discount px2rem300"><span>可抵扣100积分</span></p>
+                <div class="goods-money px2rem300">
+                    <span class="money">￥699</span>
+                    <span>2453条评价</span>
+                </div>
+            </div>
+
+            <div class="item-goods">
+                <div class="goods-img px2rem300">
+                    <img src="../images/store/goods-img.png" alt="">
+                </div>
+                <p class="goods-title px2rem300">欧式台灯姿矫正器防 近视坐姿快来抢购…</p>
+                <p class="goods-info px2rem300">iPhone X 64G 白色款白色…</p>
+                <p class="goods-discount px2rem300"><span>可抵扣100积分</span></p>
+                <div class="goods-money px2rem300">
+                    <span class="money">￥699</span>
+                    <span>2453条评价</span>
+                </div>
+            </div>
+            <div class="item-goods">
+                <div class="goods-img px2rem300">
+                    <img src="../images/store/goods-img.png" alt="">
+                </div>
+                <p class="goods-title px2rem300">欧式台灯姿矫正器防 近视坐姿快来抢购…</p>
+                <p class="goods-info px2rem300">iPhone X 64G 白色款白色…</p>
+                <p class="goods-discount px2rem300"><span>可抵扣100积分</span></p>
+                <div class="goods-money px2rem300">
+                    <span class="money">￥699</span>
+                    <span>2453条评价</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function() {
+            let params = {
+                type: '2',
+                isData: false
+            }
+            let storageData = _utils.storageData.get()
+            // 复制渲染搜索记录
+            let randerHistory = () => {
+                storageData = _utils.storageData.get()
+                if (!params.isData || params.type === '1') {
+                    let _ele = '<li class="search-history__header"><span class="name">历史记录</span><p class="delete" data-delete="history"><i class="iconfont icon-shanchu1"></i><span>清除</span></p></li>'
+                    storageData.home.forEach(e => {
+                        _ele += `<li class="search-history__item" data-link="search">${e}</li>`
+                    })
+                    $('.search-history').html(_ele)
+                    $('.search-history').css('display', 'block')
+                    $('.recommond-food').css('display', 'none')
+                    $('.store-box').css('display', 'none')
+                } else if (params.type === '2') {
+                    $('.search-history').css('display', 'none')
+                    $('.recommond-food').css('display', 'block')
+                    $('.store-box').css('display', 'none')
+                } else if (params.type === '3') {
+                    $('.search-history').css('display', 'none')
+                    $('.recommond-food').css('display', 'none')
+                    $('.store-box').css('display', 'block')
+                }
+            }
+
+            randerHistory()
+
+            $('[data-click=back]').on('click', function () {
+                history.back(-1)
+            })
+
+            $('[ data-click=search]').on('click', function () {
+                let _text = $("[data-search=input]").val()
+                if (_text.trim()) {
+                    storageData.home.push(_text)
+                    _utils.storageData.set(storageData)
+                    params.isData = true
+                    console.log(params)
+                    randerHistory()
+                } else {
+                    _utils.toast('请输入搜索内容')
+                }
+            })
+            // 监听input
+            $("[data-search=input]").on("input",function(){
+                console.log(this.value)
+                if (this.value.trim()) {
+                    $('.icon-shanchu').css('display', 'inline-block')
+                } else {
+                    $('.icon-shanchu').css('display', 'none')
+                }
+            })
+
+            $("[data-search=input]").on("focus",function(){
+                params.isData = false
+                randerHistory()
+            })
+
+            // 清空input
+            $("[data-search=delete]").on("click",function(){
+                // console.log(123)
+                $("[data-search=input]").val('')
+            })
+
+            // 清空
+            $(".search-history").on('click', '[data-delete=history]' ,function () {
+                console.log(this)
+                storageData.home = []
+                _utils.storageData.set(storageData)
+                randerHistory()
+            })
+
+            $(".search-history").on('click', '[data-link=search]' ,function (e) {
+                console.log($(e.target).text())
+                params.isData = true
+                randerHistory()
+            })
+
+            $('.home-header').on('click', '[data-click=switch],[data-click=select]' ,function (e) {
+                console.log($(this))
+                $(".home-header__list").slideToggle("slow")
+                if ($(e.target).is('[data-click=select]')) {
+                    params.type = $(e.target).attr('data-type')
+                    $('[data-click=switch] span').text($(e.target).text())
+                    console.log(params)
+                    randerHistory()
+                }
+            })
+
+            // 点击导航
+            $('.store-index-nav').on('click', '.btn-nav', function () {
+                var $dom = $(this)
+                // 价格
+                if ($dom.hasClass('price-sort')) {
+                    if ($dom.hasClass('up')) {
+                        $dom.removeClass('up');
+                        $dom.addClass('down');
+                    } else if ($dom.hasClass('down')) {
+                        $dom.removeClass('down');
+                        $dom.addClass('up');
+                    } else {
+                        $dom.addClass('up');
+                    }
+                } else {
+                    $('.btn-nav.price-sort').removeClass('down');
+                    $('.btn-nav.price-sort').removeClass('up');
+                }
+                // 分类
+                if ($dom.hasClass('store-index-btn-more')) {
+                    if ($dom.find('.iconfont').hasClass('icon-arr-down')) {
+                        $('.nav-more').show();
+                        $dom.find('.iconfont').removeClass('icon-arr-down')
+                        $dom.find('.iconfont').addClass('icon-arr-top')
+                    } else {
+                        $('.nav-more').hide();
+                        $dom.find('.iconfont').removeClass('icon-arr-top')
+                        $dom.find('.iconfont').addClass('icon-arr-down')
+                    }
+                } else {
+                    $('.nav-more').hide();
+                    $('.store-index-btn-more').find('.iconfont').removeClass('icon-arr-top')
+                    $('.store-index-btn-more').find('.iconfont').addClass('icon-arr-down')
+                }
+                // 其他
+                if ($dom.hasClass('selected')) {
+                    return
+                } else {
+                    $('.btn-nav.selected').removeClass('selected')
+                    $dom.addClass('selected')
+                }
+            })
+            // 点击更多导航栏
+            $('body').on('click', '.nav-item-more', function () {
+                if ($(this).hasClass('selected')) {
+                    return;
+                } else {
+                    $('.nav-item-more.selected').removeClass('selected');
+                    $(this).addClass('selected');
+                    $('.store-index-btn-more').find('.iconfont').removeClass('icon-arr-top');
+                    $('.store-index-btn-more').find('.iconfont').addClass('icon-arr-down');
+                    $('.nav-more').hide();
+                }
+                
+            })
+
+            // 切换排序方式
+            $("[data-click=sort]").on('click', function (e) {
+                // 判断是否已经被选中
+                let _isSelect = $(e.target).is('.recommond-food__nav_li') && !$(e.target).is('.recommond-food__nav_li_active')
+
+                // 如果当前未被选中则执行
+                if (_isSelect) {
+                    $(this).find('.recommond-food__nav_li_active').removeClass('recommond-food__nav_li_active')
+                    $(e.target).addClass('recommond-food__nav_li_active')
+
+                    // 获取排序的type
+                    console.log($(e.target).attr("data-type"))
+                    let _type = $(e.target).attr("data-type")
+
+                    // 通过排排序的type去获得最新排序
+                    _utils.ajaxFun('POST', '/product/info', {
+                        TERMINAL: "WX",
+                        channel: "WX",
+                        productId: 111403,
+                        token: "3b56e54f6c5bfe41f2448beddfded90b"
+                    })
+                    .then(data => {
+                        console.log(data)
+                    })
+                }
+            })
+        })
+    </script>
+</body>
+</html>

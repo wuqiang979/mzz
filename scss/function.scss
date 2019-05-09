@@ -1,0 +1,58 @@
+// 全局变量和函数
+@function px2rem($px, $base-font-size: 75) {
+    @return ($px / $base-font-size) * 1rem;
+}
+
+@mixin circle($width) {
+    width: $width;
+    height: $width;
+    border-radius: 50%;
+}
+
+@mixin textCenter($height) {
+    text-align: center;
+    line-height: $height;
+    height: $height;
+}
+
+@mixin flex-common($justify-content: center, $align-items: center) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin overflow-hiding {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+@mixin overflow-hiding-more($line: 2) {
+    overflow: hidden;
+    text-overflow:ellipsis;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-line-clamp: $line; // 最多显示8行
+    /*! autoprefixer: off */
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    /*! autoprefixer: on */
+}
+
+@mixin resetInput {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+$colorBase: #FF6C00;
+$inputBgColor: #F2F2F2;
+
+// 字体颜色
+$__font__color_one: #333;
+$__font__color_two: #666;
+$__font__color_three: #999;
+
+// 背景颜色
+$__base__bg__color: #f2f2f2;

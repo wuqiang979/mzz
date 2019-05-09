@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的积分</title>
+    <script src="./../js/flexble.js"></script>
+    <script src="./../js/jquery.min.js"></script>
+    <script src="./../js/utils.js"></script>
+    <link href="./../style/common.css" rel="stylesheet">
+    <link href="../style/mypoint.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1070953_deg0dcw208s.css">
+
+
+</head>
+
+<body>
+    <div class="point">
+        <span class="point-num">积分500</span>
+        <span class="point-help">（积分抵扣1:1）</span>
+    </div>
+    <div class="point-detail">
+        <li class="jffl">
+            <span>积分分类</span>
+        </li>
+        <ul>
+            <li>
+                <span>消费</span>
+                <span class="_detail"><a>明细&gt;</a></span>
+            </li>
+            <li>
+                <span>转赠</span>
+                <span class="_detail"><a>明细&gt;</a></span>
+            </li>
+            <li>
+                <span>账利返积分</span>
+                <span class="_detail"><a>明细&gt;</a></span>
+            </li>
+        </ul>
+    </div>
+    <div class="_zhuanzeng"><button type="button">转赠</button></div>
+    <div class="area-modal short-modal" id="givepoint" style="display: none;">
+        <div class="area-content short-modal-content">
+            <div class="area-titel">
+                <span>转赠积分</span>
+                <i class="area-modal-close iconfont icon-closes"></i>
+            </div>
+            <li class="_fengexian"></li>
+            <div class="jfye">共有200积分</div>
+            <div>
+                <input type="number" class="zzje-input" placeholder=" 请输入转赠积分数">
+            </div>
+            <div>
+                <input type="text" class="yqm-input" placeholder=" 请输入邀请码">
+            </div>
+            <div>
+                <input type="text" class="zzbz-input" placeholder=" 请输入转赠备注">
+            </div>
+            <div class="sub-button" id="stockSubmit">确定</div>
+        </div>
+    </div>
+
+    <script>
+        $('._zhuanzeng').click(function () {
+            $('#givepoint').css('display', 'block');
+        });
+        $('.area-modal-close').click(function () {
+            $('.area-modal').css('display', 'none');
+        });
+    </script>
+</body>
+
+</html>

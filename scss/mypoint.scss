@@ -1,0 +1,128 @@
+@import './function.scss';
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: $__base__bg__color;
+}
+
+.point {
+    height: px2rem(260);
+    background-image: url("../images/person/ac_bg.png");
+    background-size: cover;
+    color: #FFFFFF;
+
+    span {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .point-num {
+        padding-top: px2rem(63);
+        font-size: px2rem(32);
+    }
+
+    .point-help {
+        font-size: px2rem(22);
+    }
+}
+
+.point-detail {
+    height: px2rem(330);
+    margin-top: px2rem(-50);
+
+    span {
+        margin-left: px2rem(20);
+    }
+
+    ._line {
+        background-color: red;
+        width: 100%;
+        height: px2rem(10);
+    }
+
+    ._detail {
+        float: right;
+        font-size: px2rem(24);
+        color: #999999;
+        margin-right: px2rem(20);
+    }
+
+    li {
+        height: px2rem(88);
+        border-bottom: px2rem(1) solid #E2E2E2;
+        padding-top: px2rem(30);
+    }
+
+    .jffl {
+        height: px2rem(72);
+        padding-top: px2rem(22);
+
+    }
+
+    background-color: white;
+
+}
+
+._zhuanzeng {
+    position: absolute;
+    bottom: px2rem(100);
+    width: 100%;
+
+    button {
+        display: block;
+        margin: auto auto;
+        width: px2rem(600);
+        height: px2rem(88);
+        background: linear-gradient(243deg, rgba(255, 108, 0, 1) 0%, rgba(255, 150, 0, 1) 100%);
+        box-shadow: 0 px2rem(6) px2rem(9) 0 #ff6c00;
+        border-radius: px2rem(44);
+        border: 0;
+        color: #FFFFFF;
+    }
+}
+._fengexian {
+    background-color: #E2E2E2;
+    width: 100%;
+    height: px2rem(2);
+}
+
+#givepoint {
+    text-align: center;
+    div{
+        margin-top: px2rem(30);
+
+    }
+    .jfye {
+        font-size: px2rem(24);
+        color: #666666;
+    }
+
+    input {
+        width: px2rem(600);
+        height: px2rem(80);
+        background: rgba(255, 255, 255, 1);
+        border: px2rem(2) solid rgba(191, 191, 191, 1);
+        border-radius: px2rem(40);
+        padding-left: px2rem(40);
+    }
+
+    .zzbz-input {
+        height: px2rem(200);
+        vertical-align: top;
+        outline: none;
+    }
+    .sub-button{
+        display: block;
+        width:px2rem(600);
+        height:px2rem(88);
+        background:linear-gradient(243deg,rgba(255,108,0,1) 0%,rgba(255,150,0,1) 100%);
+        box-shadow:0 px2rem(6) px2rem(9) 0 #ff6c00;
+        border-radius:px2rem(44);
+        margin: 0 auto;
+        margin-top: px2rem(100);
+        color: white;
+        line-height: px2rem(88);
+    }
+}

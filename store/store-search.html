@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>商城</title>
+  <link href="../style/common.css" rel="stylesheet">
+  <link href="../style/common-store.css" rel="stylesheet">
+  <link href="../style/storeSearch.css" rel="stylesheet">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1070953_3oa7lujtq3c.css">
+  <script src="../js/flexble.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/utils.js"></script>
+</head>
+
+<body>
+  <header>
+    <!-- 顶部搜索栏 -->
+    <div class="store-index-search">
+      <span class="btn-back" onclick="javascript:history.go(-1);"><i class="iconfont icon-zuoyou1"></i></span>
+      <div class='input-box'>
+        <span class='iconfont icon-sousuo-copy' style="color: #666666"></span>
+        <input class="search-input" type="text" placeholder="搜索商品"
+          onkeyup="_utils.inputSearch.showClose($(this),'.btn-close')" />
+        <span class="btn-close" onclick="_utils.inputSearch.closeWords($(this),'.search-input')"><i
+            class="iconfont icon-shanchu"></i></span>
+      </div>
+      <span class="btn-search">搜索</span>
+    </div>
+  </header>
+  <div class="content-box">
+    <div class="history-search">
+      <h2 class="title">
+        <span class="left">历史记录</span>
+        <span class="right btn-clear-history"><i class="iconfont icon-shanchu1"></i>清楚</span>
+      </h2>
+      <div class="words-box"></div>
+    </div>
+  </div>
+  <footer>
+
+  </footer>
+  <script>
+    $(document).ready(function () {
+      loadKeyWords();
+      $('.btn-search').click(function() {
+        var keyWord = $('.search-input').val();
+        if(keyWord){
+          recordKeyWord(keyWord);
+          toSearch(keyWord);
+        }else{
+          _utils.toast('请输入搜索关键词');
+        }
+      });
+      // 点击搜索历史发起搜索
+      $('body').on('click','.item-keyword',function() {
+        var keyWord = $(this).text();
+        toSearch(keyWord);
+      });
+
+      // 清空搜索历史
+      $('.btn-clear-history').click(function() {
+        window.localStorage.setItem('storeKeyWords','');
+        loadKeyWords();
+      })
+    })
+    // 记录搜索历史
+    function recordKeyWord(keyWord){
+      _utils.recordKeyWord(keyWord);
+      loadKeyWords();
+    }
+    // 渲染搜索历史
+    function loadKeyWords() {
+      var string_keyWords = window.localStorage.getItem('storeKeyWords');
+      var arr_keyWords = [];
+      if(string_keyWords){
+        var html = '';
+        arr_keyWords = string_keyWords.split(',');
+        arr_keyWords.forEach(function(item,index) {
+          console.log(item);
+          html += `<p class='item-keyword'>${item}</p>`
+        })
+        $('.words-box').html(html);
+      }else{
+        $('.words-box').html('<p>暂时没有搜索历史...</p>');
+      }
+    }
+
+    // 发起搜索
+    function toSearch(keyWord){
+      alert(keyWord);
+    }
+  </script>
+</body>
+
+</html>

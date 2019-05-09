@@ -1,0 +1,148 @@
+header .store-index-search {
+  width: 10rem;
+  height: 1.17333rem;
+  background: #FF6C00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  header .store-index-search .input-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 8rem;
+    height: 0.73333rem;
+    background: #F2F2F2;
+    border-radius: 0.37333rem; }
+    header .store-index-search .input-box .icon-sousuo-copy {
+      font-size: 0.4rem; }
+    header .store-index-search .input-box input {
+      border: none;
+      outline: none;
+      background: none;
+      color: #999;
+      margin-left: 0.14667rem;
+      width: 2.66667rem;
+      font-size: 0.37333rem; }
+    header .store-index-search .input-box input::-webkit-input-placeholder {
+      color: #999;
+      font-size: 0.37333rem; }
+
+header .nav-box {
+  position: relative; }
+  header .nav-box .store-index-nav {
+    width: 10rem;
+    height: 1.06667rem;
+    line-height: 1.06667rem;
+    background: #F2F2F2;
+    font-size: 0.37333rem;
+    white-space: nowrap;
+    overflow: scroll;
+    padding: 0 0.13333rem; }
+    header .nav-box .store-index-nav::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      background-color: rgba(0, 0, 0, 0);
+      display: none; }
+    header .nav-box .store-index-nav a {
+      display: inline-block;
+      padding: 0 0.24rem;
+      line-height: 0; }
+    header .nav-box .store-index-nav .selected {
+      color: #FF6C00; }
+    header .nav-box .store-index-nav .store-index-btn-more .iconfont {
+      margin-left: 0.08rem;
+      font-size: 0.21333rem; }
+  header .nav-box .nav-more {
+    position: absolute;
+    z-index: 10;
+    top: 1.06667rem;
+    left: 0;
+    width: 10rem;
+    background: #fff;
+    display: none; }
+    header .nav-box .nav-more .items-box {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 0.4rem 0.4rem 0.13333rem;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      header .nav-box .nav-more .items-box span {
+        height: 0.8rem;
+        padding: 0 0.26667rem;
+        line-height: 0.8rem;
+        background: #F2F2F2;
+        margin-bottom: 0.26667rem;
+        border-radius: 0.4rem;
+        min-width: 1.86667rem;
+        text-align: center; }
+      header .nav-box .nav-more .items-box span.selected {
+        background: rgba(255, 108, 0, 0.2);
+        color: #FF6C00; }
+
+#store-index-banner {
+  width: 10rem;
+  height: 4.86667rem;
+  background: #F2F2F2; }
+  #store-index-banner .swiper-wrapper {
+    width: 9.2rem;
+    height: 4.6rem; }
+    #store-index-banner .swiper-wrapper .swiper-slide {
+      text-align: center; }
+      #store-index-banner .swiper-wrapper .swiper-slide img {
+        width: 9.2rem;
+        height: 4.6rem; }
+
+.moudle-box {
+  width: 10rem;
+  height: 0.96rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .moudle-box .btn-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    .moudle-box .btn-link img {
+      width: 4.44rem;
+      height: 0.61333rem; }
+    .moudle-box .btn-link i {
+      position: absolute;
+      right: 0.26667rem; }
+
+.footer {
+  height: 1.30667rem;
+  width: 10rem;
+  background: yellow; }

@@ -1,0 +1,290 @@
+@import './function.scss';
+
+body {
+    margin: 0 auto;
+    width: px2rem(750);
+    line-height: 1.5;
+    min-height: 100vh;
+    padding-bottom: px2rem(120);
+    box-sizing: border-box;
+    background-color: $__base__bg__color;
+}
+
+.font-order-header {
+    position: relative;
+    width: 100%;
+    height: px2rem(270);
+    padding: px2rem(14) px2rem(20);
+    background:linear-gradient(-32deg,rgba(255,108,0,1) 0%,rgba(255,150,0,1) 100%);
+
+    .icon-zuoyou1 {
+        position: absolute;
+        top: px2rem(20);
+        left: px2rem(20);
+        font-size: px2rem(35);
+        color: #FFF;
+    }
+
+    &__switch {
+        margin: 0 auto;
+        width: px2rem(340);
+        @include flex-common;
+        border-radius: px2rem(30);
+        background-color: rgba(#000, 0.1);
+        overflow: hidden;
+
+        span {
+            width: 50%;
+            height: px2rem(60);
+            line-height: px2rem(60);
+            text-align: center;
+            border-radius: px2rem(30);
+            overflow: hidden;
+            font-size: px2rem(28);
+            font-weight: 400;
+            color: #FFF;
+        }
+
+        .is_active {
+            background-color: #FFF;
+            color: $colorBase;
+        }
+    }
+
+    &__address {
+        display: block;
+        position: relative;
+        margin-top: px2rem(40);
+
+        .address {
+            font-size: px2rem(34);
+            font-weight: 600;
+            color: #FFF;
+        }
+
+        .name {
+            margin-top: px2rem(12);
+            @include flex-common(flex-start);
+            font-size: px2rem(28);
+            font-weight: 600;
+            color: #FFF;
+
+            span:first-child {
+                margin-right: px2rem(46);
+            }
+        }
+
+        i {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: px2rem(34);
+            font-weight: 600;
+            color: #FFF;
+        }
+    }
+}
+// 订单信息
+.font-order-box {
+    position: relative;
+    z-index: 100;
+    margin: px2rem(-50) auto;
+    box-sizing: border-box;
+    width: px2rem(710);
+    border-radius: px2rem(10);
+    overflow: hidden;
+
+    &__header {
+        @include flex-common(space-between);
+        padding: 0 px2rem(30);
+        height: px2rem(100);
+        background-color: #FFF;
+
+        span:first-child {
+            font-size: px2rem(32);
+            font-weight: bold;
+            color: $__font__color_two;
+        }
+
+        span:last-child {
+            font-size: px2rem(32);
+            font-weight: 600;
+            color: $colorBase;
+        }
+    }
+
+    &__footer {
+        @include flex-common(space-between);
+        padding: 0 px2rem(30);
+        height: px2rem(100);
+        background-color: #FFF;
+
+        span {
+            font-size: px2rem(32);
+            font-weight: bold;
+            color: $__font__color_one;
+        }
+
+        input {
+            width: px2rem(440);
+            text-align: right;
+            vertical-align: middle;
+            border: none;
+            outline: none;
+            font-size: px2rem(30);
+            font-weight: 400;
+            color: $__font__color_three;
+        }
+    }
+}
+
+// 订单信息之选择的商品列表
+.font-order-details {
+    margin: px2rem(20) 0;
+    padding: 0 px2rem(30);
+    background-color: #FFF;
+
+    &__header {
+        height: px2rem(88);
+        line-height: px2rem(88);
+        border-bottom: px2rem(2) solid $__base__bg__color;
+        font-size: px2rem(34);
+        font-weight: bold;
+        color: $__font__color_one;
+    }
+
+    &__footer {
+        @include flex-common(flex-end);
+        height: px2rem(88);
+        border-bottom: px2rem(2) solid $__base__bg__color;
+        font-size: px2rem(28);
+        font-weight: 400;
+        color: $__font__color_one;
+
+        .sign {
+            font-weight: bold;
+        }
+
+        .price {
+            font-size: px2rem(36);
+            font-weight: bold
+        }
+    }
+
+    &__list_item {
+        position: relative;
+        height: px2rem(120);
+        border-bottom: px2rem(2) solid $__base__bg__color;
+        padding: px2rem(10) 0 px2rem(10) px2rem(123);
+
+        img {
+            position: absolute;
+            top: px2rem(10);
+            left: px2rem(0);
+            width: px2rem(100);
+            height: px2rem(100);
+        }
+
+        .product {
+            position: relative;
+            @include flex-common(space-between);
+
+            .name {
+                font-size: px2rem(30);
+                font-weight: 400;
+                color: $__font__color_one;
+            }
+
+            .num {
+                position: absolute;
+                top: 0;
+                left: px2rem(360);
+                font-size: px2rem(28);
+                font-weight: 400;
+                color: $__font__color_one;
+            }
+
+            .price {
+                font-size: px2rem(28);
+                font-weight: 600;
+                color: $__font__color_one;
+            }
+        }
+
+        .txt {
+            position: absolute;
+            bottom: px2rem(10);
+            left: px2rem(123);
+            font-size: px2rem(24);
+            font-weight: 600;
+            color: $__font__color_three;
+        }
+    }
+
+    &__list_footer {
+        position: relative;
+        height: px2rem(88);
+        border-bottom: px2rem(2) solid $__base__bg__color;
+        padding: px2rem(24) 0 px2rem(24) px2rem(123); 
+
+        .cell {
+            position: absolute;
+            left: 0;
+            top: px2rem(19);
+            width: px2rem(100);
+            height: px2rem(50);
+            line-height: px2rem(50);
+            text-align: center;
+            border-radius: px2rem(25);
+            background-color: rgba($colorBase, 0.1);
+            font-size: px2rem(24);
+            font-weight: 400;
+            color: $colorBase;
+        }
+
+        p {
+            @include flex-common(space-between);
+        }
+
+        .name {
+            font-size: px2rem(30);
+            font-weight: 400;
+            color: $__font__color_one;
+        }
+
+        .price {
+            font-size: px2rem(28);
+            font-weight: 600;
+            color: $__font__color_one; 
+        }
+    }
+}
+
+// 底部
+.font-order-footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 2000;
+    width: px2rem(750);
+    height: px2rem(98);
+    padding: 0 px2rem(20) 0 px2rem(56);
+    @include flex-common(space-between);
+    background-color: #FFF;
+
+    span {
+        font-size: px2rem(36);
+        font-weight: bold;
+        color: $colorBase;
+    }
+
+    button {
+        width: px2rem(200);
+        height: px2rem(80);
+        border-radius: px2rem(40);
+        border: 0;
+        background:linear-gradient(90deg,rgba(254,118,2,1) 0%,rgba(255,75,2,1) 100%);
+        font-size: px2rem(30);
+        font-weight: 400;
+        color: #FFF;
+    }
+}

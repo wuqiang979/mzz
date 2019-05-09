@@ -1,0 +1,358 @@
+@import './function.scss';
+
+body {
+    margin: 0 auto;
+    width: px2rem(750);
+    line-height: 1.5;
+    min-height: 100vh;
+    padding-bottom: px2rem(120);
+    padding-top: px2rem(108);
+    box-sizing: border-box;
+    background-color: $__base__bg__color;
+}
+
+.food-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: px2rem(88);
+    padding: 0 px2rem(20);
+    box-sizing: border-box;
+    background-color: #FFF;
+    @include flex-common(flex-start);
+
+    .icon-zuoyou1 {
+        font-size: px2rem(40);
+        color: $__font__color_one;
+    }
+
+    div {
+        margin-left: px2rem(20);
+        @include flex-common(flex-start);
+        padding: 0 px2rem(20);
+        width: px2rem(560);
+        height: px2rem(60);
+        border-radius: px2rem(30);
+        background-color: $__base__bg__color;
+
+        .icon-sousuo-copy {
+            font-size: px2rem(28);
+            font-weight: 500;
+            color: $__font__color_three;
+        }
+
+        input {
+            margin-left: px2rem(11);
+            width: px2rem(440);
+            vertical-align: middle;
+            border: none;
+            outline: none;
+            font-size: px2rem(28);
+            background-color: rgba(#FFF, 0);
+            color: $__font__color_two;
+        }
+
+        .icon-shanchu {
+            margin-left: px2rem(10);
+            font-size: px2rem(30);
+            font-weight: 500;
+            color: $__font__color_three;
+        }
+    }
+
+    span {
+        margin-left: px2rem(20);
+        font-size: px2rem(32);
+        font-weight: 500;
+        color: $colorBase;
+    }
+}
+
+.home-header {
+    position: fixed;
+    top: 0;
+    z-index: 2000;
+    width: 100%;
+    height: px2rem(88);
+    padding: 0 px2rem(20);
+    box-sizing: border-box;
+    background-color: #FFF;
+    @include flex-common(flex-start);
+
+    .icon-zuoyou1 {
+        font-size: px2rem(40);
+        color: $__font__color_one;
+    }
+
+    &__switch {
+        @include flex-common(flex-start);
+
+        span {
+            margin-left: px2rem(4);
+            font-size: px2rem(28);
+            font-weight: 400;
+            color: $__font__color_one;
+        }
+
+        i {
+            font-size: px2rem(20);
+            font-weight: 400;
+            color: $__font__color_one;
+        }
+    }
+
+    &__input {
+        margin-left: px2rem(10);
+        @include flex-common(flex-start);
+        padding: 0 px2rem(20);
+        box-sizing: border-box;
+        width: px2rem(436);
+        height: px2rem(60);
+        border-radius: px2rem(30);
+        background-color: $__base__bg__color;
+
+        .icon-sousuo-copy {
+            font-size: px2rem(28);
+            font-weight: 500;
+            color: $__font__color_three;
+        }
+
+        input {
+            margin-left: px2rem(11);
+            width: px2rem(320);
+            vertical-align: middle;
+            border: none;
+            outline: none;
+            font-size: px2rem(28);
+            background-color: rgba(#FFF, 0);
+            color: $__font__color_two;
+        }
+
+        .icon-shanchu {
+            margin-left: px2rem(10);
+            font-size: px2rem(30);
+            font-weight: 500;
+            color: $__font__color_three;
+        }
+    }
+
+    .search {
+        margin-left: px2rem(10);
+        font-size: px2rem(32);
+        font-weight: 500;
+        color: $colorBase;
+    }
+
+    &__list {
+        display: none;
+        position: absolute;
+        left: px2rem(35);
+        bottom: px2rem(-160);
+        width: px2rem(140);
+        text-align: center;
+        line-height: px2rem(80);
+        border: px2rem(2) solid $__base__bg__color;
+        background-color: rgba(#FFF, 0.9);
+        font-size: px2rem(28);
+        font-weight: 400;
+        color: $__font__color_one;
+
+        .border-top {
+            border-top: px2rem(2) solid $__base__bg__color;
+        }
+
+        i {
+            position: absolute;
+            right: px2rem(10);
+            top: px2rem(-45);
+            font-size: px2rem(28);
+            font-weight: 400;
+            color: $__base__bg__color;
+        }
+
+    }
+}
+
+.search-history {
+    z-index: 2001;
+    background-color: #FFF;
+
+    &__header {
+        box-sizing: border-box;
+        padding: px2rem(18) px2rem(36);
+        @include flex-common(space-between);
+
+        .name {
+            font-size: px2rem(30);
+            font-weight: 500;
+            color: $__font__color_one;
+        }
+
+        .delete {
+            @include flex-common(flex-end);
+            font-size: px2rem(30);
+            font-weight: 500;
+            color: $__font__color_one;
+
+            span {
+                margin-left: px2rem(5);
+                color: $__font__color_three;
+            }
+        }
+    }
+
+    &__item {
+        padding: px2rem(31) px2rem(36);
+        box-sizing: border-box;
+        border-top: px2rem(2) solid $__base__bg__color;
+        word-break: break-all;
+        font-size: px2rem(30);
+        font-weight: 500;
+        color: $__font__color_three;
+
+    }
+}
+
+// 商品列表导航
+// 分类导航条
+.nav-box{
+    // position: relative;
+    .store-index-nav {
+        @include flex-common(space-around);
+        width: px2rem(750);
+        height: px2rem(80);
+        background: #fff;
+        font-size: px2rem(28);
+        .btn-nav{
+            color: $__font__color_three;
+            &.store-index-btn-more{
+                .iconfont{
+                    padding-left: px2rem(0);
+                    padding-top: px2rem(10);
+                }
+            }
+        }
+        .btn-nav.selected{
+            color: $__font__color_one;
+        }
+        .price-sort{
+            @include flex-common;
+            .sort-box{
+                @include flex-common(center,center);
+                flex-direction: column;
+                .iconfont:first-child{
+                    margin-top: 4px;
+                }
+                .iconfont:last-child{
+                    margin-top: -10px;
+                }
+            }
+        }
+        .price-sort.up{
+            .iconfont:first-child{
+                color: #FF6C00;
+            }
+        }
+        .price-sort.down{
+            .iconfont:last-child{
+                color: #FF6C00;
+            }
+        }
+    }
+    // 更多导航
+    .nav-more{
+        position: absolute;
+        z-index: 10;
+        top: px2rem(80);
+        left: 0;
+        width: px2rem(750);
+        background: #fff;
+        border-bottom: 1px solid #F2F2F2;
+        display: none;
+        .items-box{
+            @include flex-common(space-around);
+            padding: px2rem(30) px2rem(30) px2rem(10);
+            flex-wrap: wrap;
+            span{
+                height: px2rem(60);
+                padding: 0 px2rem(20);
+                line-height: px2rem(60);
+                background: #F2F2F2;
+                margin-bottom: px2rem(20);
+                border-radius: px2rem(30);
+                min-width: px2rem(140);
+                text-align: center;
+            }
+            span.selected{
+                background: rgba(255,108,0,0.2);
+                color: #FF6C00;
+            }
+        }
+    }
+}
+
+// 商品列表
+.store-index-goods-box {
+    @include flex-common(flex-start, flex-start);
+    flex-wrap: wrap;
+    background: #fff;
+    .px2rem300 {
+        width: px2rem(300);
+        margin-top: px2rem(10);
+    }
+
+    .item-goods {
+        @include flex-common;
+        flex-direction: column;
+        width: px2rem(374);
+        padding: px2rem(20) 0;
+        border-top: 1px solid #F2F2F2;
+
+        .goods-img {
+            img {
+                width: px2rem(300);
+            }
+        }
+
+        .goods-title {
+            @include overflow-hiding-more(2);
+            font-size: px2rem(28);
+            font-weight: bold;
+            color: $__font__color_one;
+            line-height: px2rem(39);
+        }
+
+        .goods-info {
+            @include overflow-hiding;
+            font-size: px2rem(24);
+            color: $__font__color_two;
+            line-height: px2rem(30);
+        }
+
+        .goods-discount {
+            span {
+                display: inline-block;
+                padding: px2rem(4) px2rem(11);
+                font-size: px2rem(22);
+                color: #FF6C00;
+                border-radius: px2rem(20);
+                background: rgba(255, 108, 0, 0.2);
+            }
+        }
+
+        .goods-money {
+            @include flex-common(space-between);
+            font-size: px2rem(22);
+            color: $__font__color_three;
+
+            .money {
+                font-size: px2rem(36);
+                color: #FF6C00;
+            }
+        }
+    }
+
+    .item-goods:nth-of-type(2n) {
+        border-left: 1px solid #F2F2F2;
+    }
+}

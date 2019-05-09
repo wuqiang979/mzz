@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>确认订单</title>
+  <link href="../style/common.css" rel="stylesheet" />
+  <link href="../style/common-store.css" rel="stylesheet" />
+  <link href="../style/confirm-order.css" rel="stylesheet" />
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_1070953_z67miwzb5m.css" />
+  <script src="../js//flexble.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/utils.js"></script>
+</head>
+
+<body>
+  <!-- 内容区域 -->
+  <div class="content-box">
+    <div class="content-bg-box">
+      <!-- 顶部返回 -->
+      <span onclick="javascript:history.go(-1);" class="btn-back"><i class="iconfont icon-zuoyou1"></i></span>
+      <!-- 用户地址信息 -->
+      <div class="adress-info">
+        <div class="item-content">
+          <span class="left-span"></span>
+          <div class="right-div">
+            <span class="name-phone"><span>李璐</span>15928281317</span>
+          </div>
+        </div>
+        <div class="item-content">
+          <span class="left-span"><i class="iconfont icon-dizhi"></i></span>
+          <div class="right-div">
+            <span class="address-box">世界贸易中心B座顺城大街248号世界贸易中心B座 顺城大街248号</span>
+            <i class="iconfont icon-zuoyou"></i>
+          </div>
+        </div>
+      </div>
+      <!-- 商店订单列表 -->
+      <div class="item-store-order">
+        <!-- 商店名称 -->
+        <div class="item-order-store-info">
+          <div class="item-order-right">
+            <div class="shop-face-name">
+              <img class="img-store-face" src="../images/store/goods-img.png" alt="" />
+              <span class="store-name">maydear迪美旗舰店</span>
+            </div>
+          </div>
+        </div>
+        <div class="item-order-box">
+          <!-- 订单列表 -->
+          <div class="item-order-list">
+            <div class="item-order-content">
+              <img class="order-goods-img" src="../images//store/goods-img.png" alt="" />
+              <div class="order-goods-info">
+                <h2 class="order-goods-title">
+                  41寸初学者吉他学生38寸新手民 他国行版金色 学者吉他学生 …
+                </h2>
+                <p class="order-goods-selcted">颜色：<span>38寸古铜色</span></p>
+                <div class="order-goods-option">
+                  <span class="money">￥ <span class="money-num">6.00</span></span>
+                  <span class="goods-num">x2</span>
+                </div>
+              </div>
+            </div>
+            <!-- 积分抵扣 -->
+            <div class="discount-box" onclick="isShoWModel(true,'.model-box-jifen',this)">
+              <div>可抵扣<span class="discount-value">100</span>积分</div>
+              <div class="color999"><span class='discount-num'>请选择</span><i class="iconfont icon-zuoyou"></i></div>
+            </div>
+          </div>
+          <div class="item-order-list">
+            <div class="item-order-content">
+              <img class="order-goods-img" src="../images//store/goods-img.png" alt="" />
+              <div class="order-goods-info">
+                <h2 class="order-goods-title">
+                  41寸初学者吉他学生38寸新手民 他国行版金色 学者吉他学生 …
+                </h2>
+                <p class="order-goods-selcted">颜色：<span>38寸古铜色</span></p>
+                <div class="order-goods-option">
+                  <span class="money">￥ <span class="money-num">6.00</span></span>
+                  <span class="goods-num">x2</span>
+                </div>
+              </div>
+            </div>
+            <!-- 积分抵扣 -->
+            <div class="discount-box" onclick="isShoWModel(true,'.model-box-jifen',this)">
+              <div>可抵扣<span class="discount-value">100</span>积分</div>
+              <div class="color999"><span class='discount-num'>请选择</span><i class="iconfont icon-zuoyou"></i></div>
+            </div>
+          </div>
+        </div>
+        <!-- 配送和计算信息 -->
+        <div class="store-count-info">
+          <div class='item-info flex-space-between'>
+            <span>配送方式</span>
+            <span>送货上门</span>
+          </div>
+          <div class='item-info order-note'>
+            <div class="flex-space-between btn-xiala-box">
+              <span>订单备注</span>
+              <i class="iconfont icon-xiala btn-xiala"></i>
+            </div>
+            <textarea name="note" class="order_node" cols="30" rows="3" placeholder="请控制在50字内..."
+              maxlength="50"></textarea>
+          </div>
+          <div class="item-info count-info">
+            <span>共3件商品</span>
+            <span>小计<span>￥551.00</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="item-store-order">
+        <!-- 商店名称 -->
+        <div class="item-order-store-info">
+          <div class="item-order-right">
+            <div class="shop-face-name">
+              <img class="img-store-face" src="../images/store/goods-img.png" alt="" />
+              <span class="store-name">maydear迪美旗舰店</span>
+            </div>
+          </div>
+        </div>
+        <div class="item-order-box">
+          <!-- 订单列表 -->
+          <div class="item-order-list">
+            <div class="item-order-content">
+              <img class="order-goods-img" src="../images//store/goods-img.png" alt="" />
+              <div class="order-goods-info">
+                <h2 class="order-goods-title">
+                  41寸初学者吉他学生38寸新手民 他国行版金色 学者吉他学生 …
+                </h2>
+                <p class="order-goods-selcted">颜色：<span>38寸古铜色</span></p>
+                <div class="order-goods-option">
+                  <span class="money">￥ <span class="money-num">6.00</span></span>
+                  <span class="goods-num">x2</span>
+                </div>
+              </div>
+            </div>
+            <!-- 积分抵扣 -->
+            <div class="discount-box" onclick="isShoWModel(true,'.model-box-jifen',this)">
+              <div>可抵扣<span class="discount-value">100</span>积分</div>
+              <div class="color999"><span class='discount-num'>请选择</span><i class="iconfont icon-zuoyou"></i></div>
+            </div>
+          </div>
+          <div class="item-order-list">
+            <div class="item-order-content">
+              <img class="order-goods-img" src="../images//store/goods-img.png" alt="" />
+              <div class="order-goods-info">
+                <h2 class="order-goods-title">
+                  41寸初学者吉他学生38寸新手民 他国行版金色 学者吉他学生 …
+                </h2>
+                <p class="order-goods-selcted">颜色：<span>38寸古铜色</span></p>
+                <div class="order-goods-option">
+                  <span class="money">￥ <span class="money-num">6.00</span></span>
+                  <span class="goods-num">x2</span>
+                </div>
+              </div>  
+            </div>
+            <!-- 积分抵扣 -->
+            <div class="discount-box" onclick="isShoWModel(true,'.model-box-jifen',this)">
+              <div>可抵扣<span class="discount-value">100</span>积分</div>
+              <div class="color999"><span class='discount-num'>请选择</span><i class="iconfont icon-zuoyou"></i></div>
+            </div>
+          </div>
+        </div>
+        <!-- 配送和计算信息 -->
+        <div class="store-count-info">
+          <div class='item-info flex-space-between'>
+            <span>配送方式</span>
+            <span>送货上门</span>
+          </div>
+          <div class='item-info order-note'>
+            <div class="flex-space-between btn-xiala-box">
+              <span>订单备注</span>
+              <i class="iconfont icon-xiala btn-xiala"></i>
+            </div>
+            <textarea name="note" class="order_node" cols="30" rows="3" placeholder="请控制在50字内..."
+              maxlength="50"></textarea>
+          </div>
+          <div class="item-info count-info">
+            <span>共3件商品</span>
+            <span>小计<span>￥551.00</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer-box">
+    <nav class="nav-box">
+      <div class="footer-option">
+        共<span>5</span>件商品
+      </div>
+      <div class="money-and-option">
+        <div>
+          实付款<span class="total-money">￥<span id="total_money">520.00</span></span>
+        </div>
+        <span class="btn-submit-order" onclick="isShoWModel(true,'.model-box-pay-type')">立即支付</span>
+      </div>
+    </nav>
+  </footer>
+
+  <!-- 模态弹窗 选择积分-->
+  <div class="model-box model-box-jifen">
+    <div class="model-content">
+      <div class="warnning"><span class="jifen-not-enough">抱歉您的积分不足</span></div>
+      <div class="model-title ">
+        <span class="title">积分兑换<span class="rate">1积分=1元</span></span>
+        <span class="btn-close" onclick="isShoWModel(false,'.model-box-jifen')"><i
+            class="iconfont icon-closes"></i></span>
+      </div>
+      <div class="item-box">
+        <div class="item-list-jifen item-list-jifen-use">
+          <span>抵扣100积分</span>
+          <span class="icon-span"><i class="iconfont icon-gouxuan"></i></span>
+        </div>
+        <div class="item-list-jifen item-list-notuse selected">
+          <span>暂不使用积分</span>
+          <span class="icon-span"><i class="iconfont icon-gouxuan"></i></span>
+        </div>
+      </div>
+      <div class="jifen-box">你有<span id="jifen_num">100</span>积分</div>
+      <!-- 确定按钮 -->
+      <div class='btn-box'>
+        <span class="btn-sure btn-choose-jifen">确定</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 模态弹窗 选择支付方式-->
+  <div class="model-box model-box-pay-type">
+    <div class="model-content">
+      <div class="model-title ">
+        <span class="title">选择支付方式</span>
+        <span class="btn-close" onclick="isShoWModel(false,'.model-box-pay-type')"><i
+            class="iconfont icon-closes"></i></span>
+      </div>
+      <div class="item-box">
+        <div class="item-list-pay-type selected">
+          <span><i class="iconfont icon-weixinzhifu icon-pay-type"></i>微信支付</span>
+          <span class="icon-span"><i class="iconfont icon-gouxuan"></i></span>
+        </div>
+        <div class="item-list-pay-type">
+          <span><i class="iconfont icon-qianbao icon-pay-type"></i>余额支付</span>
+          <span class="icon-span"><i class="iconfont icon-gouxuan"></i></span>
+        </div>
+      </div>
+      <!-- 确定按钮 -->
+      <div class='btn-box'>
+        <span class="btn-sure btn-pay">确定</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var currentOptionOrderDom = null; //当前勾选积分操作的dom
+    var tatalCount = 200 //可用总积分
+    var currentOptionCount = 0; //当前操作积分
+    $(document).ready(function () {
+      // 下拉显示订单备注信息填写框
+      $('body').on('click', '.btn-xiala-box', function () {
+        var iconxialaDom = $(this).find('.btn-xiala');
+        if (iconxialaDom.hasClass('icon-xiala')) {
+          iconxialaDom.removeClass('icon-xiala');
+          iconxialaDom.addClass('icon-xiala1');
+          $(this).parent().find('.order_node').show();
+        } else if (iconxialaDom.hasClass('icon-xiala1')) {
+          iconxialaDom.removeClass('icon-xiala1');
+          iconxialaDom.addClass('icon-xiala');
+          $(this).parent().find('.order_node').hide();
+        }
+      });
+
+      // 勾选积分
+      $('body').on('click', '.item-list-jifen', function () {
+        // 选择积分 判断积分和当前折扣数
+        if ($(this).hasClass('item-list-jifen-use') && currentOptionCount > tatalCount) {
+          $('.jifen-not-enough').show();
+          setTimeout(() => {
+            $('.jifen-not-enough').hide();
+          }, 2000);
+          return;
+        }
+        $('.item-list-jifen.selected').removeClass('selected');
+        $(this).addClass('selected');
+      })
+
+      // 确定选定积分按钮
+      $('.btn-choose-jifen').on('click', function () {
+        var text = $(currentOptionOrderDom).find('.discount-num').text();
+        if (text == '请选择' && tatalCount >= currentOptionCount && $('.item-list-jifen-use').hasClass('selected')) {
+          $(currentOptionOrderDom).find('.discount-num').text('-' + currentOptionCount);
+          tatalCount -= currentOptionCount;
+          $(currentOptionOrderDom).addClass('join-discount')
+        } else if (text != '请选择' && $('.item-list-notuse').hasClass('selected')) {
+          $(currentOptionOrderDom).find('.discount-num').text('请选择');
+          tatalCount += currentOptionCount;
+          $$(currentOptionOrderDom).removeClass('join-discount')
+        }
+        isShoWModel(false, '.model-box-jifen');
+        currentOptionCount = 0;
+      })
+
+      // 选择支付方式
+      $('body').on('click', '.item-list-pay-type', function () {
+        if($(this).hasClass('selected')){
+          return;
+        }
+        $('.item-list-pay-type.selected').removeClass('selected');
+        $(this).addClass('selected');
+      })
+
+      $(".btn-pay").on('click',function() {
+        getApplyData();
+      })
+    })
+
+    function isShoWModel(flag = true, selector, _this) { //flag为boolean
+      if (flag) {
+        $(selector).show();
+        if (_this) {
+          $('.item-list-notuse').addClass('selected');
+          $('.item-list-jifen-use').removeClass('selected');
+          currentOptionOrderDom = _this;
+          currentOptionCount = $(currentOptionOrderDom).find('.discount-value').text() * 1;
+        }
+      } else {
+        $(selector).hide();
+      }
+    }
+
+    // 获取提交支付的数据
+    function getApplyData(){
+      // 地址dom
+      var address_id = $('.address-box');
+      // 商店列表
+      $('.item-store-order').each(function(index,item){
+        // 商店
+        var store = $(this);
+        // 获取评论
+        var comments = $(this).find('.order_node');
+      })
+
+      // 积分商品ID
+      $('.join-discount').each(function() {
+        console.log(this);
+      })
+
+      var pay_type = $('.item-list-pay-type.selected')
+      console.log(pay_type);
+
+      isShoWModel(false,'.model-box-pay-type');//关闭模态框
+    }
+  </script>
+</body>
+
+</html>

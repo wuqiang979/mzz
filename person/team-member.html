@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>团队</title>
+    <script src="./../js/flexble.js"></script>
+    <script src="./../js/jquery.min.js"></script>
+    <script src="./../js/mescroll.min.js"></script>
+    <script src="./../js/utils.js"></script>
+    <link href="./../style/common.css" rel="stylesheet">
+    <link href="../style/team.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1070953_deg0dcw208s.css">
+</head>
+<body>
+    <div class="team-switch-bar">
+        <div class="team-switch-bar-item">
+            <div class="real-item real-item-active" id="member">直推人员(20)</div>
+        </div>
+        <div class="team-switch-bar-item">
+            <div class="real-item">区域人数(20)</div>
+        </div>
+    </div>
+    <div id="memberContent">
+        <div class="member-item">
+            <img src="">
+            <div class="info">
+                <div>听墨</div>
+                <div>ID:15136589855</div>
+                <div>旗下人数：124</div>
+                <div>注册日期：2018-05-15  10:25:10</div>
+            </div>
+        </div>
+    </div>
+    <div id="areaContent" style="display: none">
+        <a class="area-item">
+            <div class="area-item-title">
+                <div>
+                    <span class="title">四川省 成都市 武侯区 </span>
+                    <span>125人</span>
+                </div>
+                <div>
+                    <span>更多</span>
+                    <span>></span>
+                </div>
+            </div>
+            <div class="area-content">
+                <div class="area-content-item">
+                    <img src="">
+                    <div class="name">泉溪泉溪泉溪</div>
+                </div>
+                <div class="area-content-item">
+                        <img src="">
+                        <div class="name">泉溪泉溪泉溪</div>
+                    </div>
+                    <div class="area-content-item">
+                            <img src="">
+                            <div class="name">泉溪泉溪泉溪</div>
+                        </div>
+                        <div class="area-content-item">
+                                <img src="">
+                                <div class="name">泉溪泉溪泉溪</div>
+                            </div>
+                            <div class="area-content-item">
+                                    <img src="">
+                                    <div class="name">泉溪泉溪泉溪</div>
+                                </div>
+                                <div class="area-content-item">
+                                        <img src="">
+                                        <div class="name">泉溪泉溪泉溪</div>
+                                    </div>
+                                    <div class="area-content-item">
+                                            <img src="">
+                                            <div class="name">泉溪泉溪泉溪</div>
+                                        </div>
+                                        <div class="area-content-item">
+                                                <img src="">
+                                                <div class="name">泉溪泉溪泉溪</div>
+                                            </div>
+            </div>
+        </a>
+    </div>
+    <script>
+        $(function(){
+            $('.real-item').click(function() {
+                $('.real-item').removeClass('real-item-active');
+                $(this).addClass('real-item-active');
+                if (this.id === 'member') {
+                    $('#memberContent').css('display', 'block');
+                    $('#areaContent').css('display', 'none');
+                } else {
+                    $('#memberContent').css('display', 'none');
+                    $('#areaContent').css('display', 'block');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

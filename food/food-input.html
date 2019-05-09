@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>搜索</title>
+    <script src="./../js/flexble.js"></script>
+    <script src="./../js/jquery.min.js"></script>
+    <script src="./../js/utils.js"></script>
+    <link href="./../style/common.css" rel="stylesheet">
+    <link href="./../style/search.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1070953_deg0dcw208s.css">
+</head>
+<body>
+    <!-- 头部搜索框 -->
+    <header class="food-header">
+        <i class="iconfont icon-zuoyou1" data-click="back"></i>
+        <div>
+            <i class="iconfont icon-sousuo-copy"></i>
+            <input type="text" data-search="input" placeholder="请输入搜索内容">
+            <i class="iconfont icon-shanchu" style="display: none" data-search="delete"></i>
+        </div>
+        <span class="search" data-click="search">搜索</span>
+    </header>
+
+    <ul class="search-history">
+    </ul>
+    <script>
+        $(function() {
+            console.log(_utils.storageData.get())
+            let storageData = _utils.storageData.get()
+            // 复制渲染搜索记录
+            randerHistory = () => {
+                let _ele = '<li class="search-history__header"><span class="name">历史记录</span><p class="delete" data-delete="history"><i class="iconfont icon-shanchu1"></i><span>清除</span></p></li>'
+                storageData.food.forEach(e => {
+                    _ele += `<li class="search-history__item" data-link="search">${e}</li>`
+                })
+                $('.search-history').html(_ele)
+            }
+            randerHistory()
+
+            $('[data-click=back]').on('click', function () {
+                history.back(-1)
+            })
+
+            $('[ data-click=search]').on('click', function () {
+                let _text = $("[data-search=input]").val()
+                if (_text.trim()) {
+                    storageData.food.push(_text)
+                    _utils.storageData.set(storageData)
+                    randerHistory()
+                    // window.location.href = 'http://www.jb51.net?text' + $("[data-search=input]").val()
+                } else {
+                    _utils.toast('请输入搜索内容')
+                }
+            })
+            // 监听input
+            $("[data-search=input]").on("input",function(){
+                console.log(this.value)
+                if (this.value.trim()) {
+                    $('.icon-shanchu').css('display', 'inline-block')
+                } else {
+                    $('.icon-shanchu').css('display', 'none')
+                }
+            })
+
+            // 清空input
+            $("[data-search=delete]").on("click",function(){
+                // console.log(123)
+                $("[data-search=input]").val('')
+            })
+
+            // 清空
+            $(".search-history").on('click', '[data-delete=history]' ,function () {
+                console.log(this)
+                storageData.food = []
+                _utils.storageData.set(storageData)
+                randerHistory()
+            })
+
+            $(".search-history").on('click', '[data-link=search]' ,function (e) {
+                console.log($(e.target).text())
+                // window.location.href = 'http://www.jb51.net?text' + $(e.target).text()
+            })
+        })
+    </script>
+</body>
+</html>

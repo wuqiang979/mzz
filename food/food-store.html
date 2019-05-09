@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>美食</title>
+    <script src="./../js/flexble.js"></script>
+    <script src="./../js/jquery.min.js"></script>
+    <script src="./../js/utils.js"></script>
+    <link href="./../style/common.css" rel="stylesheet">
+    <link href="./../style/food-store.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1070953_deg0dcw208s.css">
+</head>
+<body>
+    <!-- 头部搜索框 -->
+    <header class="food-store">
+        <i class="iconfont icon-zuoyou1"></i>
+
+        <div class="food-store__img">
+            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+        </div>
+
+        <p class="food-store__name">川魂冒牌货冒菜(师范店)</p>
+
+        <p class="food-store__commont">
+            <span>评价度93%</span>
+            <span>营业时间: 8:00-22:00</span>
+        </p>
+    </header>
+
+    <section>
+        <nav class="food-store-nav">
+            <ul class="food-store-nav__list" data-click="sort">
+                <li data-type="1" class="food-store-nav__list-li food-store-nav__list-li_active">点餐</li>
+                <li data-type="2" class="food-store-nav__list-li">
+                    评价
+                    <span>240</span>
+                </li>
+                <li data-type="3" class="food-store-nav__list-li">商家</li>
+            </ul>
+        </nav>
+
+        <!-- 点餐 商家推荐-->
+        <div class="order">
+            <div class="scroll-x">
+                <header class="scroll-x__header">商家推荐</header>
+                <div class="scroll-x__box">
+                    <ul class="scroll-list">
+                        <li class="store-recommond">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                            <p class="store-recommond__name">腊肉蒜苔小份+米饭 + 水电费了水电费…</p>
+                            <p class="store-recommond__commond">好评度90%</p>
+                            <p class="store-recommond__price">￥16.5</p>
+
+                            <p class="setting-num" data-click="num">
+                                <i class="iconfont icon-jian1 reduce" style="display: none"></i>
+                                <span style="display: none">0</span>
+                                <i class="iconfont icon-jia add"></i>
+                            </p>
+                        </li>
+
+                        <li class="store-recommond">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                            <p class="store-recommond__name">腊肉蒜苔小份+米饭 + 水电费了水电费…</p>
+                            <p class="store-recommond__commond">好评度90%</p>
+                            <p class="store-recommond__price">￥16.5</p>
+
+                            <p class="setting-num" data-click="num">
+                                <i class="iconfont icon-jian1 reduce" style="display: none"></i>
+                                <span style="display: none">0</span>
+                                <i class="iconfont icon-jia add"></i>
+                            </p>
+                        </li>
+
+                        <li class="store-recommond">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                            <p class="store-recommond__name">腊肉蒜苔小份+米饭 + 水电费了水电费…</p>
+                            <p class="store-recommond__commond">好评度90%</p>
+                            <p class="store-recommond__price">￥16.5</p>
+
+                            <p class="setting-num" data-click="num">
+                                <i class="iconfont icon-jian1 reduce" style="display: none"></i>
+                                <span style="display: none">0</span>
+                                <i class="iconfont icon-jia add"></i>
+                            </p>
+                        </li>
+
+                        <li class="store-recommond">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                            <p class="store-recommond__name">腊肉蒜苔小份+米饭 + 水电费了水电费…</p>
+                            <p class="store-recommond__commond">好评度90%</p>
+                            <p class="store-recommond__price">￥16.5</p>
+                            <p class="setting-num" data-click="num">
+                                <i class="iconfont icon-jian1 reduce" style="display: none"></i>
+                                <span style="display: none">0</span>
+                                <i class="iconfont icon-jia add"></i>
+                            </p>
+                        </li>
+
+                        <li class="store-recommond">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                            <p class="store-recommond__name">腊肉蒜苔小份+米饭 + 水电费了水电费…</p>
+                            <p class="store-recommond__commond">好评度90%</p>
+                            <p class="store-recommond__price">￥16.5</p>
+                            <p class="setting-num" data-click="num">
+                                <i class="iconfont icon-jian1 reduce" style="display: none"></i>
+                                <span style="display: none">0</span>
+                                <i class="iconfont icon-jia add"></i>
+                            </p>
+                        </li>
+                        <li class="scroll-list__line"><p></p></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="hot-sell">
+                <ul class="hot-sell__aside" data-click="top">
+                    <li data-scroll="1" data-txt="热销" class="hot-sell__aside_item hot-sell__aside_item_active">
+                        热销
+                        <span class="setting-cell">1</span>
+                    </li>
+                    <li data-scroll="2" data-txt="铜锅洋芋饭" class="hot-sell__aside_item">铜锅洋芋饭<span class="setting-cell">1</span></li>
+                    <li data-scroll="3" data-txt="家常菜" class="hot-sell__aside_item">家常菜</li>
+                </ul>
+
+                <div class="hot-sell__scroll">
+                    <header class="hot-sell__scroll_header">热销</header>
+                    <dl data-scroll="1">
+                        <dt class="hot-sell__scroll_item_header">铜锅洋芋饭</dt>
+                        <dd class="hot-sell__scroll_item">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                            <p class="name">腊肉蒜苔小份+米饭…</p>
+                            <p class="commond">好评度90%</p>
+                            <p class="price">￥28.5</p>
+
+                            <p class="setting-num" data-click="num">
+                                <i class="iconfont icon-jian1 reduce" style="display: none"></i>
+                                <span style="display: none">0</span>
+                                <i class="iconfont icon-jia add"></i>
+                            </p>
+                        </dd>
+
+                        <dd class="hot-sell__scroll_item">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                            <p class="name">腊肉蒜苔小份+米饭…</p>
+                            <p class="commond">好评度90%</p>
+                            <p class="price">￥28.5</p>
+
+                            <p class="setting-num" data-click="num">
+                                <i class="iconfont icon-jian1 reduce" style="display: none"></i>
+                                <span style="display: none">0</span>
+                                <i class="iconfont icon-jia add"></i>
+                            </p>
+                        </dd>
+
+                        <dd class="hot-sell__scroll_item">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                            <p class="name">腊肉蒜苔小份+米饭…</p>
+                            <p class="commond">好评度90%</p>
+                            <p class="price">￥28.5</p>
+
+                            <p class="setting-num" data-click="num">
+                                <i class="iconfont icon-jian1 reduce" style="display: none"></i>
+                                <span style="display: none">0</span>
+                                <i class="iconfont icon-jia add"></i>
+                            </p>
+                        </dd>
+
+                        <dd class="hot-sell__scroll_item">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                            <p class="name">腊肉蒜苔小份+米饭…</p>
+                            <p class="commond">好评度90%</p>
+                            <p class="price">￥28.5</p>
+
+                            <p class="setting-num" data-click="num">
+                                <i class="iconfont icon-jian1 reduce" style="display: none"></i>
+                                <span style="display: none">0</span>
+                                <i class="iconfont icon-jia add"></i>
+                            </p>
+                        </dd>
+                    </dl>
+
+                    <dl data-scroll="2">
+                        <dt class="hot-sell__scroll_item_header">铜锅洋芋饭</dt>
+                        <dd class="hot-sell__scroll_item">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                            <p class="name">腊肉蒜苔小份+米饭…</p>
+                            <p class="commond">好评度90%</p>
+                            <p class="price">￥28.5</p>
+
+                            <p class="setting-num" data-click="num">
+                                <i class="iconfont icon-jian1 reduce" style="display: none"></i>
+                                <span style="display: none">0</span>
+                                <i class="iconfont icon-jia add"></i>
+                            </p>
+                        </dd>
+
+                        <dd class="hot-sell__scroll_item">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                            <p class="name">腊肉蒜苔小份+米饭…</p>
+                            <p class="commond">好评度90%</p>
+                            <p class="price">￥28.5</p>
+
+                            <p class="setting-num" data-click="num">
+                                <i class="iconfont icon-jian1 reduce" style="display: none"></i>
+                                <span style="display: none">0</span>
+                                <i class="iconfont icon-jia add"></i>
+                            </p>
+                        </dd>
+
+                        <dd class="hot-sell__scroll_item">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                            <p class="name">腊肉蒜苔小份+米饭…</p>
+                            <p class="commond">好评度90%</p>
+                            <p class="price">￥28.5</p>
+
+                            <p class="setting-num" data-click="num">
+                                <i class="iconfont icon-jian1 reduce" style="display: none"></i>
+                                <span style="display: none">0</span>
+                                <i class="iconfont icon-jia add"></i>
+                            </p>
+                        </dd>
+
+                        <dd class="hot-sell__scroll_item">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                            <p class="name">腊肉蒜苔小份+米饭…</p>
+                            <p class="commond">好评度90%</p>
+                            <p class="price">￥28.5</p>
+
+                            <p class="setting-num" data-click="num">
+                                <i class="iconfont icon-jian1 reduce" style="display: none"></i>
+                                <span style="display: none">0</span>
+                                <i class="iconfont icon-jia add"></i>
+                            </p>
+                        </dd>
+
+                        <dd class="hot-sell__scroll_item">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                            <p class="name">腊肉蒜苔小份+米饭…</p>
+                            <p class="commond">好评度90%</p>
+                            <p class="price">￥28.5</p>
+
+                            <p class="setting-num" data-click="num">
+                                <i class="iconfont icon-jian1 reduce" style="display: none"></i>
+                                <span style="display: none">0</span>
+                                <i class="iconfont icon-jia add"></i>
+                            </p>
+                        </dd>
+                    </dl>
+
+                    <dl data-scroll="3">
+                        <dt class="hot-sell__scroll_item_header">家常菜</dt>
+                        <dd class="hot-sell__scroll_item">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                            <p class="name">腊肉蒜苔小份+米饭…</p>
+                            <p class="commond">好评度90%</p>
+                            <p class="price">￥28.5</p>
+
+                            <p class="setting-num" data-click="num">
+                                <i class="iconfont icon-jian1 reduce" style="display: none"></i>
+                                <span style="display: none">0</span>
+                                <i class="iconfont icon-jia add"></i>
+                            </p>
+                        </dd>
+
+                        <dd class="hot-sell__scroll_item">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                            <p class="name">腊肉蒜苔小份+米饭…</p>
+                            <p class="commond">好评度90%</p>
+                            <p class="price">￥28.5</p>
+
+                            <p class="setting-num" data-click="num">
+                                <i class="iconfont icon-jian1 reduce" style="display: none"></i>
+                                <span style="display: none">0</span>
+                                <i class="iconfont icon-jia add"></i>
+                            </p>
+                        </dd>
+
+                        <dd class="hot-sell__scroll_item">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                            <p class="name">腊肉蒜苔小份+米饭…</p>
+                            <p class="commond">好评度90%</p>
+                            <p class="price">￥28.5</p>
+
+                            <p class="setting-num" data-click="num">
+                                <i class="iconfont icon-jian1 reduce" style="display: none"></i>
+                                <span style="display: none">0</span>
+                                <i class="iconfont icon-jia add"></i>
+                            </p>
+                        </dd>
+
+                        <dd class="hot-sell__scroll_item">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                            <p class="name">腊肉蒜苔小份+米饭…</p>
+                            <p class="commond">好评度90%</p>
+                            <p class="price">￥28.5</p>
+
+                            <p class="setting-num" data-click="num">
+                                <i class="iconfont icon-jian1 reduce" style="display: none"></i>
+                                <span style="display: none">0</span>
+                                <i class="iconfont icon-jia add"></i>
+                            </p>
+                        </dd>
+
+                        <dd class="hot-sell__scroll_item">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                            <p class="name">腊肉蒜苔小份+米饭…</p>
+                            <p class="commond">好评度90%</p>
+                            <p class="price">￥28.5</p>
+
+                            <p class="setting-num" data-click="num">
+                                <i class="iconfont icon-jian1 reduce" style="display: none"></i>
+                                <span style="display: none">0</span>
+                                <i class="iconfont icon-jia add"></i>
+                            </p>
+                        </dd>
+
+                        <dd class="hot-sell__scroll_item">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                            <p class="name">腊肉蒜苔小份+米饭…</p>
+                            <p class="commond">好评度90%</p>
+                            <p class="price">￥28.5</p>
+
+                            <p class="setting-num" data-click="num">
+                                <i class="iconfont icon-jian1 reduce" style="display: none"></i>
+                                <span style="display: none">0</span>
+                                <i class="iconfont icon-jia add"></i>
+                            </p>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <footer>
+                <div class="footer-box">
+                    <div class="footer-box__icon">
+                        <i class="iconfont icon-hezi"></i>
+                        <span class="setting-cell">1</span>
+                    </div>
+
+                    <div class="footer-box__news">
+                        <p class="price">￥28.5</p>
+                        <p class="txt">另需配送费5元/可自取</p>
+                    </div>
+
+                    <button class="footer-box__btn">去结算</button>
+                </div>
+            </footer>
+        </div>
+
+        <!-- 评价 -->
+        <div class="content-box" style="display: none;">
+            <div class="item-comments">
+                <div class="item-comments-info">
+                    <img class="user-face" src="../images/store/goods-img.png" alt="">
+                    <div class="user-info">
+                        <div class="phone-and-time">
+                            <span class="user-phone">180****1526</span>
+                            <span class="comments-time">2019-02-18</span>
+                        </div>
+                        <div class="comments-start">
+                            <i class="iconfont icon-xing"></i>
+                            <i class="iconfont icon-xing"></i>
+                            <i class="iconfont icon-xing"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-comments-content">
+                    <p class="content">好吃，就是我喜欢的味道~</p>
+                    <div class="img-box">
+                        <img src="../images/store/goods-img.png" alt="">
+                        <img src="../images/store/goods-img.png" alt="">
+                        <img src="../images/store/goods-img.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="item-comments">
+                <div class="item-comments-info">
+                    <img class="user-face" src="../images/store/goods-img.png" alt="">
+                    <div class="user-info">
+                        <div class="phone-and-time">
+                            <span class="user-phone">180****1526</span>
+                            <span class="comments-time">2019-02-18</span>
+                        </div>
+                        <div class="comments-start">
+                            <i class="iconfont icon-xing"></i>
+                            <i class="iconfont icon-xing"></i>
+                            <i class="iconfont icon-xing"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-comments-content">
+                  <p class="content">好吃，就是我喜欢的味道~</p>
+                  <div class="img-box">
+                    <img src="../images/store/goods-img.png" alt="">
+                    <img src="../images/store/goods-img.png" alt="">
+                    <img src="../images/store/goods-img.png" alt="">
+                  </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 商家 -->
+        <div class="font-store-business" style="display: none;">
+            <div class="scroll-x">
+                <header class="scroll-x__header">商家推荐</header>
+                <div class="scroll-x__box">
+                    <ul class="scroll-list">
+                        <li class="business-news">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                        </li>
+
+                        <li class="business-news">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                        </li>
+
+                        <li class="business-news">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                        </li>
+
+                        <li class="business-news">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                        </li>
+
+                        <li class="business-news">
+                            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                        </li>
+                        <li class="scroll-list__line"><p></p></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 定位 -->
+            <div class="font-store-business__position" id="wrapper">
+                <!-- <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt=""> -->
+            </div>
+
+            <ul class="font-store-business__news">
+                <li class="font-store-business__list">
+                    <span class="name">商家名称</span>
+                    <div class="right-box-name">
+                        <p>沙拉轻食意面</p>
+                        <p>(川音店)</p>
+                    </div>
+                </li>
+
+                <li class="font-store-business__list">
+                    <span class="name">经营品类</span>
+                    <div class="right-box-cell">
+                        <span>卤菜</span>
+                        <span>川菜</span>
+                    </div>
+                </li>
+
+                <li class="font-store-business__list">
+                    <span class="name">商家地址</span>
+                    <div class="right-box-name">
+                        <p>成都市青羊区太升南路265号</p>
+                    </div>
+                </li>
+
+                <li class="font-store-business__list">
+                    <span class="name">商家电话</span>
+                    <div class="right-box-phone">
+                        <i class="iconfont icon-dianhua"></i>
+                        <p>15106878766</p>
+                    </div>
+                </li>
+
+                <li class="font-store-business__list">
+                    <span class="name">营业时间</span>
+                    <div class="right-box-name">
+                        <p>08:00-22:00</p>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="font-store-business__aptitude">
+                营业资质
+
+                <p>
+                    <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                    <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                </p>
+            </div>
+
+            <button class="font-store-business__btn">投诉</button>
+        </div>
+    </section>
+
+    <!-- 底部导航 -->
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.3&key=e830e63116dd1c5d288fa7216463440c"></script>
+    <script>
+        $(function() {
+            let name = '川魂冒牌货冒菜(师范店)'
+            // var map = new AMap.Map('wrapper')
+            var map = new AMap.Map('wrapper', {
+                resizeEnable: true,
+                zoom: 17,//缩放级别
+                center: [104.0651392937, 30.5938602160],//地图显示中心点坐标，如果没有center属性，则会定位到你当前所处的位置
+                viewMode:'3D'//使用3D视图
+            })
+            new AMap.Marker({ //添加自定义点标记
+                map: map,
+                position: [104.0651392937, 30.5938602160], // 基点位置
+                offset: new AMap.Pixel(-75, -55), // 相对于基点的偏移位置
+                // draggable: true,  // 是否可拖动
+                content: `<div class="marker-marker-bus-from"><p>${name}</p><i class="iconfont icon-dingweiweizhi"></i></div>`   // 自定义点标记覆盖物内容
+            })
+            // 监听商品滚动
+            $('.hot-sell__scroll').scroll(function() {
+                // console.log($(this).scrollTop())
+                // console.log($(this).find('[data-scroll]').length)
+                let _eleNum = $(this).find('[data-scroll]').length
+                let _selectNum = 1
+                let _scrollTop = 0
+                for(let i = 0; i < _eleNum; i++) {
+                    _scrollTop += $($(this).find('[data-scroll]')[i]).height()
+                    // console.log($(this).scrollTop() > _scrollTop)
+                    if ($(this).scrollTop() >= _scrollTop) {
+                        _selectNum = i + 2
+                    }
+                }
+                // console.log(_selectNum)
+                let _isSelect = $('.hot-sell__aside').find(`[data-scroll=${_selectNum}]`).is('.hot-sell__aside_item_active')
+                if (!_isSelect) {
+                    $('.hot-sell__aside').find('.hot-sell__aside_item_active').removeClass('hot-sell__aside_item_active')
+                    $('.hot-sell__aside').find(`[data-scroll=${_selectNum}]`).addClass('hot-sell__aside_item_active')
+                }
+                let txt = $('.hot-sell__aside').find(`[data-scroll=${_selectNum}]`).attr('data-txt')
+                console.log(txt)
+                $('.hot-sell__scroll_header').text(txt)
+            })
+
+            // 切换商品分类
+            $('[data-click=top]').on('click', function (e) {
+                let _select = $(e.target).is('.hot-sell__aside_item') && !$(e.target).is('.hot-sell__aside_item_active')
+                
+                if (_select) {
+                    let scrollNum = Number($(e.target).attr('data-scroll'))
+                    let _eleNum = $('.hot-sell__scroll').find('[data-scroll]').length
+                    // console.log(_eleNum)
+                    let _scrollTop = 0
+                    for(let i = 0; i < _eleNum; i++) {
+                        if (scrollNum >= i + 2) {
+                            _scrollTop += $($('.hot-sell__scroll').find('[data-scroll]')[i]).height()
+                            console.log(scrollNum,i,scrollNum < i + 2, _scrollTop)
+                        }
+                    }
+                    $('.hot-sell__scroll').scrollTop(_scrollTop)
+                }
+            })
+
+            // 切换排序方式
+            $("[data-click=sort]").on('click', function (e) {
+                // 判断是否已经被选中
+                let _isSelect = $(e.target).is('.food-store-nav__list-li') && !$(e.target).is('.food-store-nav__list-li_active')
+
+                // 如果当前未被选中则执行
+                if (_isSelect) {
+                    $(this).find('.food-store-nav__list-li_active').removeClass('food-store-nav__list-li_active')
+                    $(e.target).addClass('food-store-nav__list-li_active')
+
+                    // 获取排序的type
+                    console.log($(e.target).attr("data-type") === '3')
+                    let _type = $(e.target).attr("data-type")
+
+                    if (_type === '1') {
+                        $('.order').css('display', 'block')
+                        $('.content-box').css('display', 'none')
+                        $('.font-store-business').css('display', 'none')
+                    } else if (_type === '2') {
+                        $('.order').css('display', 'none')
+                        $('.content-box').css('display', 'block')
+                        $('.font-store-business').css('display', 'none')
+                    } else if (_type === '3') {
+                        console.log(3)
+                        $('.order').css('display', 'none')
+                        $('.content-box').css('display', 'none')
+                        $('.font-store-business').css('display', 'block')
+                    }
+
+                    // 通过排排序的type去获得最新排序
+                    _utils.ajaxFun('POST', '/product/info', {
+                        TERMINAL: "WX",
+                        channel: "WX",
+                        productId: 111403,
+                        token: "3b56e54f6c5bfe41f2448beddfded90b"
+                    })
+                    .then(data => {
+                        console.log(data)
+                    })
+                }
+            })
+        
+            // 设置商品数量
+            $("[data-click=num]").on('click', function (e) {
+                if ($(e.target).is('.add')) {
+                    $(this).find('i:hidden,span:hidden').slideToggle("slow");
+                    let _num = Number($(e.target).prev().text())
+                    _num++
+                    $(e.target).prev().text(_num)
+                }
+
+                if ($(e.target).is('.reduce')) {
+                    let _num = Number($(e.target).next().text())
+                    if (_num >= 1) {
+                        _num--
+                    }
+                    $(e.target).next().text(_num)
+                    
+                    if (!_num) {
+                        $(this).find('.reduce,span').slideToggle("slow");
+                    }
+                }
+            })
+        })
+    </script>
+</body>
+</html>

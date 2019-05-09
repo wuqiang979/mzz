@@ -1,0 +1,527 @@
+body {
+  margin: 0 auto;
+  width: 10rem;
+  line-height: 1.5;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #f2f2f2; }
+
+.food-store {
+  margin-bottom: 0.26667rem;
+  padding: 0.8rem 0.26667rem 0.49333rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #FFF; }
+  .food-store .icon-zuoyou1 {
+    position: absolute;
+    top: 0.26667rem;
+    left: 0.26667rem;
+    font-size: 0.37333rem;
+    color: #333; }
+  .food-store__img {
+    margin: 0 auto;
+    width: 1.46667rem;
+    height: 1.46667rem; }
+    .food-store__img img {
+      width: 100%;
+      height: 100%; }
+  .food-store__name {
+    margin-top: 0.24rem;
+    text-align: center;
+    font-size: 0.42667rem;
+    font-weight: 600;
+    color: #333; }
+  .food-store__commont {
+    margin-top: 0.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .food-store__commont span {
+      font-size: 0.32rem;
+      font-weight: 400;
+      color: #999; }
+    .food-store__commont span:first-child {
+      margin-right: 0.53333rem; }
+
+.food-store-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  padding: 0 1.84rem;
+  background-color: #FFF;
+  border-bottom: 0.02667rem solid #f2f2f2; }
+  .food-store-nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .food-store-nav__list-li {
+      position: relative;
+      line-height: 1.17333rem;
+      font-size: 0.45333rem;
+      font-weight: 600;
+      color: #666; }
+      .food-store-nav__list-li span {
+        position: absolute;
+        bottom: 0.26667rem;
+        left: 1.06667rem;
+        font-size: 0.32rem;
+        line-height: 0.4rem;
+        font-weight: 400;
+        color: #999; }
+    .food-store-nav__list-li_active {
+      color: #FF6C00; }
+
+.scroll-x__box {
+  padding-bottom: 0.26667rem; }
+
+.store-recommond {
+  position: relative;
+  margin-right: 0.26667rem;
+  height: 6rem;
+  -webkit-box-shadow: 0px 0px 0.13333rem 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 0.13333rem 0px rgba(0, 0, 0, 0.1); }
+  .store-recommond img {
+    width: 3.86667rem;
+    height: 3.86667rem; }
+  .store-recommond__name {
+    margin-top: 0.10667rem;
+    width: 3.86667rem;
+    padding: 0 0.2rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 0.37333rem;
+    font-weight: 400;
+    color: #333;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    word-break: break-all; }
+  .store-recommond__commond {
+    margin-top: 0.10667rem;
+    padding: 0 0.2rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 0.29333rem;
+    font-weight: 400;
+    color: #999;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    word-break: break-all; }
+  .store-recommond__price {
+    margin-top: 0.13333rem;
+    padding: 0 0.2rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 0.45333rem;
+    font-weight: 400;
+    color: #FF6C00;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    word-break: break-all; }
+
+.setting-num {
+  position: absolute;
+  right: 0.2rem;
+  bottom: 0.06667rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .setting-num i {
+    font-size: 0.56rem;
+    color: #FF6C00; }
+  .setting-num span {
+    margin: 0 0.21333rem;
+    font-size: 0.45333rem;
+    font-weight: 600;
+    color: #333; }
+
+.hot-sell {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  padding-top: 0.26667rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+  .hot-sell__aside {
+    overflow-y: scroll;
+    width: 2.13333rem;
+    height: calc(100vh - 3.44rem); }
+    .hot-sell__aside li {
+      position: relative;
+      padding: 0.4rem 0.33333rem;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+      .hot-sell__aside li .setting-cell {
+        top: 0;
+        right: 0; }
+    .hot-sell__aside_item {
+      font-size: 0.37333rem;
+      font-weight: 600;
+      color: #666; }
+    .hot-sell__aside_item_active {
+      background-color: #FFF;
+      color: #333; }
+  .hot-sell__scroll {
+    width: 7.86667rem;
+    height: calc(100vh - 3.44rem);
+    background-color: #FFF;
+    overflow-y: scroll; }
+    .hot-sell__scroll_header {
+      position: absolute;
+      top: 0.26667rem;
+      left: 2.13333rem;
+      z-index: 1000;
+      width: 7.86667rem;
+      padding: 0.41333rem 0.4rem;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      background-color: #FFF;
+      font-size: 0.4rem;
+      font-weight: 600;
+      color: #333; }
+    .hot-sell__scroll_item {
+      position: relative;
+      height: 3.06667rem;
+      padding: 0.26667rem 0.26667rem 0.26667rem 3.06667rem;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      border-bottom: 0.02667rem solid #f2f2f2; }
+      .hot-sell__scroll_item img {
+        position: absolute;
+        left: 0.26667rem;
+        top: 0.26667rem;
+        width: 2.53333rem;
+        height: 2.53333rem; }
+      .hot-sell__scroll_item .name {
+        font-size: 0.37333rem;
+        font-weight: 600;
+        color: #333;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        word-break: break-all; }
+      .hot-sell__scroll_item .commond {
+        margin-top: 0.13333rem;
+        font-size: 0.29333rem;
+        font-weight: 400;
+        color: #999;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        word-break: break-all; }
+      .hot-sell__scroll_item .price {
+        margin-top: 0.70667rem;
+        font-size: 0.45333rem;
+        font-weight: 400;
+        color: #FF6C00;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        word-break: break-all; }
+    .hot-sell__scroll_item_header {
+      padding: 0.41333rem 0.4rem;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      font-size: 0.4rem;
+      font-weight: 600;
+      color: #333; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 2000;
+  padding-top: 0.18667rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 10rem;
+  height: 2rem;
+  background-color: #f2f2f2; }
+  footer .footer-box {
+    padding: 0 0.26667rem;
+    height: 1.30667rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #FFF;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative; }
+    footer .footer-box__icon {
+      position: relative; }
+      footer .footer-box__icon i {
+        font-size: 0.8rem;
+        color: #999; }
+      footer .footer-box__icon .setting-cell {
+        top: 0;
+        right: -0.2rem; }
+    footer .footer-box__news {
+      margin-left: 1.14667rem; }
+      footer .footer-box__news .price {
+        font-size: 0.48rem;
+        font-weight: 600;
+        color: #FF6C00; }
+      footer .footer-box__news .txt {
+        font-size: 0.29333rem;
+        font-weight: 400;
+        color: #999; }
+    footer .footer-box__btn {
+      position: absolute;
+      top: 0.12rem;
+      right: 0.26667rem;
+      width: 2.66667rem;
+      height: 1.06667rem;
+      line-height: 1.06667rem;
+      text-align: center;
+      background: -webkit-gradient(linear, left top, right top, from(#fe7602), to(#ff4b02));
+      background: linear-gradient(90deg, #fe7602 0%, #ff4b02 100%);
+      border-radius: 0.53333rem;
+      font-size: 0.4rem;
+      font-weight: 400;
+      color: #FFF;
+      border: none; }
+
+.content-box {
+  background: #fff; }
+  .content-box .item-comments {
+    width: 10rem;
+    padding: 0.33333rem;
+    border-bottom: 1px solid #f2f2f2; }
+    .content-box .item-comments .item-comments-info {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      height: 1.06667rem; }
+      .content-box .item-comments .item-comments-info img.user-face {
+        width: 0.74667rem;
+        height: 0.74667rem;
+        border-radius: 50%; }
+      .content-box .item-comments .item-comments-info .user-info {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        padding-left: 0.13333rem; }
+        .content-box .item-comments .item-comments-info .user-info .phone-and-time {
+          color: #666;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          font-size: 0.32rem; }
+          .content-box .item-comments .item-comments-info .user-info .phone-and-time .comments-time {
+            color: #999; }
+        .content-box .item-comments .item-comments-info .user-info .comments-start .iconfont {
+          font-size: 12px;
+          color: #FF6C00; }
+    .content-box .item-comments .item-comments-content {
+      padding-left: 0.88rem; }
+      .content-box .item-comments .item-comments-content .content {
+        margin: 0.4rem 0 0.13333rem;
+        color: #666;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        word-break: break-all;
+        -webkit-line-clamp: 3;
+        /*! autoprefixer: off */
+        -moz-box-orient: vertical;
+        -webkit-box-orient: vertical;
+        /*! autoprefixer: on */
+        font-size: 0.32rem;
+        line-height: 0.4rem; }
+      .content-box .item-comments .item-comments-content .img-box img {
+        margin-right: 0.13333rem;
+        margin-top: 0.13333rem; }
+  .content-box .item-comments:last-child {
+    border-bottom-color: transparent; }
+
+.font-store-business {
+  text-align: center; }
+  .font-store-business .business-news {
+    margin-right: 0.26667rem;
+    width: 2.26667rem;
+    height: 2.26667rem; }
+    .font-store-business .business-news img {
+      width: 2.26667rem;
+      height: 2.26667rem; }
+  .font-store-business__position {
+    margin-top: 0.26667rem;
+    width: 10rem;
+    height: 5rem; }
+    .font-store-business__position img {
+      width: 100%;
+      height: 100%; }
+  .font-store-business__news {
+    margin-top: 0.26667rem; }
+  .font-store-business__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    border-top: 0.02667rem solid #f2f2f2;
+    padding: 0.37333rem 0.26667rem;
+    background-color: #FFF;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+    .font-store-business__list .name {
+      color: #333;
+      font-size: 0.45333rem;
+      font-weight: 600; }
+    .font-store-business__list .right-box-name {
+      line-height: 0.48rem;
+      text-align: right;
+      color: #666;
+      font-size: 0.37333rem;
+      font-weight: 600; }
+    .font-store-business__list .right-box-cell {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .font-store-business__list .right-box-cell span {
+        padding: 0 0.26667rem;
+        height: 0.53333rem;
+        line-height: 0.53333rem;
+        border-radius: 0.26667rem;
+        border: 0.02667rem solid #FF6C00;
+        color: #FF6C00;
+        font-size: 0.32rem;
+        font-weight: 600; }
+      .font-store-business__list .right-box-cell span:last-child {
+        margin-left: 0.26667rem; }
+    .font-store-business__list .right-box-phone {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .font-store-business__list .right-box-phone i {
+        color: #FF6C00;
+        font-size: 0.53333rem;
+        font-weight: 600; }
+      .font-store-business__list .right-box-phone p {
+        margin-left: 0.26667rem;
+        color: #666;
+        font-size: 0.37333rem;
+        font-weight: 600; }
+  .font-store-business__aptitude {
+    position: relative;
+    margin-top: 0.26667rem;
+    margin-bottom: 0.33333rem;
+    padding: 0.37333rem 0.26667rem;
+    height: 1.6rem;
+    text-align: left;
+    background-color: #FFF;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 0.45333rem;
+    font-weight: 600; }
+    .font-store-business__aptitude p {
+      position: absolute;
+      top: 0.14667rem;
+      right: 0.26667rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .font-store-business__aptitude p img {
+        width: 1.33333rem;
+        height: 1.33333rem; }
+      .font-store-business__aptitude p img:last-child {
+        margin-left: 0.26667rem; }
+  .font-store-business__btn {
+    width: 9.2rem;
+    height: 1.17333rem;
+    border: none;
+    border-radius: 0.13333rem;
+    background-color: #FFF;
+    color: #333;
+    font-size: 0.48rem;
+    font-weight: bold; }
+
+.marker-marker-bus-from p {
+  min-width: 4rem;
+  padding: 0 0.26667rem;
+  height: 0.66667rem;
+  line-height: 0.66667rem;
+  background: #FFF;
+  -webkit-box-shadow: 0 0.05333rem 0.10667rem 0 #FF7869;
+  box-shadow: 0 0.05333rem 0.10667rem 0 #FF7869;
+  border-radius: 0.08rem; }
+
+.marker-marker-bus-from i {
+  font-size: 0.8rem;
+  color: #FF6C00; }

@@ -1,0 +1,87 @@
+body {
+  display: block;
+  background: #F2F2F2; }
+
+.store-index-search {
+  width: 10rem;
+  height: 1.17333rem;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 0.26667rem; }
+  .store-index-search .input-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 0.73333rem;
+    background: #F2F2F2;
+    border-radius: 0.37333rem;
+    padding: 0 0.26667rem;
+    width: 7.46667rem;
+    padding: 0 0.26667rem; }
+    .store-index-search .input-box .icon-sousuo-copy {
+      font-size: 0.4rem; }
+    .store-index-search .input-box input {
+      border: none;
+      outline: none;
+      background: none;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      color: #999;
+      margin-left: 0.14667rem;
+      font-size: 0.37333rem; }
+    .store-index-search .input-box input::-webkit-input-placeholder {
+      color: #999;
+      font-size: 0.37333rem; }
+    .store-index-search .input-box .btn-close {
+      padding: 0 0.13333rem 0 0.26667rem;
+      display: none; }
+
+.content-box {
+  margin-top: 0.26667rem;
+  width: 10rem;
+  background: #fff; }
+  .content-box .history-search .title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 0.26667rem;
+    height: 0.85333rem;
+    border-bottom: 1px solid #F2F2F2; }
+    .content-box .history-search .title .left {
+      font-size: 0.4rem;
+      color: #333; }
+    .content-box .history-search .title .right {
+      font-size: 0.32rem;
+      color: #A0A0A0; }
+      .content-box .history-search .title .right i {
+        color: #A0A0A0;
+        font-size: 0.32rem;
+        margin-right: 0.13333rem; }
+  .content-box .history-search .words-box p {
+    border-bottom: 1px solid #F2F2F2;
+    padding: 0 0.26667rem;
+    height: 1.17333rem;
+    line-height: 1.17333rem;
+    font-size: 0.37333rem;
+    color: #999; }

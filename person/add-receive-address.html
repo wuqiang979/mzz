@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>添加收货地址</title>
+    <script src="./../js/flexble.js"></script>
+    <script src="./../js/jquery.min.js"></script>
+    <script src="./../js/mescroll.min.js"></script>
+    <script src="./../js/utils.js"></script>
+    <link href="./../style/common.css" rel="stylesheet">
+    <link href="../style/add-receive-address.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1070953_deg0dcw208s.css">
+</head>
+
+<body>
+    <div class="add-adress">
+        <form action="" id="search-form2" ethod="post" onsubmit="return false">
+        <div class="person-name">
+            <span>收货人姓名</span><input placeholder="请输入姓名" type="text" name="consignee" value="{$info.consignee|default=''}" />
+        </div>
+        <div class="person-cell">
+            <span>收货人电话</span><input placeholder="请输入电话" type="number" name="mobile" value="{$info.mobile|default=''}" />
+        </div>
+        <div class="person-region" id="selectArea" onclick="myFunc.myModal('选择地址',{'type':'getRegion'},test)">
+            <span>所在区域</span>
+            <div id="area" class="area-selected">
+            {$region_list[$info['province']]['name']|default=""}{$region_list[$info['city']]['name']|default=""}{$region_list[$info['district']]['name']|default=""}
+            </div>
+            <input type="hidden" id="IdStr" name="regionIdStr" value="{$info.province|default=''},{$info.city|default=''},{$info.district|default=''}">
+        </div>
+        <div class="person-address">
+            <input placeholder="请输入详细地址" type="text" name="address"  value="{$info.address|default=''}" />
+            <input type="hidden"  name="address_id" value="{$info.address_id|default=''}">
+        </div>
+        </form>
+    </div>
+    <div class="submit-button">
+        <button type="submit" id="sum_bit">保存</button>
+    </div>
+    <script>
+        var nowLevel = 'province';
+        $('.area-modal-close').click(function() {
+            $('#areaModal').css('display', 'none');
+        });
+        // 选了层级，渲染面板
+        $('.area-level').click(function() {
+            $('.area-level').removeClass('bot-line');
+            $(this).addClass('bot-line');
+            nowLevel = $(this)[0].id;
+        });
+        $('.area-item').click(function() {
+            // 根据nowLevel做处理，如果是city级别，输出值，关闭弹框，其他则更新面板。
+        });
+        $(function() {
+            $('#selectArea').click(function() {
+                // 打开地址选择模态框
+                $('#areaModal').css('display', 'block');
+            });
+
+            $('#sum_bit').click(function () {
+                $.ajax({
+                    url:"{:url('mobile/store/addEditAddress')}",
+                    type:'post',
+                    data:$("#search-form2").serialize(),
+                    success:function(result){
+                        if(result.code===1){
+                            _utils.toast(result.msg)
+                        }else {
+                            _utils.toast(result.msg)
+                        }
+                    }});
+            })
+        });
+
+        function test(res){
+            $('#area').html(res.address);
+            $('#IdStr').val(res.province+','+res.city+','+res.district)
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

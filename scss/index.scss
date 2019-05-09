@@ -1,0 +1,135 @@
+@import './function.scss';
+
+body {
+    margin: 0 auto;
+    width: px2rem(750);
+    line-height: 1.5;
+    min-height: 100vh;
+    padding-bottom: px2rem(120);
+    box-sizing: border-box;
+    background-color: $__base__bg__color;
+}
+
+// 头部广告图
+.index-top {
+    width: 100%;
+    height: px2rem(375);
+
+    img {
+        width: 100%;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
+
+// 热销榜，推荐图片
+.index-header {
+    width: 100%;
+    padding: px2rem(14) px2rem(30);
+    display: block;
+    box-sizing: border-box;
+    background-color: #FFF;
+    text-align: center;
+
+    img {
+        width: px2rem(333);
+        height: px2rem(45);
+    }
+
+    i {
+        float: right;
+        font-size: px2rem(30);
+        color: $__font__color_three;
+    }
+}
+
+// 首页导航栏
+.index-nav {
+    @include flex-common(space-between);
+    width: 100%;
+    padding: px2rem(14) px2rem(32);
+    box-sizing: border-box;
+    background-color: #FFF;
+
+    &__item {
+        img {
+            width: px2rem(105);
+            height: px2rem(105);
+        }
+
+        p {
+            text-align: center;
+            font-size: px2rem(28);
+            font-weight: 500;
+            color: $__font__color_two;
+        }
+    }
+}
+
+
+// 热销榜
+.index-rehot {
+    margin: px2rem(20) 0;
+
+    &__list {
+        @include flex-common(space-between);
+        flex-wrap: wrap;
+
+    }
+
+    &__item {
+        position: relative;
+        margin-top: px2rem(3);
+        padding: px2rem(20);
+        width: px2rem(373);
+        height: px2rem(240);
+        box-sizing: border-box;
+        background-color: #FFF;
+        
+        .title {
+            margin-top: px2rem(-10);
+            @include overflow-hiding;
+            font-size: px2rem(32);  
+            font-weight: 500;
+            color: $__font__color_one;
+        }
+
+        .subtitle {
+            @include overflow-hiding;
+            height: px2rem(36);
+            font-size: px2rem(24);
+            font-weight: 400;
+            color: $__font__color_three;
+        }
+
+        .favourable {
+            display: inline-block;
+            margin-top: px2rem(15);
+            padding: 0 px2rem(12);
+            // height: px2rem(40);
+            // line-height: px2rem(40);
+            text-align: center;
+            font-size: px2rem(22);
+            border-radius: px2rem(22);
+            background-color: rgba($colorBase, 0.1);
+            color: $colorBase;
+        }
+
+        .price {
+            position: absolute;
+            bottom: px2rem(40);
+            // margin-top: px2rem(15);
+            font-size: px2rem(30);
+            font-weight: 500;
+            color: $colorBase;
+        }
+
+        img {
+            position: absolute;
+            bottom: px2rem(10);
+            right: px2rem(10);
+            width: px2rem(140);
+            height: px2rem(140);
+        }
+    }
+}

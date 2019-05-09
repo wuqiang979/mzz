@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的订单</title>
+    <script src="./../js/flexble.js"></script>
+    <script src="./../js/jquery.min.js"></script>
+    <script src="./../js/mescroll.min.js"></script>
+    <script src="./../js/utils.js"></script>
+    <link href="./../style/mescroll.min.css" rel="stylesheet">
+    <link href="./../style/common.css" rel="stylesheet">
+    <link href="../style/order.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1070953_deg0dcw208s.css">
+</head>
+<body>
+    <div class="status-lines">
+        <div>
+            <!-- 全部写死，我默认传空 -->
+            <div class="status-lines-item active-status-lines-item" onclick="_handleSwitchStatus(event,'')">全部</div>
+            <!-- 传下status的key到click -->
+            <div class="status-lines-item" onclick="_handleSwitchStatus(event,'key')">待使用</div>
+        </div>
+    </div>
+    <div id="mescroll" class="mescroll">
+        <!-- 嵌套DIV必留 -->
+        <div id="orderContainer">
+            <!-- 订单 -->
+            <div class="user-order-item">
+                <div class="order-title">
+                    <div>
+                        <!-- 店家头像 -->
+                        <img src="">
+                        <!-- 店名，店家跳转 -->
+                        <a class="main-name">阿达迪斯</a>
+                    </div>
+                    <div class="status">待付款</div>
+                </div>
+                <!-- 跳转详情 -->
+                <a class="_detail-jump">
+                    <!-- 食物 -->
+                    <div class="food-item">
+                        <img src="">
+                        <div class="food-item-info">
+                            <div>
+                                <div class="food-name">鱼香茄子</div>
+                                <div>￥16.00</div>
+                            </div>
+                            <div class="apps">
+                                <div>小份</div>
+                                <div>x2</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- 结账 -->
+                <div class="buy-info">
+                    <span class="count">共4件</span>
+                    <span>应付款:<span style="font-weight: bold">￥85.00</span></span>
+                </div>
+                <!-- 待付款 -->
+                <div class="order-opreate">
+                    <div class="order-opreate-item" style="color: #999;border-color: #999;">取消订单</div>
+                    <a class="order-opreate-item">付款</a>
+                </div>
+                <!-- 待使用 -->
+                <div class="order-opreate">
+                    <a class="order-opreate-item" style="color: #999;border-color: #999;" onclick="_handleRefund('orderId')">申请退款</a>
+                </div>
+                <!-- 待评价 -->
+                <div class="order-opreate">
+                    <a class="order-opreate-item">评价</a>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="area-modal short-modal" id="stockModal" style="display: none;">
+        <div class="area-content short-modal-content">
+            <div class="area-titel">
+                <span>退款</span>
+                <i class="area-modal-close iconfont icon-closes"></i>
+            </div>
+            <div class="stock-input-wrap">
+                <div>退款理由</div>
+                <textarea class="stock-input" id="refund"></textarea>
+            </div>
+            <div class="sub-button" id="refundSubmit">确定</div>
+        </div>
+    </div>
+    <script>
+        var _refundOrder = ''
+        function _handleRefund (id) {
+            _refundOrder = id;
+            $('#stockModal').css('display', 'block');
+        }
+        $('.area-modal-close').click(function() {
+            $('#stockModal').css('display', 'none');
+        });
+        
+        // 申请退款
+        $('#refundSubmit').click(function() {
+            var reason = $('#refund').val();
+            var id = _refundOrder;
+            // ajax
+        });
+        // 切换状态
+        function _handleSwitchStatus (e, key) {
+            $('.status-lines-item').removeClass('active-status-lines-item');
+            $(e.target).addClass('active-status-lines-item');
+        }
+    </script>
+</body>
+</html>

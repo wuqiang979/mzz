@@ -1,0 +1,189 @@
+@import './function.scss';
+
+body {
+    margin: 0 auto;
+    width: px2rem(750);
+    line-height: 1.5;
+    min-height: 100vh;
+    padding-bottom: px2rem(120);
+    box-sizing: border-box;
+    background-color: $__base__bg__color;
+}
+
+// 投诉页面头部
+.food-complain-header {
+    @include flex-common(flex-start);
+    height: px2rem(88);
+    padding: 0 px2rem(30);
+    box-sizing: border-box;
+    background-color: #FFF;
+    
+    &__img {
+        width: px2rem(60);
+        height: px2rem(60);
+        border-radius: px2rem(10);
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__name {
+        margin-left: px2rem(20);
+        font-size: px2rem(32);
+        font-weight: bold;
+        color: $__font__color_one;
+    }
+}
+
+// 投诉页面输入投诉内容
+.food-complain-details {
+    position: relative;
+    margin-top: px2rem(20);
+    padding: 0 px2rem(20);
+    box-sizing: border-box;
+    background-color: #FFF;
+
+    &__header {
+        height: px2rem(88);
+        @include flex-common(space-between);
+        border-bottom: px2rem(2) solid $__base__bg__color;
+
+        &_name {
+            font-size: px2rem(34);
+            font-weight: 600;
+            color: $__font__color_one;
+        }
+
+        &_select {
+            @include flex-common(flex-end);
+            font-size: px2rem(28);
+            font-weight: 600;
+            
+            i, span {
+                color: $__font__color_three;
+                margin-left: px2rem(10);
+            }
+        }
+    }
+
+    &__news_header {
+        padding-top: px2rem(26);
+        padding-bottom: px2rem(20);
+        font-size: px2rem(32);
+        font-weight: 600;
+        color: $__font__color_one;
+    }
+
+    &__news_img {
+        @include flex-common(flex-start);
+        flex-wrap: wrap;
+
+        li {
+            position: relative;
+            margin-right: px2rem(20);
+            margin-bottom: px2rem(20);
+            width: px2rem(170);
+            height: px2rem(170);
+            line-height: px2rem(170);
+            text-align: center;
+        }
+
+        li:last-child {
+            background-color: $__base__bg__color;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .icon-jia1 {
+            color: $__font__color_three;
+            font-size: px2rem(80);
+        }
+
+        .icon-shanchu {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: px2rem(30);
+            line-height: px2rem(30);
+            color: $__font__color_two;
+        }
+    }
+
+    &__news_input {
+        height: px2rem(200);
+        padding: px2rem(20) 0;
+        box-sizing: border-box;
+        border-top: px2rem(2) solid $__base__bg__color;
+
+        textarea {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            outline: 0;
+            resize: none;
+            font-size: px2rem(28);
+            color: $__font__color_one;
+        }
+    }
+
+    &__submit {
+        position: relative;
+        left: px2rem(10);
+        bottom: px2rem(-148);
+        width: px2rem(690);
+        height: px2rem(88);
+        border: 0;
+        background:linear-gradient(-18deg,rgba(255,108,0,1) 0%,rgba(255,150,0,1) 100%);
+        border-radius: px2rem(10);
+        font-size: px2rem(36);
+        font-weight: bold;
+        color: #FFF;
+    }
+}
+
+// 选择投诉类型
+.food-complain-type {
+    margin-top: px2rem(20);
+    padding: 0 px2rem(20);
+    box-sizing: border-box;
+    background-color: #FFF;
+    
+    &__item {
+        position: relative;
+        height: px2rem(120);
+        padding: px2rem(25) 0;
+        border-top: px2rem(2) solid $__base__bg__color;
+
+        .title {
+            font-size: px2rem(30);
+            font-weight: 400;
+            color: $__font__color_one;
+        }
+
+        .subtitle {
+            font-size: px2rem(24);
+            font-weight: 400;
+            color: $__font__color_three;
+        }
+
+        i {
+            position: absolute;
+            top: px2rem(40);
+            right: px2rem(20);
+            font-size: px2rem(40);
+            font-weight: 400;
+            color: $__base__bg__color;
+        }
+
+        .is_active {
+            color: $colorBase;
+        }
+    }
+
+}

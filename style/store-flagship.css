@@ -1,0 +1,135 @@
+body {
+  background: #F2F2F2; }
+
+.top-qijian-box {
+  background: #fff;
+  margin-bottom: 0.26667rem;
+  position: relative; }
+  .top-qijian-box .btn-back {
+    position: absolute;
+    top: 0.26667rem;
+    left: 0.26667rem;
+    font-size: 0.53333rem; }
+  .top-qijian-box .qijian-info {
+    width: 10rem;
+    height: 4rem;
+    text-align: center;
+    border-bottom: 1px solid #F2F2F2; }
+    .top-qijian-box .qijian-info .qijian-info-img {
+      padding: 0.97333rem 0 0.24rem 0; }
+      .top-qijian-box .qijian-info .qijian-info-img img {
+        width: 1.29333rem; }
+    .top-qijian-box .qijian-info .qijian-info-title {
+      color: #333;
+      font-size: 0.42667rem;
+      line-height: 0.45333rem; }
+    .top-qijian-box .qijian-info .qijian-info-comments {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-top: 0.26667rem;
+      color: #A0A0A0;
+      font-size: 0.32rem; }
+      .top-qijian-box .qijian-info .qijian-info-comments span:first-child {
+        margin-right: 0.53333rem; }
+  .top-qijian-box .qijian-choose {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 1.17333rem;
+    color: #333;
+    font-size: 0.45333rem; }
+    .top-qijian-box .qijian-choose .item-choose.selected {
+      color: #FF6C00; }
+    .top-qijian-box .qijian-choose i {
+      margin: 0 1.85333rem;
+      font-size: 0.34667rem;
+      font-weight: bold;
+      color: #F2F2F2; }
+
+.hot-sale-box {
+  background: #fff;
+  padding: 0 0.26667rem; }
+  .hot-sale-box .px2rem290 {
+    width: 3.86667rem; }
+  .hot-sale-box .hot-title {
+    font-size: 0.4rem;
+    line-height: 0.8rem; }
+  .hot-sale-box .hot-sale-goods {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    padding: 0.26667rem 0.13333rem; }
+    .hot-sale-box .hot-sale-goods .item-goods {
+      margin-right: 0.26667rem;
+      border: none;
+      -webkit-box-shadow: 0px 0px 0.13333rem 0px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 0px 0.13333rem 0px rgba(0, 0, 0, 0.1); }
+      .hot-sale-box .hot-sale-goods .item-goods .goods-img img {
+        width: 3.86667rem;
+        height: 3.86667rem; }
+    .hot-sale-box .hot-sale-goods .item-goods:last-child {
+      margin-right: 0; }
+
+.store-info {
+  width: 10rem; }
+  .store-info .info-list .item-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0rem 0.26667rem;
+    height: 1.17333rem;
+    border-bottom: 1px solid #F2F2F2;
+    background: #fff; }
+    .store-info .info-list .item-list .item-title {
+      font-size: 0.45333rem;
+      line-height: 1.17333rem;
+      color: #999; }
+    .store-info .info-list .item-list .item-title-value {
+      font-size: 0.37333rem;
+      color: #666; }
+      .store-info .info-list .item-list .item-title-value .icon-lianxikefu {
+        color: #FF6C00; }
+    .store-info .info-list .item-list.item-list-license {
+      height: auto;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: start;
+      margin-top: 0.26667rem; }
+      .store-info .info-list .item-list.item-list-license .item-title-license {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        width: 6.66667rem;
+        padding: 0.13333rem 0 0; }
+        .store-info .info-list .item-list.item-list-license .item-title-license img {
+          margin-left: 0.13333rem;
+          margin-bottom: 0.13333rem;
+          width: 1.33333rem;
+          height: 1.33333rem; }

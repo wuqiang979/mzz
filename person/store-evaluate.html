@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>评价</title>
+    <script src="./../js/flexble.js"></script>
+    <script src="./../js/jquery.min.js"></script>
+    <script src="./../js/mescroll.min.js"></script>
+    <script src="./../js/utils.js"></script>
+    <link href="./../style/common.css" rel="stylesheet">
+    <link href="../style/evaluate.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1070953_deg0dcw208s.css">
+</head>
+<body>
+    <!-- 商品信息，有多个,把商品ID绑定在goods-wrap上 -->
+    <div class="goods-wrap" id="id">
+        <div class="goods-info">
+            <img src="">
+            <div>
+                <div class="name">川魂冒牌货冒菜(师范店） 拷贝</div>
+                <div>
+                    <div class="mid">商品评价</div>
+                    <div class="star-wrap">
+                        <i class="iconfont icon-shoucang star-item"></i>
+                        <i class="iconfont icon-shoucang star-item"></i>
+                        <i class="iconfont icon-shoucang star-item"></i>
+                        <i class="iconfont icon-shoucang star-item"></i>
+                        <i class="iconfont icon-shoucang star-item"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="textarea-box" style="margin-top: 0">
+            <textarea maxlength="100" placeholder="请输入评价"></textarea>
+            <div class="bot-area">
+                <div class="img-wrap">
+                    <div class="trag">
+                        <img src="./../images/person/photo.png">
+                        <div>照片／视频</div>
+                    </div>
+                </div>
+                <div class="tips">100字</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="goods-wrap" id="id2">
+        <div class="goods-info">
+            <img src="">
+            <div>
+                <div class="name">川魂冒牌货冒菜(师范店） 拷贝</div>
+                <div>
+                    <div class="mid">商品评价</div>
+                    <div class="star-wrap">
+                        <i class="iconfont icon-shoucang star-item"></i>
+                        <i class="iconfont icon-shoucang star-item"></i>
+                        <i class="iconfont icon-shoucang star-item"></i>
+                        <i class="iconfont icon-shoucang star-item"></i>
+                        <i class="iconfont icon-shoucang star-item"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="textarea-box" style="margin-top: 0">
+            <textarea maxlength="100" placeholder="请输入评价"></textarea>
+            <div class="bot-area">
+                <div class="img-wrap">
+                    <div class="trag">
+                        <img src="./../images/person/photo.png">
+                        <div>照片／视频</div>
+                    </div>
+                </div>
+                <div class="tips">100字</div>
+            </div>
+        </div>
+    </div>
+    <div class="sub-btn" id="sub">发布评价</div>
+    <input type="file" style="display: none" id="fileSave">
+    <script>
+        var subList = [];  // 提交的评价
+        $('.goods-wrap').each(function(i, n) {
+            // 改成你们想要的字段，改了之后注意替换一下JS里面的字段名
+            subList.push({
+                imgs: [],     // 上传的图片组
+                content: '',  // 文本内容
+                goodsId: n.id,
+                star: 5   // 默认五颗星
+            });
+        });
+        $(function() {
+            var uploadIndex = 0;
+            $('.star-item').click(function() {
+                var starList = $(this).parent().find($('.star-item'));
+                var starLevel = starList.index($(this));
+                subList[$('.goods-wrap').index($(this).parents('.goods-wrap'))].star = starLevel + 1;
+                starList.removeClass('icon-shoucang').addClass('icon-shoucang2');
+                starList.slice(0, starLevel + 1).removeClass('icon-shoucang2').addClass('icon-shoucang');
+            });
+            $('.trag').click(function() {
+                $('#fileSave').click();
+                uploadIndex = $('.trag').index($(this));
+            });
+            $('#fileSave').change(function(e) {
+                var file = e.target.files[0];
+                if (subList[uploadIndex].imgs.length >= 3) {
+                    return
+                }
+                if (!(/^(gif|jpg|jpeg|png|gif|jpg|png)$/.test(file.name.split('.')[file.name.split('.').length - 1]))) {
+                    _utils.toast('请上传图片');
+                    return
+                }
+                if (file.size > 2 * 1024 * 1024) {
+                    _utils.toast('上传的图片请小于2M');
+                    return
+                }
+                var param = new FormData();
+                param.append('file', file);
+                $.ajax({
+                    url: 'http://47.92.29.189:9001/upload',
+                    data: param,
+                    method: 'post',
+                    processData: false,
+                    contentType: false,
+                    success: function(res) {
+                        if (res.code === 1) {
+                            subList[uploadIndex].imgs.push(res.fileUrl);
+                            const dom = '<img src="' + res.fileUrl +'" class="up-img">';
+                            $('.img-wrap').eq(uploadIndex).append(dom);
+                            e.target.value = '';
+                        } else {
+                            _utils.toast(res.msg);
+                        }
+                    }
+                });
+            });
+            $('#sub').click(function() {
+                $('textarea').each(function(i, n) {
+                    subList[i].content = $(n).val();
+                })
+                console.log(subList)
+            })
+        });
+    </script>
+</body>
+</html>

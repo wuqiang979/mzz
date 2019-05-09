@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta className="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的订单</title>
+    <script src="./../js/flexble.js"></script>
+    <script src="./../js/jquery.min.js"></script>
+    <script src="./../js/mescroll.min.js"></script>
+    <script src="./../js/utils.js"></script>
+    <link href="./../style/mescroll.min.css" rel="stylesheet">
+    <link href="./../style/common.css" rel="stylesheet">
+    <link href="../style/seller-store.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1070953_deg0dcw208s.css">
+</head>
+<body>
+    <div class="is-open">
+        <div>是否营业</div>
+        <div class="is-open-right">
+            <span class="open-tips">关闭后用户不能下单</span>
+            <div class="switch-bar" id="isOpen"></div>
+        </div>
+    </div>
+
+    <div class="gary-line"></div>
+
+    <div class="brand-toggle">
+        <div class="brand-toggle-item active-brand-toggle-item" id="brandShop">商品</div>
+        <div class="brand-toggle-item" id="brandDetail">详情</div>
+    </div>
+
+    <!-- 商品页面 -->
+    <div id="shopView">
+        <div class="type-lines">
+            <div>
+                <!-- 传下type的key,第一条才加active-type-lines-item -->
+                <div class="type-lines-item active-type-lines-item" onclick="_handleSwitchType(event,'hot')">热卖</div>
+                <div class="type-lines-item" onclick="_handleSwitchType(event,'hot1')">热卖</div>
+            </div>
+        </div>
+
+        <div id="mescroll" class="mescroll">
+            <!-- 嵌套DIV必留 -->
+            <div id="goodsContainer">
+                <div class="goods-item">
+                    <!-- 图片 -->
+                    <div><img src="" class="goodsImg"></div>
+                    <div>
+                        <!-- 名字 -->
+                        <div class="goods-name">41寸初学者吉他学生38寸新手通用练习41寸初学者吉他学生38寸新手通用练习习</div>
+                        <!-- 副标题 -->
+                        <div class="goods-apps">41寸初学者吉他学生38寸新手通用练习41寸初学者吉他学生38寸新手通用练习习</div>
+                        <!-- 是否上架 -->
+                        <div class="switch-bar-wrap">
+                            <div>是否上架</div>
+                            <!-- 同上渲染样式,传下商品ID -->
+                            <div class="switch-bar" onclick="_handlePush(event, 1)"></div>
+                        </div>
+                        <!-- 是否热卖 -->
+                        <div class="switch-bar-wrap">
+                            <div>是否热卖</div>
+                            <!-- 同上渲染样式,传下商品ID -->
+                            <div class="switch-bar" onclick="_handleHot(event, 1)"></div>
+                        </div>
+                        <!-- 设置库存 -->
+                        <div class="switch-bar-wrap">
+                            <div>库存10件</div>
+                            <!-- ID商品ID，num现在库存数 -->
+                            <div onclick="_handleStock(event, 'id', 'num')">设置库存 ></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 详情页面 -->
+    <div id="detailView" style="display: none">
+        <div class="detail-item">
+            <div>法人姓名</div>
+            <div class="detail-value">啊啊</div>
+        </div>
+        <div class="detail-item">
+            <div>注册电话</div>
+            <div class="detail-value">啊啊</div>
+        </div>
+        <div class="detail-item">
+            <div>店铺名称</div>
+            <div class="detail-value">啊啊</div>
+        </div>
+        <div class="detail-item">
+            <div>经营区域</div>
+            <div class="detail-value">啊啊</div>
+        </div>
+        <div class="detail-item">
+            <div>经营范围</div>
+            <div class="detail-value">啊啊</div>
+        </div>
+        <div class="detail-item">
+            <div>营业执照</div>
+            <div class="detail-value">
+                <img src="">
+            </div>
+        </div>
+        <div class="detail-item">
+            <div>食品安全卫生许可证号</div>
+            <div class="detail-value">啊啊</div>
+        </div>
+        <div class="detail-item">
+            <div>门店相册</div>
+            <div class="detail-value">
+                <img src="">
+            </div>
+        </div>
+        <div class="detail-item">
+            <div>营业时间</div>
+            <div class="detail-value">啊啊</div>
+        </div>
+        <div class="detail-item">
+            <div>是否支持外卖配送</div>
+            <div class="detail-value">啊啊</div>
+        </div>
+        <div class="detail-item" style="align-items: initial">
+            <div>门店描述</div>
+            <div class="detail-value">啊啊</div>
+        </div>
+    </div>
+
+     <div class="area-modal short-modal" id="stockModal" style="display: none;">
+        <div class="area-content short-modal-content">
+            <div class="area-titel">
+                <span>库存</span>
+                <i class="area-modal-close iconfont icon-closes"></i>
+            </div>
+            <div class="stock-input-wrap">
+                <div>设置库存</div>
+                <input type="text" class="stock-input" id="stock">
+            </div>
+            <div class="sub-button" id="stockSubmit">确定</div>
+        </div>
+    </div>
+     <script>
+        var _goodsFilter = {
+            type: 'hot',
+            pageNum: 1
+        }
+        var _stockBody = {
+            id: 1,
+            stock: 10
+        }
+        function _toggleSwitchClass (jqObj) {
+            if (jqObj[0].className === 'switch-bar') {
+                jqObj.addClass('switch-bar-open');
+            } else {
+                jqObj.removeClass('switch-bar-open');
+            }
+        }
+        function _isOpen (jqObj) {
+            return jqObj[0].className === 'switch-bar';
+        }
+        $('.area-modal-close').click(function() {
+            $('#stockModal').css('display', 'none');
+        });
+            //  处理swtich的样式变化
+        $('body').click(function(e) {
+            var targetClassName = ['switch-bar', 'switch-bar switch-bar-open'];
+            if (targetClassName.indexOf(e.target.className) >= 0) {
+                _toggleSwitchClass($(e.target));
+            }
+        });
+        $('#brandShop').click(function() {
+            $('#shopView').css('display', 'block');
+            $('#detailView').css('display', 'none');
+            $(this).addClass('active-brand-toggle-item');
+            $('#brandDetail').removeClass('active-brand-toggle-item');
+        });
+        $('#brandDetail').click(function() {
+            $('#shopView').css('display', 'none');
+            $('#detailView').css('display', 'block');
+            $(this).addClass('active-brand-toggle-item');
+            $('#brandShop').removeClass('active-brand-toggle-item');
+        });
+        
+        // 上架
+        function _handlePush(e, id) {
+            var bol = _isOpen($(e.target));
+            console.log(bol, id)
+        }
+        // 热销
+        function _handleHot(e, id) { 
+            var bol = _isOpen($(e.target));
+            console.log(bol, id)
+        }
+        // 库存
+        function _handleStock(e, id, stock) {
+            _stockBody.id = id;
+            _stockBody.stock = stock;
+            $('#stockModal').css('display', 'block');
+            $('#stock').val(stock);
+        }
+        // 切换类型
+        function _handleSwitchType(e, key) {
+            $('.type-lines-item').removeClass('active-type-lines-item');
+            $(e.target).addClass('active-type-lines-item');
+            _goodsFilter.type = key;
+            console.log(_goodsFilter)
+        }
+        // 是否营业
+        $('#isOpen').click(function() {
+            var bol = _isOpen($(this));
+            // _utils.ajaxFun().then()
+        });
+        $('#stockSubmit').click(function() {
+            // _utils.ajaxFun().then();
+            $('#stockModal').css('display', 'none');
+        })
+
+        // var mescroll = _utils.mescroll('post', '/product/discovery', {}, function(res) {
+        //     _goodsFilter.pageNum++
+        //     res.data.forEach(n => {
+        //         $('#goodsContainer').append('<div>' + n.title +'</div>')
+        //     })
+        // }, true, true);
+        // mescroll.resetUpScroll();
+     </script>
+</body>
+</html>

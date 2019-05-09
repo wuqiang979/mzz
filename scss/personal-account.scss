@@ -1,0 +1,42 @@
+@import './function.scss';
+
+body {
+    background-color: $__base__bg__color;
+    min-height: 100vh;
+    width: 100%;
+    padding-top: px2rem(20);
+}
+
+.account-list {
+    height: px2rem(350);
+    width: 100%;
+    background-color: white;
+    display: block;
+    a {
+        .title {
+            margin-left: px2rem(20);
+            font-size: px2rem(30);
+        }
+
+        .value {
+            font-size: px2rem(24);
+            color: $__font__color_two;
+        }
+        
+    li {
+        line-height: px2rem(85);
+        height: px2rem(88);
+        border-bottom: px2rem(1) solid $inputBgColor;
+        img {
+            width: px2rem(24);
+            height: px2rem(24);
+            float: right;
+            display: inline-block;
+            margin-top: px2rem(32);
+            margin-right: px2rem(20);
+        }
+        
+
+        }
+    }
+}

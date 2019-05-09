@@ -1,0 +1,205 @@
+@import './function.scss';
+
+body {
+    background-color: $__base__bg__color;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.food-user-order {
+    margin: 0 auto;
+    padding-top: px2rem(20);
+    height: px2rem(250);
+    width: 100%;
+
+    .food-user-order-title {
+        border-bottom: px2rem(1) solid $__base__bg__color;
+        display: block;
+        height: px2rem(90);
+        width: 100%;
+        background-color: white;
+
+        span {
+            font-size: px2rem(30);
+            line-height: px2rem(90);
+            color: #333333;
+            padding-left: px2rem(20);
+        }
+
+        a {
+            line-height: px2rem(90);
+            float: right;
+            padding-right: px2rem(20);
+            font-size: px2rem(24);
+            color: #A0A0A0;
+        }
+    }
+
+    .food-user-order-content {
+        background-color: white;
+        height: px2rem(160);
+        padding-top: px2rem(25);
+        display: flex;
+        justify-content: space-around;
+        font-size: px2rem(24);
+        color: #666666;
+
+        div {
+            height: px2rem(120);
+            width: px2rem(120);
+        }
+    }
+}
+
+.store-user-order {
+    margin: 0 auto;
+    height: px2rem(250);
+    width: 100%;
+    padding-top: px2rem(50);
+
+    .store-user-order-title {
+        border-bottom: px2rem(1) solid $__base__bg__color;
+        display: block;
+        height: px2rem(90);
+        width: 100%;
+        background-color: white;
+
+        span {
+            font-size: px2rem(30);
+            line-height: px2rem(90);
+            color: #333333;
+            padding-left: px2rem(20);
+        }
+
+        a {
+            line-height: px2rem(90);
+            float: right;
+            padding-right: px2rem(20);
+            font-size: px2rem(24);
+            color: #A0A0A0;
+        }
+    }
+
+    .store-user-order-content {
+        background-color: white;
+        height: px2rem(160);
+        padding-top: px2rem(25);
+        display: flex;
+        justify-content: space-around;
+        font-size: px2rem(24);
+        color: #666666;
+
+        div {
+            height: px2rem(120);
+            width: px2rem(120);
+        }
+    }
+}
+
+.store-order {
+    margin: 0 auto;
+    padding-top: px2rem(75);
+    height: px2rem(250);
+    width: 100%;
+
+    .store-order-title {
+        border-bottom: px2rem(1) solid $__base__bg__color;
+        display: block;
+        height: px2rem(90);
+        width: 100%;
+        background-color: white;
+
+        span {
+            font-size: px2rem(30);
+            line-height: px2rem(90);
+            color: #333333;
+            padding-left: px2rem(20);
+        }
+
+        a {
+            line-height: px2rem(90);
+            float: right;
+            padding-right: px2rem(20);
+            font-size: px2rem(24);
+            color: #A0A0A0;
+        }
+    }
+
+    .store-user-order-content {
+        background-color: white;
+        height: px2rem(160);
+        padding-top: px2rem(25);
+        display: flex;
+        justify-content: space-around;
+        font-size: px2rem(24);
+        color: #666666;
+
+        div {
+            height: px2rem(120);
+            width: px2rem(120);
+        }
+    }
+}
+
+.food-order {
+    margin: 0 auto;
+    padding-top: px2rem(100);
+    height: px2rem(250);
+    width: 100%;
+
+    .food-order-title {
+        border-bottom: px2rem(1) solid $__base__bg__color;
+        display: block;
+        height: px2rem(90);
+        width: 100%;
+        background-color: white;
+
+
+        span {
+            font-size: px2rem(30);
+            line-height: px2rem(90);
+            padding-left: px2rem(20);
+            color: #333333;
+        }
+
+        a {
+            line-height: px2rem(90);
+            float: right;
+            padding-right: px2rem(20);
+            font-size: px2rem(24);
+            color: #A0A0A0;
+        }
+    }
+
+    .food-order-content {
+        display: flex;
+        justify-content: space-around;
+        font-size: px2rem(24);
+        color: #666666;
+        background-color: white;
+        height: px2rem(160);
+        padding-top: px2rem(25);
+
+        div {
+            height: px2rem(120);
+            width: px2rem(120);
+        }
+    }
+}
+
+a {
+    display: block;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+
+    span {
+        font-size: px2rem(22);
+        color: #666666;
+    }
+
+    img {
+        width: px2rem(96);
+        height: px2rem(96);
+    }
+}

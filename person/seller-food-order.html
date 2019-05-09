@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户订单</title>
+    <script src="./../js/flexble.js"></script>
+    <script src="./../js/jquery.min.js"></script>
+    <script src="./../js/mescroll.min.js"></script>
+    <script src="./../js/utils.js"></script>
+    <link href="./../style/mescroll.min.css" rel="stylesheet">
+    <link href="./../style/common.css" rel="stylesheet">
+    <link href="../style/order.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1070953_deg0dcw208s.css">
+</head>
+<body>
+    <div class="status-lines">
+        <div>
+            <!-- 全部写死，我默认传空 -->
+            <div class="status-lines-item active-status-lines-item" onclick="_handleSwitchStatus(event,'')">全部</div>
+            <!-- 传下status的key到click -->
+            <div class="status-lines-item" onclick="_handleSwitchStatus(event,'key')">
+                <span>待使用</span>
+                <!-- 该状态的订单量 -->
+                <span class="count">3</span>
+            </div>
+        </div>
+    </div>
+    <div class="search-box">
+        <div class="input-wrap">
+            <i class="iconfont icon-sousuo-copy"></i>
+            <input type="text" id="search">
+            <i class="iconfont icon-shanchu" id="clearSearch"></i>
+        </div>
+        <div class="search-btn" id="startSearch">搜索</div>
+    </div>
+    <div id="mescroll" class="mescroll">
+        <!-- 嵌套DIV必留 -->
+        <div id="orderContainer">
+            <!-- 订单 -->
+            <div class="user-order-item">
+                <div class="order-title seller-order-title">
+                    <div>
+                        <div>
+                            <div class="main-name">订单号：2565655633</div>
+                            <div class="main-name" style="font-size: 12px;color: #999">下单时间：2019-02-05  12:20:10</div>
+                        </div>
+                    </div>
+                    <div class="status">待付款</div>
+                </div>
+                <!-- 跳转详情 -->
+                <a class="_detail-jump">
+                    <!-- 食物 -->
+                    <div class="food-item">
+                        <img src="">
+                        <div class="food-item-info">
+                            <div>
+                                <div class="food-name">鱼香茄子</div>
+                                <div>￥16.00</div>
+                            </div>
+                            <div class="apps">
+                                <div>小份</div>
+                                <div>x2</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- 结账 -->
+                <div class="buy-info">
+                    <span class="count">共4件</span>
+                    <span>应付款:<span style="font-weight: bold">￥85.00</span></span>
+                </div>
+                <!-- 待使用 -->
+                <div class="order-opreate">
+                    <div class="order-opreate-item" style="background: #FF6C00;color: #fff;">确认消费</div>
+                </div>
+                <!-- 完成 -->
+                <div class="order-opreate">
+                    <a class="order-opreate-item">查看评价</a>
+                </div>
+            </div>
+        </div>
+     </div>
+    <script>
+        // 切换状态
+        function _handleSwitchStatus (e, key) {
+            var obj = $(e.target);
+            if (obj[0].tagName !== 'DIV') {
+                obj = obj.parent();
+            }
+            $('.status-lines-item').removeClass('active-status-lines-item');
+            obj.addClass('active-status-lines-item');
+            // 切换状态之后把关键词清除了
+        }
+
+        // 搜索栏相关
+        $('#clearSearch').click(function() {
+            $('#search')[0].value = '';
+        });
+        $('#startSearch').click(function() {
+            let searchValue = $('#search').val();
+            // 和切换状态一样重置分页，保不保留订单状态看你们，保留了应该好些，要简单些
+        })
+    </script>
+</body>
+</html>

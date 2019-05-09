@@ -1,0 +1,81 @@
+@import './function.scss';
+
+body {
+    background-color: $__base__bg__color;
+    min-height: 100vh;
+}
+.star-icon{
+    display: inline-block;
+    color: red;
+    margin-top: px2rem(-20);
+
+}
+.data-input {
+    display: flex;
+    flex-direction: column;
+    margin-top: px2rem(18);
+    height: px2rem(616);
+    background-color: rgba(255, 255, 255, 1);
+
+    li {
+        height: px2rem(88);
+        border-bottom: px2rem(2) solid $inputBgColor;
+        color: #222222;
+        width: 100%;
+        font-size: px2rem(30);
+        padding-top: px2rem(30);
+
+        span {
+            vertical-align: middle;
+
+        }
+
+        ::-webkit-input-placeholder {
+            direction: rtl;
+            font-size: px2rem(24);
+
+        }
+
+        :-ms-input-placeholder {
+            direction: rtl;
+            font-size: px2rem(24);
+
+        }
+
+        :-moz-placeholder {
+            direction: rtl;
+            font-size: px2rem(24);
+
+        }
+
+        ::-moz-placeholder {
+            direction: rtl;
+            font-size: px2rem(24);
+
+        }
+
+        input {
+            display: inline-block;
+            float: right;
+            direction: rtl;
+        }
+
+    }
+}
+
+.submit-button {
+    margin-top: px2rem(353);
+    text-align: center;
+    button {
+        color: white;
+        background-color: transparent;
+        width: px2rem(623);
+        height: px2rem(111);
+        margin: 0;
+        padding: 0;
+        border: 0px solid transparent;
+        outline: none;
+        background-image: url("../images/submit_button.png");
+        background-size: cover;
+    }
+}

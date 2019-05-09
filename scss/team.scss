@@ -1,0 +1,127 @@
+@import './function.scss';
+
+body{
+    background: rgb(242,242,242);
+    overflow: hidden;
+}
+
+.team-switch-bar{
+    margin-top: px2rem(20);
+    height: px2rem(88);
+    display: flex;
+    align-items: center;
+    background: #fff;
+    .team-switch-bar-item{
+        flex: 1;
+        text-align: center;
+        font-size: px2rem(30);
+        color: #222;
+        .real-item{
+            display: inline-block;
+            line-height: px2rem(88);
+        }
+        .real-item-active{
+            border-bottom: 1px solid $colorBase;
+            color: $colorBase;
+        }
+    }
+}
+
+.member-item{
+    height: px2rem(180);
+    display: flex;
+    font-size: px2rem(24);
+    color: #666;
+    background: #fff;
+    padding: px2rem(20);
+    img{
+        display: block;
+        @include circle(px2rem(60));
+        margin-right: px2rem(20);
+    }
+    .info div{
+        line-height: px2rem(35);
+    }
+}
+
+.grade-item{
+    height: px2rem(240);
+    img{
+        margin-top: px2rem(15);
+    }
+    .info div{
+        line-height: px2rem(40);
+    }
+}
+
+.area-select{
+    margin-bottom: px2rem(20);
+    margin-top: px2rem(20);
+    height: px2rem(88);
+    padding: 0 px2rem(20);
+    display: flex;
+    // align-items: center;
+    justify-content: space-between;
+    // align-items: center;
+    color: #222;
+    font-size: px2rem(30);
+    background: #fff;
+    overflow: hidden;
+    .grade{
+        font-size: px2rem(24);
+        color: #999;
+        line-height: px2rem(88);
+    }
+    .sq{
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-left: px2rem(10) solid transparent;
+        border-right: px2rem(10) solid transparent;
+        border-top: px2rem(20) solid #222;
+        margin-top: px2rem(40);
+        margin-left: px2rem(15);
+    }
+}
+
+.area-item{
+    display: block;
+    margin-top: px2rem(20);
+    background: #fff;
+    .area-item-title{
+        height: px2rem(88);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 px2rem(20);
+        font-size: px2rem(24);
+        color: #999;
+        .title{
+            font-size: px2rem(30);
+            color: #333;
+        }
+    }
+    .area-content{
+        height: px2rem(270);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        .area-content-item{
+            width: px2rem(750/6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        img{
+            display: block;
+            @include circle(px2rem(60));
+        }
+        .name{
+            width: px2rem(96);
+            margin-top: px2rem(10);
+            @include overflow-hiding;
+            font-size: px2rem(24);
+            color: #666;
+        }
+    }
+}

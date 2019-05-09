@@ -1,0 +1,40 @@
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f2f2f2;
+  min-height: 100vh;
+  padding-top: 0.33333rem; }
+
+div {
+  background-color: #FFFFFF; }
+  div .give-detail {
+    padding-left: 0.24rem;
+    border-bottom: 0.01333rem solid #F2F2F2;
+    font-size: 0.4rem;
+    color: #222222;
+    height: 0.96rem;
+    line-height: 0.96rem;
+    width: 100%; }
+  div ul li {
+    width: 100%;
+    height: 1.33333rem;
+    border-bottom: 0.01333rem solid #F2F2F2; }
+    div ul li .title {
+      font-size: 0.4rem;
+      color: #222222;
+      padding-left: 0.24rem;
+      margin-top: 0.2rem;
+      display: block; }
+    div ul li .time {
+      font-size: 0.29333rem;
+      color: #999999;
+      display: block;
+      padding-left: 0.24rem;
+      margin-bottom: 0.24rem;
+      margin-top: 0.26667rem; }
+    div ul li .num {
+      font-size: 0.32rem;
+      color: #333333;
+      float: right;
+      margin-top: -1rem;
+      padding-right: 0.30667rem; }

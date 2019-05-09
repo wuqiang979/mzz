@@ -1,0 +1,124 @@
+.login-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 0.53333rem;
+  padding-bottom: 0.26667rem; }
+  .login-container .logo {
+    width: 2.44rem;
+    margin-bottom: 0.66667rem; }
+  .login-container .switch-wrap {
+    margin-bottom: 0.85333rem;
+    font-size: 0.37333rem;
+    color: #666; }
+    .login-container .switch-wrap .shu-line {
+      margin: 0 0.50667rem 0.16rem;
+      font-size: 0.32rem;
+      color: #999; }
+  .login-container .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 6.90667rem;
+    margin-top: 0.4rem;
+    font-size: 0.34667rem;
+    color: #666; }
+    .login-container .links i {
+      font-size: 0.26667rem; }
+  .login-container .login-title {
+    width: 7.86667rem;
+    margin-bottom: 0.32rem;
+    font-size: 0.42667rem;
+    color: #666; }
+
+.input-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 7.86667rem;
+  height: 1.17333rem;
+  padding-left: 0.49333rem;
+  margin-bottom: 0.53333rem;
+  font-size: 0.37333rem;
+  border-radius: 0.58667rem;
+  background: #F2F2F2; }
+  .input-wrap input {
+    display: inline-block;
+    width: 5.33333rem;
+    height: 0.66667rem;
+    margin-left: 0.24rem;
+    margin-right: 0.4rem;
+    border: none;
+    outline: none;
+    background: transparent; }
+  .input-wrap #smsCode {
+    width: 4rem;
+    height: 0.96rem;
+    border-right: 1px solid #E3E3E3; }
+  .input-wrap input:-webkit-placeholder {
+    color: #999; }
+  .input-wrap i {
+    font-size: 0.4rem;
+    color: #999; }
+  .input-wrap .area-selected {
+    color: #666;
+    width: 5.33333rem;
+    margin-left: 0.24rem;
+    margin-right: 0.4rem; }
+
+.sub-button {
+  width: 7.86667rem;
+  height: 1.17333rem;
+  font-size: 0.4rem;
+  text-align: center;
+  line-height: 1.17333rem;
+  border-radius: 0.58667rem;
+  color: #fff;
+  background: -webkit-gradient(linear, left top, right top, from(#FF9600), to(#FF6C00));
+  background: linear-gradient(to right, #FF9600, #FF6C00);
+  -webkit-box-shadow: 0 0.08rem 0.06667rem 0 rgba(255, 108, 0, 0.35);
+  box-shadow: 0 0.08rem 0.06667rem 0 rgba(255, 108, 0, 0.35); }
+
+.agreement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 7.86667rem;
+  margin-left: 0.53333rem;
+  font-size: 0.32rem;
+  color: #FF6C00; }
+  .agreement .agreement-circle {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    border: 1px solid #999;
+    margin-right: 0.29333rem; }
+  .agreement .agreement-circle-selected {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    border: 1px solid #FF6C00;
+    margin-right: 0.29333rem;
+    background: #FF6C00;
+    color: #fff; }
+    .agreement .agreement-circle-selected i {
+      font-size: 12px; }

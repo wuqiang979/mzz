@@ -1,0 +1,142 @@
+@import './function.scss';
+
+.content-box {
+  .content {
+    background: #fff;
+    padding: px2rem(20) 0 px2rem(98);
+
+    .item-content {
+      text-align: center;
+    }
+
+    .user-face {
+      img {
+        width: px2rem(100);
+        height: px2rem(100);
+        border-radius: 50%;
+      }
+    }
+
+    .user-name {
+      font-size: px2rem(32);
+      color: #333;
+      margin-top: px2rem(10);
+    }
+
+    .user-quotes {
+      font-size: px2rem(26);
+      color: #666;
+      margin-top: px2rem(19);
+    }
+
+    .invite-code {
+      font-size: px2rem(33);
+      color: #FF6C00;
+      margin-top: px2rem(37);
+    }
+
+    .invite-code-img {
+      margin-top: px2rem(37);
+
+      img {
+        padding: px2rem(6);
+        width: px2rem(400);
+      }
+    }
+
+    .tips1 {
+      font-size: px2rem(26);
+      color: #666;
+      margin-top: px2rem(7);
+      margin-bottom: px2rem(54);
+    }
+
+    .tips {
+      font-size: px2rem(24);
+      color: #999;
+      line-height: px2rem(38);
+    }
+  }
+
+  .btn-box {
+    @include flex-common;
+    margin-top: px2rem(88);
+    .btn-share {
+      width: px2rem(590);
+      height: px2rem(88);
+      background: linear-gradient(-36deg, rgba(255, 108, 0, 1) 0%, rgba(255, 150, 0, 1) 100%);
+      box-shadow: 0px 6px 9px 1px rgba(255, 200, 108, 0.35);
+      border-radius: 44px;
+      color: #fff;
+      font-size: px2rem(30);
+      text-align: center;
+      line-height: px2rem(88);
+    }
+  }
+}
+
+// 底部导航
+.footer {
+  height: px2rem(98);
+  width: px2rem(750);
+  background: #fff;
+}
+
+// 分享模态框
+.model-share{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: px2rem(750);
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  color: #fff;
+  .model-content{
+    width: px2rem(750);
+    height: 6rem;
+    position: absolute;
+    top: 50%;
+    margin-top: -3rem;
+    .forword-span{
+      position: fixed;
+      top: px2rem(-20);
+      right: px2rem(20);
+      .iconfont{
+        font-size: px2rem(200);
+        text-align: top;
+      }
+    }
+    .tips{
+      text-align: center;
+      margin-bottom: px2rem(50);
+      font-size: px2rem(36);
+      p{
+        margin-bottom: px2rem(20);
+        .icon-shouxiangshang{
+          font-size: px2rem(120);
+        }
+      }
+      p:last-child{
+        margin-bottom: 0;
+      }
+    }
+    .share-type{
+      @include flex-common;
+      span{
+        width: px2rem(100);
+        height: px2rem(100);
+        border-radius: px2rem(50);
+        background: #fff;
+        @include flex-common;
+        margin-right: px2rem(60);
+        img{
+          width: px2rem(60)
+        }
+      }
+      span:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+}

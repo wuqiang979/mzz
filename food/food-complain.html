@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>商家-投诉</title>
+    <script src="./../js/flexble.js"></script>
+    <script src="./../js/jquery.min.js"></script>
+    <script src="./../js/utils.js"></script>
+    <link href="./../style/common.css" rel="stylesheet">
+    <link href="./../style/food-complain.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1070953_dp7bcf1e9kq.css">
+</head>
+<body>
+    <header class="food-complain-header">
+        <div class="food-complain-header__img">
+            <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+        </div>
+        <span class="food-complain-header__name">川魂冒牌货冒菜(师范店)</span>
+    </header>
+
+    <!-- 输入投入内容-->
+    <section class="food-complain-details">
+        <header class="food-complain-details__header" data-click="switch">
+            <span class="food-complain-details__header_name">投诉类型</span>
+            <div class="food-complain-details__header_select">
+                <span class="type" data-show="type">请选择</span>
+                <i class="iconfont icon-zuoyou"></i>
+            </div>
+        </header>
+
+        <div class="food-complain-details__news">
+            <p class="food-complain-details__news_header">商家信息</p>
+
+            <ul class="food-complain-details__news_img">
+                <li><input type="file" id="upload" multiple style="display: none"><i class="iconfont icon-jia1" data-click="upload"></i></li>
+            </ul>
+
+            <div class="food-complain-details__news_input">
+                <textarea placeholder="投诉补充填写"></textarea>
+            </div>
+        </div>
+
+        <button class="food-complain-details__submit" data-click="submit">提交</button>
+    </section>
+
+    <!-- 选择类型 -->
+    <ul class="food-complain-type" style="display: none">
+        <li class="food-complain-type__item" data-click="select">
+            <p class="title">商家资质问题</p>
+            <p class="subtitle">商家缺少相关资质证书</p>
+            <i class="iconfont icon-xuanzhong"></i>
+        </li>
+
+        <li class="food-complain-type__item" data-click="select">
+            <p class="title">商家价格问题</p>
+            <p class="subtitle">商家缺少相关资质证书</p>
+            <i class="iconfont icon-xuanzhong"></i>
+        </li>
+
+        <li class="food-complain-type__item" data-click="select">
+            <p class="title">商家品类问题</p>
+            <p class="subtitle">商家缺少相关资质证书</p>
+            <i class="iconfont icon-xuanzhong"></i>
+        </li>
+
+        <li class="food-complain-type__item" data-click="select">
+            <p class="title">商家配送问题</p>
+            <p class="subtitle">商家缺少相关资质证书</p>
+            <i class="iconfont icon-xuanzhong"></i>
+        </li>
+
+        <li class="food-complain-type__item" data-click="select">
+            <p class="title">其它问题</p>
+            <p class="subtitle">商家缺少相关资质证书</p>
+            <i class="iconfont icon-xuanzhong"></i>
+        </li>
+    </ul>
+    <script>
+        $(function () {
+            // 投诉需要提交的信息
+            let params = {
+                imgs: [],
+                type: '',
+                txt: ''
+            }
+
+            // 切换至选择投诉类型
+            $('[data-click=switch]').on('click', function () {
+                $('.food-complain-details').css('display', 'none')
+                $('.food-complain-type').css('display', 'block')
+            })
+
+            // 选择投诉类型
+            $('[data-click=select]').on('click', function () {
+                console.log($(this).find('.is_active')[0])
+                if (!$(this).find('.is_active')[0]) {
+                    $('.is_active').removeClass('is_active')
+                    $(this).find('i').addClass('is_active')
+                    $('[data-show=type]').text($(this).find('.title').text())
+                    params.type = $(this).find('.title').text()
+                }
+                $('.food-complain-type').css('display', 'none')
+                $('.food-complain-details').css('display', 'block')
+            })
+
+            // 选择图片
+            $('.food-complain-details__news_img').on('click', '[data-click=upload]', function () {
+                if (params.imgs.length <= 4) {
+                    $('#upload').click()
+                } else {
+                    _utils.toast('最多4张图片')
+                }
+                let _upload = document.getElementById('upload');
+                upload.addEventListener('change', function() {
+                    for(let _file of upload.files) {
+                        let _param = new FormData()
+                        _param.append('file', _file)
+                        $.ajax({  
+                            url : "http://imgService.9000ji.com/upload",  
+                            type : "POST",  
+                            data: _param,
+                            processData: false, // 告诉jquery不要处理发送的数据
+                            contentType: false, // 告诉jquery不要设置content-Type请求头
+                            success : function(data) {  
+                                if (data.code) {
+                                    if (params.imgs.length < 4) {
+                                        params.imgs.push(data.fileUrl)
+                                    }
+                                    let _ele = ''
+                                    params.imgs.forEach((e, index) => {
+                                        _ele += `<li><img data-show="openimg" src="${e}" alt=""><i class="iconfont icon-shanchu" data-close="${index}"></i></li>`
+                                    })
+                                    
+                                    _ele += `<li><input type="file" id="upload" multiple style="display: none"><i class="iconfont icon-jia1" data-click="upload"></i></li>`
+                                
+                                    $('.food-complain-details__news_img').html(_ele)
+                                } else {
+                                    _utils.toast(data.msg)
+                                }
+                            }
+                        });
+                    }
+
+                    let _clone = upload.cloneNode(true);
+                    _clone.onchange = arguments.callee; //克隆不会复制动态绑定事件
+                    _clone.value = '';
+                    upload.parentNode.replaceChild(_clone, upload);
+                }, false);
+            })
+
+            // 删除图片
+            $('.food-complain-details__news_img').on('click', '[data-close]', function (e){
+                window.event? window.event.cancelBubble = true : e.stopPropagation()
+                params.imgs.splice(Number($(e.target).attr("data-close")), 1)
+                let _ele = ''
+                params.imgs.forEach((e, index) => {
+                    _ele += `<li><img data-show="openimg" src="${e}" alt=""><i class="iconfont icon-shanchu" data-close="${index}"></i></li>`
+                })
+                
+                _ele += `<li><input type="file" id="upload" multiple style="display: none"><i class="iconfont icon-jia1" data-click="upload"></i></li>`
+            
+                $('.food-complain-details__news_img').html(_ele)
+            })
+
+            // 展示图片
+            $('body').on('click', '[data-show=openimg], [data-show=closeimg]', function (e){
+                window.event? window.event.cancelBubble = true : e.stopPropagation()
+                console.log($(e.target).is('[data-show=openimg]'))
+                if ($(e.target).is('[data-show=openimg]')) {
+                    let _ele = `<div class="toast-show-img" data-show="closeimg"><img src="${$(e.target).attr("src")}" alt=""></div>`
+                    $('body').append(_ele)
+                } else if ($(e.target).is('[data-show=closeimg]')) {
+                    $(".toast-show-img").remove();
+                }
+            }) 
+
+            // 提交投诉
+            $('[data-click=submit]').on('click', function () {
+                console.log(params)
+            })
+        })
+    </script>
+</body>
+</html>

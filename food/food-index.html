@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>美食</title>
+    <script src="./../js/flexble.js"></script>
+    <script src="./../js/jquery.min.js"></script>
+    <script src="./../js/utils.js"></script>
+    <link href="./../style/common.css" rel="stylesheet">
+    <link href="./../style/food-index.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1070953_deg0dcw208s.css">
+</head>
+<body>
+    <!-- 头部搜索框 -->
+    <header class="search-header search-header_active">
+        <div class="search-header__area">
+            <span>青羊区</span>
+            <i class="iconfont icon-zuoyou-copy"></i>
+        </div>
+
+        <a class="search-header__link">
+            <i class="iconfont icon-sousuo-copy"></i>
+            <span>搜索商品和商家</span>
+        </a>
+    </header>
+
+    <nav class="nav-common" data-click="nav">
+        <ul class="nav-list">
+            <li class="nav-list__item nav-list__item_active">推荐</li>
+            <li class="nav-list__item">火锅</li>
+            <li class="nav-list__item">中餐</li>
+            <li class="nav-list__item">自助餐</li>
+            <li class="nav-list__item">蛋糕</li>
+            <li class="nav-list__item">奶茶</li>
+            <li class="nav-list__item" data-click="more"><span>更多</span><i class="iconfont icon-zuoyou-copy"></i></li>
+        </ul>
+
+        <ul class="nav-list_more" style="display: none;"  data-show="more">
+            <li class="nav-list_more__item">推荐</li>
+            <li class="nav-list_more__item">韩式烧烤</li>
+            <li class="nav-list_more__item">简阳羊肉汤锅</li>
+            <li class="nav-list_more__item">冒菜</li>
+            <li class="nav-list_more__item">西餐</li>
+            <li class="nav-list_more__item">寿司</li>
+            <li class="nav-list_more__item">肯德基</li>
+        </ul>
+    </nav>
+
+    <div class="food-index-ad">
+        <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+    </div>
+
+    <!--推荐商品 -->
+    <div class="recommond-food">
+        <header class="recommond-food__header">
+            <img src="./../images/index/img_ms_l.png" alt="">
+            <span>推荐美食</span>
+            <img src="./../images/index/img_ms_r.png" alt="">
+        </header>
+
+        <ul class="recommond-food__nav" data-click="sort">
+            <li data-type="1" class="recommond-food__nav_li recommond-food__nav_li_active">综合排序</li>
+            <li data-type="2" class="recommond-food__nav_li">销量排序</li>
+            <li data-type="3" class="recommond-food__nav_li">距离最近</li>
+        </ul>
+
+        <ul class="recommond-food__list">
+            <li class="recommond-food__item">
+                <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                <p class="title">川魂冒牌货冒菜(师范店）</p>
+                <p class="cell">
+                    <span>10年老店</span>
+                    <span>祖传秘方</span>
+                </p>
+                <p class="price">
+                    <span>起送￥5</span>
+                    <span>配送￥5</span>
+                </p>
+                <p class="time">营业时间: 8:00-22:00</p>
+
+                <span class="comment">好评90%</span>
+
+                <span class="distance">1.2km</span>
+
+                <i class="iconfont icon-dayang"></i>
+            </li>
+
+            <li class="recommond-food__item">
+                <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                <p class="title">川魂冒牌货冒菜(师范店）</p>
+                <p class="cell">
+                    <span>10年老店</span>
+                    <span>祖传秘方</span>
+                </p>
+                <p class="price">
+                    <span>起送￥5</span>
+                    <span>配送￥5</span>
+                </p>
+                <p class="time">营业时间: 8:00-22:00</p>
+
+                <span class="comment">好评90%</span>
+
+                <span class="distance">1.2km</span>
+            </li>
+
+            <li class="recommond-food__item">
+                <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                <p class="title">川魂冒牌货冒菜(师范店）</p>
+                <p class="cell">
+                    <span>10年老店</span>
+                    <span>祖传秘方</span>
+                </p>
+                <p class="price">
+                    <span>起送￥5</span>
+                    <span>配送￥5</span>
+                </p>
+                <p class="time">营业时间: 8:00-22:00</p>
+
+                <span class="comment">好评90%</span>
+
+                <span class="distance">1.2km</span>
+            </li>
+
+            <li class="recommond-food__item">
+                <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                <p class="title">川魂冒牌货冒菜(师范店）</p>
+                <p class="cell">
+                    <span>10年老店</span>
+                    <span>祖传秘方</span>
+                </p>
+                <p class="price">
+                    <span>起送￥5</span>
+                    <span>配送￥5</span>
+                </p>
+                <p class="time">营业时间: 8:00-22:00</p>
+
+                <span class="comment">好评90%</span>
+
+                <span class="distance">1.2km</span>
+            </li>
+
+            <li class="recommond-food__item">
+                <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                <p class="title">川魂冒牌货冒菜(师范店）</p>
+                <p class="cell">
+                    <span>10年老店</span>
+                    <span>祖传秘方</span>
+                </p>
+                <p class="price">
+                    <span>起送￥5</span>
+                    <span>配送￥5</span>
+                </p>
+                <p class="time">营业时间: 8:00-22:00</p>
+
+                <span class="comment">好评90%</span>
+
+                <span class="distance">1.2km</span>
+            </li>
+
+            <li class="recommond-food__item">
+                <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                <p class="title">川魂冒牌货冒菜(师范店）</p>
+                <p class="cell">
+                    <span>10年老店</span>
+                    <span>祖传秘方</span>
+                </p>
+                <p class="price">
+                    <span>起送￥5</span>
+                    <span>配送￥5</span>
+                </p>
+                <p class="time">营业时间: 8:00-22:00</p>
+
+                <span class="comment">好评90%</span>
+
+                <span class="distance">1.2km</span>
+            </li>
+
+            <li class="recommond-food__item">
+                <img src="https://img2.9000ji.com/20190216/688888154.jpg" alt="">
+                <p class="title">川魂冒牌货冒菜(师范店）</p>
+                <p class="cell">
+                    <span>10年老店</span>
+                    <span>祖传秘方</span>
+                </p>
+                <p class="price">
+                    <span>起送￥5</span>
+                    <span>配送￥5</span>
+                </p>
+                <p class="time">营业时间: 8:00-22:00</p>
+
+                <span class="comment">好评90%</span>
+
+                <span class="distance">1.2km</span>
+            </li>
+        </ul>
+    </div>
+
+    <ul class="bottom-tab">
+        <li class="bottom-tab__item">
+            <img src="./../images/tab/tab_icon_sy_.png" alt="">
+            <p class="mycolor">首页</p>
+        </li>
+
+        <li class="bottom-tab__item">
+            <img src="./../images/tab/tab_icon_lmsj.png" alt="">
+            <p>商家</p>
+        </li>
+
+        <li class="bottom-tab__item">
+            <img src="./../images/tab/tab_icon_fx.png" alt="">
+            <p>分享</p>
+        </li>
+
+        <li class="bottom-tab__item">
+            <img src="./../images/tab/tab_icon_grzx.png" alt="">
+            <p>个人中心</p>
+        </li>
+    </ul>
+
+    <!-- 底部导航 -->
+    <script>
+        $(function() {
+            // 显示更多的标签
+            $("[data-click=more]").on('click', function () {
+                window.event? window.event.cancelBubble = true : e.stopPropagation()
+                let _isOpen = $("[data-click=more] i").is('.icon-zuoyou-copy')
+                if (_isOpen) {
+                    $("[data-click=more] i").removeClass('icon-zuoyou-copy')
+                    $("[data-click=more] i").addClass('icon-zuoyou2')
+                } else {
+                    $("[data-click=more] i").removeClass('icon-zuoyou2')
+                    $("[data-click=more] i").addClass('icon-zuoyou-copy')
+                }
+                $("[data-show=more]").slideToggle("slow")
+            })
+
+            // 切换排序方式
+            $("[data-click=sort]").on('click', function (e) {
+                // 判断是否已经被选中
+                let _isSelect = $(e.target).is('.recommond-food__nav_li') && !$(e.target).is('.recommond-food__nav_li_active')
+
+                // 如果当前未被选中则执行
+                if (_isSelect) {
+                    $(this).find('.recommond-food__nav_li_active').removeClass('recommond-food__nav_li_active')
+                    $(e.target).addClass('recommond-food__nav_li_active')
+
+                    // 获取排序的type
+                    console.log($(e.target).attr("data-type"))
+                    let __type__ = $(e.target).attr("data-type")
+
+                    // 通过排排序的type去获得最新排序
+                    _utils.ajaxFun('POST', '/product/info', {
+                        TERMINAL: "WX",
+                        channel: "WX",
+                        productId: 111403,
+                        token: "3b56e54f6c5bfe41f2448beddfded90b"
+                    })
+                    .then(data => {
+                        console.log(data)
+                    })
+                }
+            })
+        
+            // 导航点击事件
+            $("[data-click=nav]").on('click', function (e) {
+                window.event? window.event.cancelBubble = true : e.stopPropagation()
+                if ($(e.target).is('.nav-list__item')) {
+                    if (!$(e.target).is('.nav-list__item_active')) {
+                       $('.nav-list__item_active').removeClass('nav-list__item_active')
+                       $('.nav-list_more__item_active').removeClass('nav-list_more__item_active')
+                       $(e.target).addClass('nav-list__item_active')
+                    }
+                } else if ($(e.target).is('.nav-list_more__item')) {
+                    console.log('132')
+                    if (!$(e.target).is('.nav-list_more__item_active')) {
+                       $('.nav-list__item_active').removeClass('nav-list__item_active')
+                       $('.nav-list_more__item_active').removeClass('nav-list_more__item_active')
+                       $(e.target).addClass('nav-list_more__item_active')
+                    }
+                }
+                $("[data-click=more] i").removeClass('icon-zuoyou2')
+                $("[data-click=more] i").addClass('icon-zuoyou-copy')
+                $("[data-show=more]").slideUp()
+            })
+        })
+    </script>
+</body>
+</html>

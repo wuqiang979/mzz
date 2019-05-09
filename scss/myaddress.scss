@@ -1,0 +1,59 @@
+@import './function.scss';
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: $__base__bg__color;
+}
+
+.address1 {
+    padding-top: px2rem(20);
+    height: px2rem(120);
+    background-color: white;
+
+    .name {
+        color: black;
+        font-size: px2rem(32);
+        margin-left: px2rem(22);
+    }
+
+    .address {
+        display: flex;
+        color: $__font__color_three;
+        font-size: px2rem(24);
+        margin-left: px2rem(22);
+        margin-top: px2rem(15);
+    }
+
+    button {
+        position: absolute;
+        display: inline;
+        border: none;
+        outline: none;
+        background-color: white;
+        color: $__font__color_three;
+        font-size: px2rem(24);
+        top: px2rem(20);
+        left: px2rem(682);
+    }
+}
+
+.new-address {
+    height: px2rem(90);
+    margin-top: px2rem(20);
+    background-color: white;
+    span {
+        position: fixed;
+        margin-top: px2rem(30);
+        margin-left: px2rem(20);
+        font-size: px2rem(30);
+    }
+
+    img {
+        position:fixed;
+        margin-left: px2rem(700);
+        margin-top: px2rem(30);
+        width: px2rem(30);
+        height: px2rem(30);
+    }
+}

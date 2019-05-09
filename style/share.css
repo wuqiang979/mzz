@@ -1,0 +1,125 @@
+.content-box .content {
+  background: #fff;
+  padding: 0.26667rem 0 1.30667rem; }
+  .content-box .content .item-content {
+    text-align: center; }
+  .content-box .content .user-face img {
+    width: 1.33333rem;
+    height: 1.33333rem;
+    border-radius: 50%; }
+  .content-box .content .user-name {
+    font-size: 0.42667rem;
+    color: #333;
+    margin-top: 0.13333rem; }
+  .content-box .content .user-quotes {
+    font-size: 0.34667rem;
+    color: #666;
+    margin-top: 0.25333rem; }
+  .content-box .content .invite-code {
+    font-size: 0.44rem;
+    color: #FF6C00;
+    margin-top: 0.49333rem; }
+  .content-box .content .invite-code-img {
+    margin-top: 0.49333rem; }
+    .content-box .content .invite-code-img img {
+      padding: 0.08rem;
+      width: 5.33333rem; }
+  .content-box .content .tips1 {
+    font-size: 0.34667rem;
+    color: #666;
+    margin-top: 0.09333rem;
+    margin-bottom: 0.72rem; }
+  .content-box .content .tips {
+    font-size: 0.32rem;
+    color: #999;
+    line-height: 0.50667rem; }
+
+.content-box .btn-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 1.17333rem; }
+  .content-box .btn-box .btn-share {
+    width: 7.86667rem;
+    height: 1.17333rem;
+    background: linear-gradient(-36deg, #ff6c00 0%, #ff9600 100%);
+    -webkit-box-shadow: 0px 6px 9px 1px rgba(255, 200, 108, 0.35);
+    box-shadow: 0px 6px 9px 1px rgba(255, 200, 108, 0.35);
+    border-radius: 44px;
+    color: #fff;
+    font-size: 0.4rem;
+    text-align: center;
+    line-height: 1.17333rem; }
+
+.footer {
+  height: 1.30667rem;
+  width: 10rem;
+  background: #fff; }
+
+.model-share {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10rem;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  color: #fff; }
+  .model-share .model-content {
+    width: 10rem;
+    height: 6rem;
+    position: absolute;
+    top: 50%;
+    margin-top: -3rem; }
+    .model-share .model-content .forword-span {
+      position: fixed;
+      top: -0.26667rem;
+      right: 0.26667rem; }
+      .model-share .model-content .forword-span .iconfont {
+        font-size: 2.66667rem;
+        text-align: top; }
+    .model-share .model-content .tips {
+      text-align: center;
+      margin-bottom: 0.66667rem;
+      font-size: 0.48rem; }
+      .model-share .model-content .tips p {
+        margin-bottom: 0.26667rem; }
+        .model-share .model-content .tips p .icon-shouxiangshang {
+          font-size: 1.6rem; }
+      .model-share .model-content .tips p:last-child {
+        margin-bottom: 0; }
+    .model-share .model-content .share-type {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .model-share .model-content .share-type span {
+        width: 1.33333rem;
+        height: 1.33333rem;
+        border-radius: 0.66667rem;
+        background: #fff;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-right: 0.8rem; }
+        .model-share .model-content .share-type span img {
+          width: 0.8rem; }
+      .model-share .model-content .share-type span:last-child {
+        margin-right: 0; }

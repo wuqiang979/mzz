@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户订单</title>
+    <script src="./../js/flexble.js"></script>
+    <script src="./../js/jquery.min.js"></script>
+    <script src="./../js/mescroll.min.js"></script>
+    <script src="./../js/utils.js"></script>
+    <link href="./../style/mescroll.min.css" rel="stylesheet">
+    <link href="./../style/common.css" rel="stylesheet">
+    <link href="../style/order.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1070953_deg0dcw208s.css">
+</head>
+<body>
+    <div class="status-lines">
+        <div>
+            <!-- 全部写死，我默认传空 -->
+            <div class="status-lines-item active-status-lines-item" onclick="_handleSwitchStatus(event,'')">全部</div>
+            <!-- 传下status的key到click -->
+            <div class="status-lines-item" onclick="_handleSwitchStatus(event,'key')">
+                    <span>待使用</span>
+                    <!-- 该状态的订单量 -->
+                    <span class="count">3</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mescroll" class="mescroll">
+        <!-- 嵌套DIV必留 -->
+        <div id="orderContainer">
+            <!-- 订单 -->
+            <div class="user-order-item">
+                <div class="order-title">
+                    <div>
+                        <div>
+                            <div class="main-name">订单号：2565655633</div>
+                            <div class="main-name" style="font-size: 12px;color: #999">下单时间：2019-02-05  12:20:10</div>
+                        </div>
+                    </div>
+                    <div class="status">待付款</div>
+                </div>
+                <!-- 跳转详情 -->
+                <a class="_detail-jump">
+                    <!-- 商品 -->
+                    <div class="food-item store-item">
+                        <img src="">
+                        <div class="food-item-info">
+                            <div>
+                                <div class="store-name">鱼香茄子鱼香茄子鱼香茄子鱼香茄子鱼香茄子鱼香茄子鱼香茄子</div>
+                                <div>￥16.00</div>
+                            </div>
+                            <div class="apps">
+                                <div>小份</div>
+                                <div>x2</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- 结账 -->
+                <div class="buy-info">
+                    <span class="count">共4件商品</span>
+                    <span>已付款:<span style="font-weight: bold">￥85.00</span></span>
+                </div>
+                <!-- 待发货 -->
+                <div class="order-opreate">
+                    <div class="order-opreate-item" onclick="_handleSend('orderId')">发货</div>
+                </div>
+                <!-- 已完成 -->
+                <div class="order-opreate">
+                    <a class="order-opreate-item">查看评价</a>
+                </div>
+                <!-- 待退款 -->
+                <div class="order-opreate">
+                    <div class="order-opreate-item">驳回申请</div>
+                    <div class="order-opreate-item">同意退款</div>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="area-modal short-modal" id="stockModal" style="display: none;">
+        <div class="area-content short-modal-content send-modal">
+            <div class="area-titel">
+                <span>发货</span>
+                <i class="area-modal-close iconfont icon-closes"></i>
+            </div>
+            <input class="send-input" placeholder="请输入物流" id="sendMethod">
+            <input class="send-input" placeholder="请输入物流单号" id="sendNum">
+            <div class="sub-button send-sub-btn" id="refundSubmit">确定</div>
+        </div>
+    </div>
+    <script>
+        var _sendOrder = ''
+        function _handleSend (id) {
+            _sendOrder = id;
+            $('#stockModal').css('display', 'block');
+        }
+        $('.area-modal-close').click(function() {
+            $('#stockModal').css('display', 'none');
+        });
+        
+        // 发货
+        $('#refundSubmit').click(function() {
+            var sendMethod = $('#sendMethod').val();
+            var sendNum = $('#sendNum').val();
+            if (!sendMethod || !sendNum) {
+                _utils.toast('请将信息填写完整');
+                return
+            }
+            var id = _sendOrder;
+            // ajax
+        });
+        // 切换状态
+        function _handleSwitchStatus (e, key) {
+            var obj = $(e.target);
+            if (obj[0].tagName !== 'DIV') {
+                obj = obj.parent();
+            }
+            $('.status-lines-item').removeClass('active-status-lines-item');
+            obj.addClass('active-status-lines-item');
+        }
+    </script>
+</body>
+</html>

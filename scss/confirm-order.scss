@@ -1,0 +1,408 @@
+@import './function.scss';
+
+a {
+  text-decoration: none !important;
+}
+
+body {
+  @include flex-common;
+  flex-direction: column;
+  height: 100vh;
+  width: px2rem(750);
+  margin: 0 auto !important;
+  background: #F2F2F2;
+
+  .icon-xuanzhong {
+    color: $colorBase
+  }
+}
+
+
+
+// 内容区域
+.content-box {
+  .content-bg-box {
+    padding: 0 px2rem(20) px2rem(20);
+    background: url('../images/store/confirm-order-bg_img@2x.png') no-repeat center -2px;
+    background-size: contain;
+    position: relative;
+
+    .btn-back {
+      position: absolute;
+      padding: px2rem(10);
+      top: px2rem(10);
+      left: px2rem(10);
+
+      .icon-zuoyou1 {
+        font-size: px2rem(40);
+        color: #fff;
+      }
+    }
+
+    .adress-info {
+      color: #fff;
+      font-size: px2rem(30);
+      padding: px2rem(42) px2rem(20) px2rem(30) px2rem(10);
+
+      .item-content {
+        @include flex-common;
+
+        .left-span {
+          height: 100%;
+          width: px2rem(56);
+
+          i {
+            font-size: px2rem(46);
+          }
+        }
+
+        .right-div {
+          flex: 1;
+          @include flex-common(space-between, flex-start);
+          font-size: px2rem(28);
+
+          span {
+            line-height: px2rem(38);
+          }
+
+          .name-phone {
+            font-size: px2rem(30);
+
+            span {
+              margin-right: px2rem(20);
+            }
+          }
+
+          .icon-zuoyou {
+            padding: px2rem(6) 0 px2rem(6) px2rem(6);
+            font-size: px2rem(30);
+          }
+        }
+      }
+    }
+
+    .item-store-order {
+      border-radius: px2rem(10);
+      background: #fff;
+      margin-bottom: px2rem(20);
+
+      .item-order-store-info {
+        width: px2rem(710);
+        padding: px2rem(20);
+        transition: all 0.4s ease-out;
+        @include flex-common(space-between);
+
+        .item-order-right {
+          @include flex-common(space-between);
+          flex: 1;
+
+          .shop-face-name {
+            img {
+              width: px2rem(50);
+              margin-right: px2rem(10);
+            }
+
+            .store-name {
+              font-size: px2rem(34);
+              color: $__font__color_one;
+            }
+          }
+        }
+      }
+
+      // 订单列表
+      .item-order-box {
+        .item-order-list {
+          border-bottom: 1px solid $inputBgColor;
+
+          .item-order-content {
+            width: px2rem(710);
+            padding: px2rem(20);
+            transition: all 0.3s ease-out;
+            @include flex-common(space-between);
+            position: relative;
+            z-index: 10;
+            background: #fff;
+
+            // 订单列表中得样式
+            .order-goods-img {
+              width: px2rem(180);
+              height: px2rem(180)
+            }
+
+            // 订单信息
+            .order-goods-info {
+              width: px2rem(468);
+              height: px2rem(180);
+              @include flex-common(space-between, start);
+              flex-direction: column;
+
+              .order-goods-title {
+                @include overflow-hiding-more;
+                font-size: px2rem(28);
+                color: #222;
+                line-height: px2em(29);
+              }
+
+              .order-goods-selcted {
+                font-size: px2rem(24);
+                color: $__font__color_three;
+                padding: 0 px2rem(10);
+              }
+
+              .order-goods-option {
+                @include flex-common(space-between);
+                width: 100%;
+                font-size: px2rem(28);
+
+                .money {
+                  color: $colorBase;
+                }
+
+                .goods-num {
+                  font-size: px2rem(34)
+                }
+              }
+            }
+          }
+
+          .discount-box {
+            @include flex-common(space-between);
+            margin: 0 auto;
+            height: px2rem(88);
+            width: px2rem(670);
+            border-top: 1px solid #F2F2F2;
+            color: $__font__color_one;
+            font-size: px2rem(30);
+
+            .color999 {
+              color: $__font__color_three;
+
+              .iconfont {
+                font-size: px2rem(30);
+              }
+            }
+          }
+        }
+      }
+
+      // 该商城订单总计
+      .store-count-info {
+        padding: 0 px2rem(20);
+
+        .flex-space-between {
+          @include flex-common(space-between);
+        }
+
+        .item-info {
+          font-size: px2rem(30);
+          color: $__font__color_one;
+          border-bottom: 1px solid #F2F2F2;
+          height: px2rem(88);
+          line-height: px2rem(88);
+        }
+
+        .order-note {
+          height: auto;
+
+          .iconfont {
+            font-size: px2rem(30);
+            padding-left: px2rem(20);
+          }
+
+          .order_node {
+            width: 100%;
+            padding: px2rem(5);
+            border-radius: px2rem(4);
+            display: none;
+            border: 1px solid #F2F2F2;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 底部导航+功能按钮
+.footer-box {
+  width: px2rem(750);
+  background: #fff;
+  box-shadow: 0px 0px px2rem(5) 0px rgba(0, 0, 0, 0.1);
+
+  .nav-box {
+    @include flex-common(space-between);
+    height: px2rem(98);
+    width: px2rem(710);
+    margin: 0 auto;
+
+    .footer-option {
+      font-size: px2rem(30);
+      color: $__font__color_three;
+
+      .iconfont {
+        font-size: px2rem(34);
+      }
+    }
+
+    .money-and-option {
+      @include flex-common;
+      font-size: px2rem(36);
+      color: $__font__color_one;
+
+      .total-money {
+        color: $colorBase;
+      }
+
+      .btn-submit-order {
+        width: px2rem(200);
+        height: px2rem(80);
+        background: linear-gradient(90deg, rgba(254, 118, 2, 1) 0%, rgba(255, 75, 2, 1) 100%);
+        border-radius: px2rem(40);
+        text-align: center;
+        line-height: px2rem(80);
+        color: #fff;
+        font-size: px2rem(30);
+        margin-left: px2rem(28);
+      }
+    }
+  }
+}
+
+// 模态弹窗 选着商品信息+选择支付
+.model-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.16);
+
+  display: none;
+  .model-content {
+    width: px2rem(750);
+    height: px2rem(590);
+    background: #fff;
+    // padding: 0 px2rem(20) px2rem(20);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: px2rem(-375);
+
+    .warnning {
+      position: absolute;
+      top: px2rem(-174);
+      @include flex-common;
+      width: px2rem(750);
+      span {
+        display: none;
+        width: px2rem(280);
+        height: px2rem(60);
+        background: #000;
+        border-radius: px2rem(10);
+        text-align: center;
+        line-height: px2rem(60);
+        font-size: px2rem(30);
+        color: #fff;
+      }
+    }
+
+    .model-title,
+    .item-list-jifen,
+    .item-list-pay-type {
+      @include flex-common(space-between);
+      height: px2rem(88);
+      border-bottom: 1px solid #F2F2F2;
+      font-size: px2rem(32);
+      color: #222;
+
+      .iconfont {
+        font-size: px2rem(20);
+      }
+    }
+
+    .model-title {
+      justify-content: center;
+      position: relative;
+
+      .title {
+        position: relative;
+
+        .rate {
+          position: absolute;
+          font-size: px2rem(22);
+          color: $__font__color_three;
+          margin-left: px2rem(5);
+          bottom: 0;
+          width: max-content;
+        }
+      }
+
+      .btn-close {
+        position: absolute;
+        padding: 0 px2rem(20);
+        top: px2rem(0);
+        height: px2rem(88);
+        line-height: px2rem(88);
+        right: 0;
+      }
+    }
+
+    .item-box {
+      padding: 0 px2rem(20);
+
+      .icon-span {
+        display: none;
+      }
+
+      .selected {
+        .icon-span {
+          display: block;
+        }
+      }
+      .item-list-pay-type{
+        font-size: px2rem(34);
+        font-weight: bold;
+        .icon-pay-type{
+          margin-right: px2rem(40);
+          font-size: px2rem(36);
+          color: #FF9600;
+          &.icon-weixinzhifu{
+            color: #41B035;
+          }
+        }
+      }
+    }
+
+    .jifen-box {
+      text-align: center;
+      position: absolute;
+      bottom: px2rem(160);
+      left: 0;
+      width: px2rem(750);
+      font-size: px2rem(26);
+      color: $__font__color_three;
+    }
+
+    // 确定按钮
+    .btn-box {
+      position: absolute;
+      left: 0;
+      bottom: px2rem(45);
+      width: px2rem(750);
+      @include flex-common;
+
+      .btn-sure {
+        width: px2rem(710);
+        height: px2rem(80);
+        background: linear-gradient(90deg, rgba(254, 118, 2, 1) 0%, rgba(255, 75, 2, 1) 100%);
+        color: #fff;
+        border-radius: px2rem(40);
+        font-size: px2rem(34);
+        line-height: px2rem(80);
+        text-align: center
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+body {
+  margin: 0 auto;
+  width: 10rem;
+  line-height: 1.5;
+  min-height: 100vh;
+  padding-top: 2.24rem;
+  padding-bottom: 1.6rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #f2f2f2; }
+
+.food-index-ad {
+  margin: 0 auto 0.26667rem;
+  width: 9.2rem;
+  border-radius: 0.13333rem;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  .food-index-ad img {
+    width: 100%;
+    height: 100%; }
+
+.nav-common {
+  position: fixed;
+  top: 1.17333rem;
+  z-index: 2000;
+  width: 10rem; }
+  .nav-common .nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 1.06667rem;
+    line-height: 1.06667rem;
+    padding: 0 0.26667rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    color: #666;
+    font-size: 0.37333rem; }
+    .nav-common .nav-list__item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      font-weight: 400; }
+      .nav-common .nav-list__item i {
+        margin-left: 0.13333rem; }
+    .nav-common .nav-list__item_active {
+      color: #FF6C00; }
+  .nav-common .nav-list_more {
+    padding: 0.26667rem 0.4rem 0.01333rem;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    background-color: #FFF;
+    font-weight: 400; }
+    .nav-common .nav-list_more__item {
+      padding: 0 0.26667rem;
+      margin-right: 0.4rem;
+      margin-bottom: 0.26667rem;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      min-width: 1.86667rem;
+      height: 0.8rem;
+      line-height: 0.8rem;
+      text-align: center;
+      border-radius: 0.4rem;
+      background-color: #f2f2f2;
+      color: #333;
+      font-size: 0.34667rem; }
+    .nav-common .nav-list_more__item_active {
+      background-color: rgba(255, 108, 0, 0.19);
+      color: #FF6C00; }

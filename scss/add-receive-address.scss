@@ -1,0 +1,94 @@
+@import './function.scss';
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100vh;
+    background-color: $__base__bg__color;
+    height: px2rem(355);
+}
+
+.add-adress {
+    background-color: white;
+
+    div {
+        height: px2rem(88);
+        border-bottom: px2rem(1) solid $inputBgColor;
+        #area{
+            display: block;
+            padding-top: px2rem(30);
+            font-size: px2rem(24);
+            color: #999999;
+        }
+        span {
+            position: relative;
+            font-size: px2rem(32);
+            color: #222222;
+            top: px2rem(29);
+        }
+
+        input {
+            float: right;
+            direction: rtl;
+            outline: none;
+            border: none;
+            font-size: px2rem(24);
+            display: block;
+            margin-top: px2rem(30);
+            color: #999999;
+        }
+
+        .area-selected {
+            float: right;
+            height: px2rem(30);
+            display: block;
+            text-align: center;
+
+        }
+    }
+}
+
+.submit-button {
+    position: absolute;
+    bottom: px2rem(77);
+    left: px2rem(80);
+    text-align: center;
+
+    button {
+        color: white;
+        width: px2rem(590);
+        height: px2rem(88);
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: none;
+        background: linear-gradient(243deg, rgba(255, 108, 0, 1) 0%, rgba(255, 150, 0, 1) 100%);
+        box-shadow: 0 px2rem(6) px2rem(9) px2rem(1) #FF6C00;
+        border-radius: 44px;
+    }
+
+}
+
+::-webkit-input-placeholder {
+    direction: rtl;
+    font-size: px2rem(24);
+
+}
+
+:-ms-input-placeholder {
+    direction: rtl;
+    font-size: px2rem(24);
+
+}
+
+:-moz-placeholder {
+    direction: rtl;
+    font-size: px2rem(24);
+
+}
+
+::-moz-placeholder {
+    direction: rtl;
+    font-size: px2rem(24);
+
+}

@@ -1,0 +1,115 @@
+@import './function.scss';
+
+body {
+    background-color: $__base__bg__color;
+    min-height: 100vh;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: px2rem(330);
+    background-image: url(../images/person/background.png);
+    background-size: cover;
+
+    .user-icon {
+        width: px2rem(118);
+        height: px2rem(118);
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        margin-top: px2rem(100);
+        border: px2rem(2) solid white;
+    }
+
+    .user-v {
+        position: fixed;
+        font-size: px2rem(20);
+        margin-top: px2rem(93);
+        margin-left: px2rem(30);
+
+        img {
+            width: px2rem(32);
+            height: px2rem(32);
+        }
+    }
+
+    .user-name {
+        height: px2rem(35);
+        font-size: px2rem(36);
+        font-family: PingFang-SC-Bold;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 1);
+        margin-top: px2rem(12);
+    }
+
+    .invite {
+        width: px2rem(260);
+        height: px2rem(40);
+        font-size: px2rem(28);
+        font-family: PingFang-SC-Regular;
+        font-weight: 400;
+        color: rgba(255, 118, 0, 1);
+        margin-top: px2rem(16);
+        border: px2rem(2) solid rgba(255, 108, 0, 1);
+        border-radius: px2rem(20);
+        background: rgba(255, 255, 255, 1);
+
+        .invite-code {
+            text-align: center;
+        }
+    }
+}
+
+.user-menu {
+    margin-top: px2rem(18);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: px2rem(626);
+    background-color: rgba(255, 255, 255, 1);
+
+    a {
+        display: block;
+        border-bottom: px2rem(2) solid $inputBgColor;
+    }
+    li {
+
+        margin-left: px2rem(35);
+        font-size: px2rem(30);
+        height: px2rem(88);
+        color: #222222;
+        position: relative;
+        top: px2rem(20);
+
+        .icon-zuoyou {
+            float: right;
+            color: $__font__color_three;
+            margin-right: px2rem(37);
+            margin-top: px2rem(10);
+        }
+    }
+}
+
+.exit-button {
+    width: px2rem(600);
+    height: px2rem(88);
+    color: white;
+    margin-top: px2rem(70);
+    margin-left: auto;
+    margin-right: auto;
+    font-size: px2rem(34);
+    font-weight: 400;
+    text-align: center;
+    line-height: px2rem(88);
+    background: linear-gradient(to right, #FF9600 , #FF6C00);
+    border-radius: px2rem(44);
+
+    a {
+        display: inline-block;
+        // vertical-align: middle;
+        color: #fff;
+    }
+}

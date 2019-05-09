@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的余额</title>
+    <script src="./../js/flexble.js"></script>
+    <script src="./../js/jquery.min.js"></script>
+    <script src="./../js/utils.js"></script>
+    <link href="./../style/common.css" rel="stylesheet">
+    <link href="../style/mybalance.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1070953_deg0dcw208s.css">
+</head>
+
+<body>
+    <div class="this-banner">
+        <span class="total-balance">
+            总余额
+        </span>
+        <span class="balance-num">
+            580.00元
+        </span>
+    </div>
+    <ul class="detail-float">
+
+        <li class="yye">
+            <p class="balance-num">
+                500.00
+            </p>
+            <p class="balance-title">
+                营业额
+            </p>
+        </li>
+        <li class="line"></li>
+        <li class="ye">
+            <p class="balance-num">
+                500.00
+            </p>
+            <p class="balance-title">
+                余额
+            </p>
+        </li>
+        <li class="line"></li>
+        <li class="wdzye">
+            <p class="balance-num">
+                500.00
+            </p>
+            <p class="balance-title">
+                未到账余额
+            </p>
+        </li>
+    </ul>
+    <div class="yefl">
+        <ul>
+            <li class="yefl-title"><span>余额分类</span></li>
+            <li>
+                <span>直推收益</span>
+                <a href="#">
+                    <span class="mingxi">明细</span>
+                    <img src="../images/account/zuoyou.png">
+                </a>
+            </li>
+            <li>
+
+                <span>分红收益</span>
+                <a href="#">
+                    <span class="mingxi">明细</span>
+                    <img src="../images/account/zuoyou.png">
+
+                </a>
+            </li>
+            <li>
+
+                <span>商家退款</span>
+                <a href="#">
+                    <span class="mingxi">明细</span>
+                    <img src="../images/account/zuoyou.png">
+
+                </a>
+            </li>
+            <li>
+
+                <span>消费</span>
+                <a href="#">
+                    <span class="mingxi">明细</span>
+                    <img src="../images/account/zuoyou.png">
+
+                </a>
+            </li>
+            <li>
+
+                <span>转赠</span>
+                <a href="#">
+                    <span class="mingxi">明细</span>
+                    <img src="../images/account/zuoyou.png">
+
+                </a>
+            </li>
+            <li>
+
+                <span>提现</span>
+                <a href="#">
+                    <span class="mingxi">明细</span>
+                    <img src="../images/account/zuoyou.png">
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    <div class="tixianzhuanzhang">
+        <button class="zhuanzeng" type="button">转赠</button>
+        <button class="tixian" type="button">提现</button>
+    </div>
+
+    <div class="area-modal short-modal" id="givemodel" style="display: none;">
+        <div class="area-content short-modal-content">
+            <div class="area-titel">
+                <span>转赠金额</span>
+                <i class="area-modal-close iconfont icon-closes"></i>
+            </div>
+            <li class="_fengexian"></li>
+            <div class="ksyye">可使用余额500.00</div>
+            <div>
+                <input type="number" class="zzje-input" placeholder=" 请输入转赠金额">
+            </div>
+            <div>
+                <input type="text" class="yqm-input" placeholder=" 请输入邀请码">
+            </div>
+            <div>
+                <input type="text" class="zzbz-input" placeholder=" 请输入转赠备注">
+            </div>
+            <div class="sub-button" id="stockSubmit">确定</div>
+        </div>
+    </div>
+    <div class="area-modal short-modal" id="extract" style="display: none;">
+        <div class="area-content short-modal-content">
+            <div class="area-titel">
+                <p>提现</p>
+                <span>可使用余额500.00</s>
+                    <i class="area-modal-close iconfont icon-closes"></i>
+
+            </div>
+            <li class="_fengexian"></li>
+
+            <div class="txchoice">
+
+                <div class="tixianyye">
+                    <p class="txtitle">
+                        提现营业额
+                    </p>
+                    <p class="txnum">
+                        250.00
+                    </p>
+                </div>
+                <li class="choice_fgx"></li>
+                <div class="tixiansy">
+                    <p class="txtitle">
+                        提现收益
+                    </p>
+                    <p class="txnum">
+                        250.00
+                    </p>
+                </div>
+            </div>
+            <div class="shurukuang">
+                <div class="khzh-input">
+                    <input type="text" class="khzh" placeholder=" 请输入开户支行名称">
+                </div>
+                <div class="yhkh-input">
+                    <input type="number" class="yhkh" placeholder=" 请输入银行卡号">
+                </div>
+                <div class="zsxm-input">
+                    <input type="text" class="zsxm" placeholder=" 请输入真实姓名">
+                </div>
+                <div class="cellphone-num-input">
+                    <input type="number" class=cellphone-num" placeholder=" 请输入手机号">
+                </div>
+                <div class="txje-input">
+                    <input type="number" class=txje" placeholder=" 请输入手机号">
+                </div>
+                <div class="sub-button" id="stockSubmit">
+                    确定
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.zhuanzeng').click(function () {
+            $('#givemodel').css('display', 'block');
+        });
+        $('.tixian').click(function () {
+            $('#extract').css('display', 'block');
+        });
+        $('.area-modal-close').click(function () {
+            $('.area-modal').css('display', 'none');
+        });
+        $('.tixianyye').click(function(){
+            $('.tixianyye .txtitle').css('color' , '#FF6C00');
+            $('.tixiansy .txtitle').css('color' , '#333333');
+        });
+        $('.tixiansy').click(function(){
+            $('.tixianyye .txtitle').css('color' , '#333333');
+            $('.tixiansy .txtitle').css('color' , '#FF6C00');
+        });
+    </script>
+</body>
+
+</html>

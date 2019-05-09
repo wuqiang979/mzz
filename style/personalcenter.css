@@ -1,0 +1,101 @@
+body {
+  background-color: #f2f2f2;
+  min-height: 100vh; }
+
+.user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 4.4rem;
+  background-image: url(../images/person/background.png);
+  background-size: cover; }
+  .user-info .user-icon {
+    width: 1.57333rem;
+    height: 1.57333rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    margin-top: 1.33333rem;
+    border: 0.02667rem solid white; }
+  .user-info .user-v {
+    position: fixed;
+    font-size: 0.26667rem;
+    margin-top: 1.24rem;
+    margin-left: 0.4rem; }
+    .user-info .user-v img {
+      width: 0.42667rem;
+      height: 0.42667rem; }
+  .user-info .user-name {
+    height: 0.46667rem;
+    font-size: 0.48rem;
+    font-family: PingFang-SC-Bold;
+    font-weight: bold;
+    color: white;
+    margin-top: 0.16rem; }
+  .user-info .invite {
+    width: 3.46667rem;
+    height: 0.53333rem;
+    font-size: 0.37333rem;
+    font-family: PingFang-SC-Regular;
+    font-weight: 400;
+    color: #ff7600;
+    margin-top: 0.21333rem;
+    border: 0.02667rem solid #ff6c00;
+    border-radius: 0.26667rem;
+    background: white; }
+    .user-info .invite .invite-code {
+      text-align: center; }
+
+.user-menu {
+  margin-top: 0.24rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  height: 8.34667rem;
+  background-color: white; }
+  .user-menu a {
+    display: block;
+    border-bottom: 0.02667rem solid #F2F2F2; }
+  .user-menu li {
+    margin-left: 0.46667rem;
+    font-size: 0.4rem;
+    height: 1.17333rem;
+    color: #222222;
+    position: relative;
+    top: 0.26667rem; }
+    .user-menu li .icon-zuoyou {
+      float: right;
+      color: #999;
+      margin-right: 0.49333rem;
+      margin-top: 0.13333rem; }
+
+.exit-button {
+  width: 8rem;
+  height: 1.17333rem;
+  color: white;
+  margin-top: 0.93333rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.45333rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.17333rem;
+  background: -webkit-gradient(linear, left top, right top, from(#FF9600), to(#FF6C00));
+  background: linear-gradient(to right, #FF9600, #FF6C00);
+  border-radius: 0.58667rem; }
+  .exit-button a {
+    display: inline-block;
+    color: #fff; }

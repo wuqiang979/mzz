@@ -1,0 +1,19 @@
+@import './function.scss';
+
+body {
+    margin: 0 auto;
+    width: px2rem(750);
+    line-height: 1.5;
+    min-height: 100vh;
+    padding-top: px2rem(102);
+    padding-bottom: px2rem(120);
+    box-sizing: border-box;
+    background-color: $__base__bg__color;
+}
+
+// .position-fixed {
+//     position: fixed;
+//     top: px2rem(88);
+//     z-index: 2000;
+//     width: px2rem(750);
+// }

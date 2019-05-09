@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>登录</title>
+        <script src="./../js//flexble.js"></script>
+        <script src="./../js/jquery.min.js"></script>
+        <script src="./../js/utils.js"></script>
+        <link href="./../style/common.css" rel="stylesheet">
+        <link href="./../style/login.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://at.alicdn.com/t/font_1070953_deg0dcw208s.css">
+</head>
+<body>
+    <div class="login-container">
+        <img src="./../images/logo_mzz@2x.png" class="logo">
+        <div class="switch-wrap">
+            <span id="person" class="base-color">个人登录</span>
+            <span class="shu-line">|</span>
+            <span id="seller">商家登录</span>
+        </div>
+        <div class="input-wrap">
+            <i class="iconfont icon-shouji"></i>
+            <input id="tel" type="text" placeholder="请输入手机号" maxlength="11">
+            <i class="iconfont icon-closes" id="clearTel" style="font-size: 0.3rem"></i>
+        </div>
+        <div class="input-wrap">
+            <i class="iconfont icon-yaoqingma"></i>
+            <input id="password" type="password" placeholder="请输入密码">
+            <i class="iconfont icon-kejian" id="open"></i>
+            <i class="iconfont icon-kejian" id="hide" style="display: none"></i>
+        </div>
+        <div class="sub-button" style="margin-top: .3rem">登录</div>
+        <div class="links">
+            <a href="">忘记密码</a>
+            <a href="">注册 <i class="iconfont icon-zuoyou"></i></a>
+        </div>
+    </div>
+    <script>
+        $(function() {
+           var loginType = 'person'; // 登录方式
+           $('#person').click(function() {
+              loginType = 'person';
+              $(this).addClass('base-color');
+              $('#seller').removeClass('base-color');
+           });
+           $('#seller').click(function() {
+              loginType = 'seller';
+              $(this).addClass('base-color');
+              $('#person').removeClass('base-color');
+           });
+           
+        // input框的前端效果
+           $('#clearTel').click(function () { 
+               $('#tel').val('');
+            });
+            $('#open').click(function() {
+                $(this).css('display', 'none');
+                $('#hide').css('display', 'block');
+                $('#password').attr('type', 'text');
+            });
+            $('#hide').click(function() {
+                $(this).css('display', 'none');
+                $('#open').css('display', 'block');
+                $('#password').attr('type', 'password');
+            });
+        });
+    </script>
+</body>
+</html>

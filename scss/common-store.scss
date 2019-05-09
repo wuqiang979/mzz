@@ -1,0 +1,277 @@
+@import './function.scss';
+
+body {
+    @include flex-common;
+    flex-direction: column;
+    width: px2rem(750);
+    height: 100vh;
+    margin: 0 auto !important;
+    -webkit-overflow-scrolling: touch;
+    cursor: pointer;
+
+    .mescroll-hardware {
+        width: 100%;
+    }
+}
+
+a {
+    text-decoration: none !important;
+}
+
+input {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.content-box {
+    width: px2rem(750);
+    flex: 1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: #F2F2F2;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &::-moz-scrollbar {
+        display: none;
+    }
+}
+
+.display-none {
+    display: none !important;
+}
+
+// 商品列表
+.store-index-goods-box {
+    @include flex-common(flex-start, flex-start);
+    flex-wrap: wrap;
+    background: #fff;
+
+    .px2rem300 {
+        width: px2rem(300);
+        margin-top: px2rem(10);
+    }
+
+    .item-goods {
+        @include flex-common;
+        flex-direction: column;
+        width: px2rem(374);
+        padding: px2rem(20) 0;
+        border-top: 1px solid #F2F2F2;
+
+        .goods-img {
+            img {
+                width: px2rem(300);
+                height: px2rem(300);
+            }
+        }
+
+        .goods-title {
+            @include overflow-hiding-more(2);
+            font-size: px2rem(28);
+            font-weight: bold;
+            color: $__font__color_one;
+            line-height: px2rem(39);
+        }
+
+        .goods-info {
+            @include overflow-hiding;
+            font-size: px2rem(24);
+            color: $__font__color_two;
+            line-height: px2rem(30);
+        }
+
+        .goods-discount {
+            span {
+                display: inline-block;
+                padding: px2rem(4) px2rem(11);
+                font-size: px2rem(22);
+                color: #FF6C00;
+                border-radius: px2rem(20);
+                background: rgba(255, 108, 0, 0.2);
+            }
+        }
+
+        .goods-money {
+            @include flex-common(space-between);
+            font-size: px2rem(22);
+            color: $__font__color_three;
+
+            .money {
+                font-size: px2rem(36);
+                color: #FF6C00;
+            }
+        }
+    }
+
+    .item-goods:nth-of-type(2n) {
+        border-left: 1px solid #F2F2F2;
+    }
+}
+
+// 分类导航条
+.nav-box {
+    position: relative;
+
+    .store-index-nav {
+        @include flex-common(space-around);
+        width: px2rem(750);
+        height: px2rem(80);
+        background: #fff;
+        font-size: px2rem(28);
+
+        .btn-nav {
+            color: $__font__color_three;
+
+            &.store-index-btn-more {
+                .iconfont {
+                    padding-left: px2rem(0);
+                    padding-top: px2rem(10);
+                }
+            }
+        }
+
+        .btn-nav.selected {
+            color: $__font__color_one;
+        }
+
+        .price-sort {
+            @include flex-common;
+
+            .sort-box {
+                @include flex-common(center, center);
+                flex-direction: column;
+
+                .iconfont:first-child {
+                    margin-top: 4px;
+                }
+
+                .iconfont:last-child {
+                    margin-top: -10px;
+                }
+            }
+        }
+
+        .price-sort.up {
+            .iconfont:first-child {
+                color: #FF6C00;
+            }
+        }
+
+        .price-sort.down {
+            .iconfont:last-child {
+                color: #FF6C00;
+            }
+        }
+    }
+
+    // 更多导航
+    .nav-more {
+        position: absolute;
+        z-index: 10;
+        top: px2rem(80);
+        left: 0;
+        width: px2rem(750);
+        background: #fff;
+        border-bottom: 1px solid #F2F2F2;
+        display: none;
+
+        .items-box {
+            @include flex-common(space-around);
+            padding: px2rem(30) px2rem(30) px2rem(10);
+            flex-wrap: wrap;
+
+            span {
+                height: px2rem(60);
+                padding: 0 px2rem(20);
+                line-height: px2rem(60);
+                background: #F2F2F2;
+                margin-bottom: px2rem(20);
+                border-radius: px2rem(30);
+                min-width: px2rem(140);
+                text-align: center;
+            }
+
+            span.selected {
+                background: rgba(255, 108, 0, 0.2);
+                color: #FF6C00;
+            }
+        }
+    }
+}
+
+// 确认框
+.confirm-model {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: px2rem(750);
+    height: 100vh;
+    z-index: 10000;
+    @include flex-common;
+    background: rgba(0, 0, 0, 0.16);
+
+    .confirm-content-box {
+        width: px2rem(480);
+        height: auto;
+        background: #fff;
+        border-radius: px2rem(5);
+
+        .msg {
+            padding: px2rem(20) 0;
+            min-height: px2rem(100);
+            text-align: center;
+        }
+
+        .btn-box {
+            @include flex-common;
+            padding: px2rem(20) 0;
+            text-align: center;
+            border-top: 1px solid #eee;
+
+            span {
+                flex: 1;
+            }
+
+            .btn-sure {
+                border-right: 1px solid #eee;
+            }
+        }
+    }
+}
+
+.no-data{
+    .tips-content{
+        @include flex-common;
+        flex-direction: column;
+        padding-top: px2rem(234);
+        img{
+        width: px2rem(200);
+        }
+        p.tip1{
+        font-weight: bold;
+        color: #333;
+        font-size: px2rem(28);
+        margin-top: px2rem(18);
+        }
+        p.tip2{
+        color: #999;
+        font-size: px2rem(26);
+        margin-top: px2rem(18);
+        }
+        .toShop{
+        width: px2rem(180);
+        height: px2rem(58);
+        line-height: px2rem(58);
+        text-align: center;
+        color: #FF6C00;
+        font-size: px2rem(28);
+        border: 1px solid #FF6C00;
+        border-radius: px2rem(29);
+        margin-top: px2rem(26);
+        }
+    }
+}

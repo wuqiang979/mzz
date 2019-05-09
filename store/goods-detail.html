@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>商品详情</title>
+  <link href="../style/common.css" rel="stylesheet" />
+  <link href="../style/common-store.css" rel="stylesheet" />
+  <link href="../style/goodsDetail.css" rel="stylesheet" />
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_1070953_oeblyj3uytm.css" />
+  <script src="../js//flexble.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/public.js"></script>
+</head>
+
+<body>
+  <header>
+    <!-- 分类导航条 -->
+    <nav class="store-index-nav">
+      <a class="btn-location selected" data-id="goods_info" href="javascript:void(0);">商品</a>
+      <a class="btn-location" data-id="goods_comments" href="javascript:void(0);">评价</a>
+      <a class="btn-location" data-id="goods_detail" href="javascript:void(0);">详情</a>
+    </nav>
+  </header>
+  <!-- 内容区域 -->
+  <div class="content-box">
+    <!-- 商品信息 -->
+    <div class="goods-info item-locaton" id="goods_info">
+      <div class="goods-info-img item">
+        <img src="../images/store/goodsImg.png" alt="" />
+      </div>
+      <p class="goods-info-title item px2rem706">
+        41寸初学者吉他学生38寸新手通用练习吉他男女生入门琴
+        民谣木吉他国行版金色 32GB 移动联通电信三网
+      </p>
+      <p class="goods-info-market item px2rem706">
+        【现货热销】以旧换新最高补贴500元！免息分期！ 提示：为避免黄牛炒货抬高售价，对真实顾客造成伤害，凡是购买mate20系列的顾客，必须现场激活手机，一人限购一台！     
+      </p>
+      <p class="goods-info-discout item px2rem706">
+        <span>可抵扣100积分 拷贝</span>
+      </p>
+      <div class="goods-info-money item px2rem706">
+        <span class="money-box">
+          <span>￥</span><span class="money">5888</span>
+        </span>
+        <span class="goods-info-mark">
+          <span>好评度</span>
+          <span class="mark">99%</span>
+        </span>
+      </div>
+    </div>
+    <!-- 商品参数选择区域 -->
+    <div class="goods-selection">
+      <div class="item-selection choose-goods">
+        <span class="px2rem88">已选</span>
+        <span class="chosed-info">古铜色,36寸原声款,1件古铜色</span>
+        <span class="btn-more"><i class="iconfont icon-zuoyou"></i></span>
+      </div>
+      <!-- <div class="item-selection">
+          <span class="px2rem88">参数</span>
+          <span class="chosed-info">品牌:乐器 型号:B-38C…</span>
+          <span class="btn-more"><i class="iconfont icon-zuoyou"></i></span>
+        </div> -->
+      <div class="item-selection" onclick="myFunc.myModal('选择地址',{'type':'getRegion'},chooseAdress)">
+        <span class="px2rem88">配送</span>
+        <span class="chosed-info">四川省,成都市0,双流区</span>
+        <span class="btn-more"><i class="iconfont icon-zuoyou"></i></span>
+      </div>
+    </div>
+
+    <!-- 商品评价 -->
+    <div class="goods-comments item-locaton" id='goods_comments'>
+      <div class="module-nav">
+        <div class="left">
+          <i class="iconfont icon-vertical_line"></i>
+          <span>评价(6666)</span>
+        </div>
+        <div class="right">
+          <span>好评度 <span class="FF6C00">97.26%</span></span>
+          <i class="iconfont icon-zuoyou"></i>
+        </div>
+      </div>
+      <!-- 评论列表 -->
+      <div class="comments-lists">
+        <div class="item-box">
+          <div class="item-comments">
+            <div class="img-box">
+              <img src="../images//store//comment.png" alt="" />
+              <span class="img-num">共6张</span>
+            </div>
+            <div class="user-info">
+              <div class="user-face">
+                <img src="../images/store/goods-img.png" alt="" />
+              </div>
+              <div class="user-phone">
+                <p class="phone">180****1526</p>
+                <p><i class="iconfont icon-xing"></i></p>
+              </div>
+            </div>
+            <p class="comments-info">
+              总体来说确实不错,现在这个
+              价格还是可以入手的入手总体来说确实不错,现在这个
+              价格还是可以入手的入手
+            </p>
+          </div>
+          <div class="item-comments">
+            <div class="img-box">
+              <img src="../images//store//comment.png" alt="" />
+              <span class="img-num">共6张</span>
+            </div>
+            <div class="user-info">
+              <div class="user-face">
+                <img src="../images/store/goods-img.png" alt="" />
+              </div>
+              <div class="user-phone">
+                <p class="phone">180****1526</p>
+                <p><i class="iconfont icon-xing"></i></p>
+              </div>
+            </div>
+            <p class="comments-info">
+              总体来说确实不错,现在这个
+              价格还是可以入手的入手总体来说确实不错,现在这个
+              价格还是可以入手的入手
+            </p>
+          </div>
+          <div class="item-comments">
+            <div class="img-box">
+              <img src="../images//store//comment.png" alt="" />
+              <span class="img-num">共6张</span>
+            </div>
+            <div class="user-info">
+              <div class="user-face">
+                <img src="../images/store/goods-img.png" alt="" />
+              </div>
+              <div class="user-phone">
+                <p class="phone">180****1526</p>
+                <p><i class="iconfont icon-xing"></i></p>
+              </div>
+            </div>
+            <p class="comments-info">
+              总体来说确实不错,现在这个
+              价格还是可以入手的入手总体来说确实不错,现在这个
+              价格还是可以入手的入手
+            </p>
+          </div>
+          <div class="item-comments">
+            <div class="img-box">
+              <img src="../images//store//comment.png" alt="" />
+              <span class="img-num">共6张</span>
+            </div>
+            <div class="user-info">
+              <div class="user-face">
+                <img src="../images/store/goods-img.png" alt="" />
+              </div>
+              <div class="user-phone">
+                <p class="phone">180****1526</p>
+                <p><i class="iconfont icon-xing"></i></p>
+              </div>
+            </div>
+            <p class="comments-info">
+              总体来说确实不错,现在这个
+              价格还是可以入手的入手总体来说确实不错,现在这个
+              价格还是可以入手的入手
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- 查看全部评价 -->
+      <div class="goods-detail-btn-box">
+        <a href="javascript:void(0);" class="btn-check-all">查看全部评价</a>
+      </div>
+    </div>
+    <!-- 商品推广 -->
+    <div class="goods-tuiguang">
+      <div class="goods-tuiguang-left">
+        <img src="../images/store/goods-img.png" alt="" />
+        <span>benny 乐器旗舰店</span>
+      </div>
+      <a class="goods-tuiguang-right" href="javascrtip:void(0);">进店逛逛</a>
+    </div>
+    <!-- 商品详情 -->
+    <div class="goods-details item-locaton" id='goods_detail'>
+      <div class="module-nav">
+        <div class="left">
+          <i class="iconfont icon-vertical_line"></i>
+          <span>商品详情</span>
+        </div>
+      </div>
+      <!-- 富文本信息展示 -->
+      <div class="details-content">
+        <img src="../images/store/goodsImg.png" alt="" />
+      </div>
+    </div>
+  </div>
+  <footer class="footer-box">
+    <nav class="nav-box">
+      <a class="btn-link selected" href="javascript:void(0);">
+        <i class="iconfont icon-dianpu"></i>
+        <span>店铺</span>
+      </a>
+      <a class="btn-link" href="javascript:void(0);">
+        <i class="iconfont icon-lianxikefu"></i>
+        <span>联系</span>
+      </a>
+      <a class="btn-link" href="javascript:void(0);">
+        <span class='img-car'>
+          <i class="iconfont icon-gouwuche"></i>
+          <span class='car-num'>5</span>
+        </span>
+        <span>购物车</span>
+      </a>
+      <span class='btn-option btn-addcar'>加入购物车</span>
+      <span class='btn-option btn-buy'>立即购买</span>
+    </nav>
+  </footer>
+  <!-- 模态弹窗 选着商品信息 -->
+  <div class="model-box model-box-goods-info">
+    <div class="model-content">
+      <!-- 关闭按钮 -->
+      <span class="btn-close"><i class="iconfont icon-closes"></i></span>
+      <!-- 商品信息 -->
+      <div class="goods-info">
+        <img class="goods-img" src="../images/store/goods-img.png" alt="">
+        <div class="info-content">
+          <p class="money">￥<span>899</span></p>
+          <p class="product-id">商品编号：<span>25697112</span></p>
+          <p class="color">已选：<span>古铜色</span></p>
+        </div>
+      </div>
+      <!-- 颜色分类 -->
+      <div class="color-class">
+        <div class="title">颜色分类</div>
+        <div class='class-box'>
+          <span class="item-class selected">颜色分类</span>
+          <span class="item-class">颜色分类</span>
+          <span class="item-class">颜色分类</span>
+          <span class="item-class">颜色分类</span>
+          <span class="item-class">颜色分类</span>
+          <span class="item-class">颜色分类</span>
+          <span class="item-class item-class-visible-hidden"></span>
+          <span class="item-class item-class-visible-hidden"></span>
+        </div>
+      </div>
+      <!-- 购买数量 -->
+      <div class="num-option">
+        <span>购买数量</span>
+        <div class="option-box">
+          <span class="btn-reduce"><i class="iconfont icon-jian1"></i></span>
+          <input type="number" class="goods-num" min="1" max="999" value="1"
+            oninput="value=value.replace(/[^\d]/g, 1).slice(0,3)" />
+          <span class="btn-add"><i class="iconfont icon-jiajian"></i></span>
+        </div>
+      </div>
+      <!-- 确定按钮 -->
+      <div class='btn-box'>
+        <span class="btn-sure">确定</span>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function () {
+      // 选中顶部按钮
+      $('.store-index-nav').on('click', '.btn-location', function () {
+        var $dom = $(this);
+        $('#' + $(this).data('id'))[0].scrollIntoView();
+        if ($dom.hasClass('selected')) {
+          return
+        } else {
+          $('.btn-location.selected').removeClass('selected')
+          $dom.addClass('selected')
+        }
+      })
+      // 点击底部按钮
+      $('.nav-box').on('click', '.btn-link', function () {
+        var $dom = $(this)
+        if ($dom.hasClass('selected')) {
+          return
+        } else {
+          $('.btn-link.selected').removeClass('selected')
+          $dom.addClass('selected')
+        }
+      })
+      // 商品减减
+      $('body').on('click', '.btn-reduce', function () {
+        console.log(123);
+        var thisGoodsNum =
+          $(this)
+          .next()
+          .val() * 1
+        if (thisGoodsNum > 1) {
+          thisGoodsNum--
+          $(this)
+            .next()
+            .val(thisGoodsNum)
+        } else {
+          _utils.toast('已是最少数量了')
+        }
+      })
+      // 商品加加
+      $('body').on('click', '.btn-add', function () {
+        var thisGoodsNum =
+          $(this)
+          .prev()
+          .val() * 1
+        console.log(thisGoodsNum)
+        if (thisGoodsNum < 999) {
+          thisGoodsNum++
+          $(this)
+            .prev()
+            .val(thisGoodsNum)
+        } else {
+          _utils.toast('请慎重购买')
+        }
+      })
+      // 选择商品颜色
+      $('body').on('click', '.item-class', function () {
+        if ($(this).hasClass('selected')) {
+          return;
+        } else {
+          $('.item-class.selected').removeClass('selected');
+          $(this).addClass('selected');
+        }
+      })
+      // 点击弹出商品信息选择model
+      $('body').on('click', '.choose-goods', function () {
+        $('.model-box-goods-info').show();
+      })
+      // 确定商品信息
+      $('body').on('click', '.btn-sure', function () {
+        $('.model-box-goods-info').hide();
+      })
+      // 点击叉叉关闭model框
+      $('body').on('click', '.btn-close', function (e) {
+        $('.model-box').hide();
+      });
+
+      // 监听content滚动事件
+      $('.content-box').scroll(function () {
+        $('.item-locaton').each(function (index, item) {
+          var offersetHight = $(item).offset().top;
+          if (offersetHight >= -20 && offersetHight < 50) {
+            $('.btn-location').each(function (index, item1) {
+              if ($(item1).data('id') == $(item).attr('id')) {
+                if ($(item1).hasClass('selected')) {
+                  return;
+                } else {
+                  $('.btn-location.selected').removeClass('selected');
+                  $(item1).addClass('selected');
+                }
+              }
+            })
+          }
+        })
+      })
+    });
+    // 选择地址信息
+    function chooseAdress(res) {
+      console.log(res);
+    }
+  </script>
+</body>
+
+</html>

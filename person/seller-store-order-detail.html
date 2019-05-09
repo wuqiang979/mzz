@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>订单详情</title>
+    <script src="./../js/flexble.js"></script>
+    <script src="./../js/jquery.min.js"></script>
+    <script src="./../js/mescroll.min.js"></script>
+    <script src="./../js/utils.js"></script>
+    <link href="./../style/common.css" rel="stylesheet">
+    <link href="../style/order-detail.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1070953_deg0dcw208s.css">
+</head>
+<body>
+    <div class="order-bg">
+        <img src="./../images/person/bg_grzx_@2x.png">
+        <!-- 已取消和申请退款中用这张 -->
+        <!-- <img src="./../images/person/bg_grzx_hs@2x.png"> -->
+        <div class="order-header">
+            <!-- 待发货 -->
+            <div class="order-statu">待发货</div>
+            <div class="order-desc">买家已成功支付待发货</div>
+            <!-- 待收货 -->
+            <!-- <div class="order-statu">待收货</div>
+            <div class="order-desc">待买家确认收货</div> -->
+            <!-- 待评价 -->
+            <!-- <div class="order-statu">待评价</div>
+            <div class="order-desc">买家已确认收货，待评价</div> -->
+            <!-- 完成 -->
+            <!-- <div class="order-statu">完成</div>
+            <div class="order-desc">买家已评价完成订单</div> -->
+            <!-- 取消 -->
+            <!-- <div class="order-statu">已取消</div>
+            <div class="order-desc">订单已取消</div> -->
+            <!-- 待退款 -->
+            <!-- <div class="order-statu">待退款</div>
+            <div class="order-desc">买家申请退款</div> -->
+            <!-- 待退款 -->
+            <!-- <div class="order-statu">已退款/退款已驳回</div>
+            <div class="order-desc">已退款给买家/买家退款申请已驳回</div> -->
+            <div class="buyer-info">
+                <div class="user"><span>下单人：李璐</span><span style="margin-left: 20px;">1590528888</span></div>
+                <div><i class="iconfont icon-dingweiweizhi"></i><span>地址：四川省成都市锦江区春熙路15号2栋15号</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="order-goods">
+        <div class="food-item store-item">
+            <img src="">
+            <div class="right">
+                <div class="goods-name">
+                    <div class="g-name">41寸初学者吉他学生38寸新手 民他国行版金色 学者吉他 …</div>
+                    <div class="price">￥16.00</div>
+                </div>
+                <div class="goods-apps">
+                    <div>38寸古铜色</div>
+                    <div>X2</div>
+                </div>
+            </div>
+        </div>
+        <div class="food-item store-item">
+                <img src="">
+                <div class="right">
+                    <div class="goods-name">
+                        <div class="g-name">41寸初学者吉他学生38寸新手 民他国行版金色 学者吉他 …</div>
+                        <div class="price">￥16.00</div>
+                    </div>
+                    <div class="goods-apps">
+                        <div>38寸古铜色</div>
+                        <div>X2</div>
+                    </div>
+                </div>
+            </div>
+        <div class="order-info" style="margin-top: 10px">
+            <div class="order-info-item"><span>订 单 编 号</span><span>546468496</span></div>
+            <div class="order-info-item"><span>下 单 时 间</span><span>2017-05-06 14:24:55</span></div>
+            <div class="order-info-item"><span>支 付 方 式</span><span>微信支付</span></div>
+            <div class="order-info-item"><span>配送方式</span><span>商家配送/到店就餐</span></div>
+            <div class="order-info-item"><div><div class="caps">买家备注</div></div><span>不要葱蒜</span></div>
+        </div>
+        <div class="money-compute">
+            <div class="compute">
+                <div class="compute-item">
+                    <div>商品总价</div>
+                    <div class="price">￥12660.00</div>
+                </div>
+                <div class="compute-item">
+                    <div>积分抵扣</div>
+                    <div class="price">-￥200.00</div>
+                </div>
+            </div>
+            <div class="total">
+                <span class="count">共3件商品</span>
+                <span>实付: <span class="price">￥12660.00</span></span>
+            </div>
+        </div>
+        <!-- 待发货 -->
+        <div class="order-operation">
+            <a class="order-opreate-item" onclick="_handleSend('orderId')">确认发货</a>
+        </div>
+        <!-- 完成 -->
+        <div class="order-operation">
+            <a class="order-opreate-item">查看评价</a>
+        </div>
+        <!-- 待退款 -->
+        <div class="order-operation">
+            <div class="order-opreate-item">同意退款</div>
+        </div>
+    </div>
+    <div class="area-modal short-modal" id="stockModal" style="display: none;">
+        <div class="area-content short-modal-content send-modal">
+            <div class="area-titel">
+                <span>发货</span>
+                <i class="area-modal-close iconfont icon-closes"></i>
+            </div>
+            <input class="send-input" placeholder="请输入物流" id="sendMethod">
+            <input class="send-input" placeholder="请输入物流单号" id="sendNum">
+            <div class="sub-button send-sub-btn" id="refundSubmit">确定</div>
+        </div>
+    </div>
+    <script>
+        var _sendOrder = ''
+        function _handleSend (id) {
+            _sendOrder = id;
+            $('#stockModal').css('display', 'block');
+        }
+        $('.area-modal-close').click(function() {
+            $('#stockModal').css('display', 'none');
+        });
+        
+        // 发货
+        $('#refundSubmit').click(function() {
+            var sendMethod = $('#sendMethod').val();
+            var sendNum = $('#sendNum').val();
+            if (!sendMethod || !sendNum) {
+                _utils.toast('请将信息填写完整');
+                return
+            }
+            var id = _sendOrder;
+            // ajax
+        });
+    </script>
+</body>
+</html>

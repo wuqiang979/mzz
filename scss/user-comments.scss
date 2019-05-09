@@ -1,0 +1,60 @@
+@import './function.scss';
+
+body {
+  padding: px2rem(20)!important;
+  background: #F2F2F2;
+}
+
+
+
+// 内容区域
+.content-box {
+  background: #fff;
+  .item-comments{
+    width: px2rem(750);
+    padding: px2rem(25);
+    border-bottom: 1px solid #F2F2F2;
+    .item-comments-info{
+      @include flex-common(space-between);
+      height: px2rem(80);
+      img.user-face{
+        width: px2rem(56);
+        height: px2rem(56);
+        border-radius: 50%;
+      }
+      .user-info{
+        flex: 1;
+        padding-left: px2rem(10);
+        .phone-and-time{
+          @include flex-common(space-between);
+          font-size: px2rem(24);
+        }
+        .comments-start{
+          .iconfont{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .item-comments-content{
+      padding-left: px2rem(66);
+      .content{
+        margin: px2rem(30) 0 px2rem(10);
+        color: $__font__color_two;
+        font-size: px2rem(24);
+        line-height: px2rem(30);
+      }
+      .img-box{
+        img{
+          width: px2rem(300);
+          height: px2rem(300);
+          margin-right: px2rem(10);
+          margin-top: px2rem(10);
+        }
+      }
+    }
+  }
+  .item-comments:last-child{
+    border-bottom-color: transparent; 
+  }
+}

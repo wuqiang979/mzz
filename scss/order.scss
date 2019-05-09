@@ -1,0 +1,258 @@
+@import './function.scss';
+
+body{
+    background: rgb(242,242,242);
+}
+.status-lines{
+    width: px2rem(750);
+    height: px2rem(88);
+    font-size: px2rem(32);
+    background: #fff;
+    >div{
+        width: auto;
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+    .status-lines-item{
+        position: relative;
+        display: inline-block;
+        margin: 0 px2rem(28);
+        text-align: center;
+        line-height: px2rem(88);
+        color: #000006;
+        .count{
+            position: absolute;
+            right: px2rem(-24);
+            top: px2rem(16);
+            color: #fff;
+            background: $colorBase;
+            @include circle(px2rem(24));
+            font-size: px2rem(24);
+            line-height: px2rem(24);
+            text-align: center;
+        }
+    }
+    .active-status-lines-item{
+        color: $colorBase;
+        border-bottom: 1px solid $colorBase;
+    }
+    .status-text{
+        display: inline-block;
+    }
+}
+._detail-jump{
+    display: block
+}
+.user-order-item{
+    width: px2rem(750);
+    margin-top: px2rem(20);
+    background: #fff;
+    & .order-title{
+        width: px2rem(750);
+        height: px2rem(88);
+        padding: 0 px2rem(20);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: px2rem(32);
+        color: #333;
+        img{
+            width: px2rem(50);
+            height: px2rem(50);
+            border-radius: px2rem(4);
+        }
+        .main-name{
+            display: block;
+            width: px2rem(500);
+            @include overflow-hiding;
+            margin-left: px2rem(20);
+        }
+        .status{
+            font-size: px2rem(26);
+            color: $colorBase;
+        }
+        &>div:first-child{
+            display: flex;
+        }
+    }
+    & .seller-order-title{
+        height: px2rem(100);
+    }
+    .food-item{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: px2rem(750);
+        height: px2rem(160);
+        padding: 0 px2rem(20);
+        img{
+            width: px2rem(100);
+            height: px2rem(100);
+        }
+        .food-item-info{
+            width: px2rem(590);
+            >div{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .price{
+                color: #666;
+                font-size: px2rem(28);
+            }
+            .apps{
+                color: #999;
+                font-size: px2rem(24);
+            }
+            >div:first-child{
+                margin-bottom: px2rem(30);
+                .food-name{
+                    width: px2rem(400);
+                    @include overflow-hiding;
+                    font-size: px2rem(32);
+                    color: #333;
+                }
+                .store-name{
+                    width: px2rem(400);
+                    @include overflow-hiding-more;
+                    font-size: px2rem(32);
+                    color: #333;
+                }
+            }
+        }
+    }
+    .store-item{
+        img{
+            width: px2rem(140);
+            height: px2rem(140);
+        }
+        .food-item-info{
+            width: px2rem(560);
+            >div:first-child{
+                margin-bottom: px2rem(24);
+            }
+        }
+    }
+    .buy-info{
+        width: px2rem(750);
+        height: px2rem(72);
+        padding-right: px2rem(20);
+        text-align: right;
+        color: #333;
+        font-size: px2rem(28);
+        .count{
+            font-size: px2rem(24);
+            margin-right: px2rem(80);
+        }
+    }
+    .order-opreate{
+        width: px2rem(750);
+        height: px2rem(72);
+        padding-right: px2rem(20);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .order-opreate-item{
+            display: block;
+            width: px2rem(120);
+            height: px2rem(50);
+            margin-left: px2rem(20);
+            border-radius: px2rem(25);
+            text-align: center;
+            line-height: px2rem(50);
+            font-size: px2rem(26);
+            color: $colorBase;
+            border: 1px solid $colorBase;
+        }
+    }
+}
+.short-modal-content{
+    height: px2rem(404) !important;
+    .send-input{
+        display: block;
+        border: 1px solid #BFBFBF;
+        outline: none;
+        font-size: px2rem(28);
+        color: #333;
+        width: px2rem(600);
+        height: px2rem(80);
+        text-align: center;
+        line-height: px2rem(80);
+        border-radius: px2rem(40);
+        margin: px2rem(30) auto 0;
+    }
+}
+.send-modal{
+    height: px2rem(500) !important;
+}
+.stock-input-wrap{
+    width: px2rem(750);
+    height: px2rem(88);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 px2rem(20);
+    .stock-input{
+        display: inline-block;
+        border: 1px solid #ccc;
+        outline: none;
+        font-size: px2rem(28);
+        color: #333;
+        width: px2rem(500);
+        height: px2rem(100);
+        padding: px2rem(10);
+        // line-height: px2rem(30);
+        // text-align: right;
+        resize: none;
+    }
+}
+.sub-button{
+    width: px2rem(710);
+    height: px2rem(80);
+    font-size: px2rem(30);
+    text-align: center;
+    line-height: px2rem(80);
+    border-radius: px2rem(40);
+    margin-top: px2rem(117);
+    margin-left: px2rem(20);
+    color: #fff;
+    background: linear-gradient(to right, #FF9600 , #FF6C00);
+    box-shadow: 0 px2rem(6) px2rem(5) 0 rgba(255,108,0,.35)
+}
+
+.send-sub-btn{
+    width: px2rem(600);
+    margin-top: px2rem(80);
+    margin-left: px2rem(75);
+}
+
+.search-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: px2rem(20);
+    .input-wrap{
+        display: flex;
+        align-items: center;
+        width: px2rem(560);
+        height: px2rem(60);
+        padding-left: px2rem(20);
+        border-radius: px2rem(30);
+        background: #fff;
+        color: #999;
+        i{
+            font-size: px2rem(30);
+        }
+        input{
+            display: block;
+            width: px2rem(400);
+            border: none;
+            outline: none;
+            margin: 0 px2rem(30) 0 px2rem(15);
+        }
+    }
+    .search-btn{
+        font-size: px2rem(32);
+        margin-left: px2rem(12);
+        color: $colorBase;
+    }
+}

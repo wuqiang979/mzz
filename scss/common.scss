@@ -1,0 +1,675 @@
+@import './function.scss';
+
+.base-color {
+    color: $colorBase;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #333;
+    font-size: 14px;
+    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+}
+
+td,
+th,
+caption {
+    font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+a {
+    color: #555;
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: inline-block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/*字体大小*/
+.flc2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.price-icon {
+    font-size: .11rem;
+    color: #f23030;
+}
+
+/*公共类*/
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.al {
+    text-align: left
+}
+
+.ac {
+    text-align: center
+}
+
+.ar {
+    text-align: right
+}
+
+.hide {
+    display: none
+}
+
+.show {
+    display: block;
+}
+
+.fhide {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.footer.weui-tab {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+}
+
+/*三角形箭头*/
+/*向上*/
+.triangle_border_up {
+    width: 0;
+    height: 0;
+    border-width: 0 .04rem .04rem;
+    border-style: solid;
+    border-color: transparent transparent #333;
+    /*透明 透明  灰*/
+    position: relative;
+}
+
+.triangle_border_up span {
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 0 .08rem .08rem;
+    border-style: solid;
+    border-color: transparent transparent #333;
+    /*透明 透明  黄*/
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*向下*/
+.triangle_border_down {
+    width: 0;
+    height: 0;
+    border-width: .04rem .04rem 0;
+    border-style: solid;
+    border-color: #333 transparent transparent;
+    /*灰 透明 透明 */
+    position: relative;
+}
+
+.triangle_border_down span {
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: .08rem .08rem 0;
+    border-style: solid;
+    border-color: #333 transparent transparent;
+    /*黄 透明 透明 */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*右箭头*/
+.right-jt {
+    display: inline-block;
+    background-image: url('../../images/icon/icon_ckgd.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bacW {
+    background-color: white;
+}
+
+/*默认title*/
+.default-title {
+    height: 1.17rem;
+    line-height: 1.17rem;
+    text-align: center;
+    font-size: 0.48rem;
+    background: #fff;
+    color: #000;
+}
+
+.default-title img {
+    width: .5rem;
+    position: absolute;
+    left: .16rem;
+    top: .32rem;
+}
+
+/* 弹框 */
+._modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 5000;
+}
+
+._modal-content {
+    position: absolute;
+    width: 100%;
+    z-index: 6000;
+}
+
+// 消息提示弹出框
+.toast-msg {
+    position: fixed;
+    bottom: px2rem(120);
+    width: 100%;
+    z-index: 10000;
+    @include flex-common;
+
+    span {
+        max-width: 50%;
+        line-height: px2rem(36);
+        text-align: center;
+        word-break: break-all;
+        padding: px2rem(20);
+        background-color: rgba(#000, 0.7);
+        border-radius: px2rem(10);
+        font-size: px2rem(28);
+        color: #FFF;
+    }
+}
+
+// 全局公共地址选择弹窗样式
+.area-modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 1001;
+
+    .area-content {
+        width: 100%;
+        height: px2rem(850);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: px2rem(28);
+        background: #fff;
+        color: #333;
+
+        .area-titel {
+            position: relative;
+            width: 100%;
+            font-size: px2rem(32);
+            @include textCenter(px2rem(88));
+
+            .area-modal-close {
+                position: absolute;
+                right: px2rem(20);
+                font-size: px2rem(24);
+            }
+        }
+
+        .area-level-select-bar {
+            display: flex;
+            margin-left: px2rem(30);
+            font-size: px2rem(30);
+
+            .area-level {
+                padding-bottom: px2rem(10);
+                margin-left: px2rem(10);
+            }
+
+            .bot-line {
+                border-bottom: 1px solid #333;
+            }
+        }
+
+        .area-city-group {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: px2rem(16);
+
+            .area-item {
+                width: 25%;
+                @include textCenter(px2rem(60));
+                @include overflow-hiding;
+            }
+        }
+    }
+}
+
+// 页面底部tab栏
+.bottom-tab {
+    position: fixed;
+    // left: 0;
+    bottom: 0;
+    width: px2rem(750);
+    height: px2rem(98);
+    padding: px2rem(15) px2rem(30) 0;
+    box-sizing: border-box;
+    @include flex-common(space-between);
+    background-color: #FFF;
+
+    &__item {
+        text-align: center;
+        text-decoration: none;
+
+        img {
+            width: px2rem(40);
+            height: px2rem(40);
+        }
+
+        p {
+            font-size: px2rem(22);
+            font-weight: 500;
+            color: $__font__color_two;
+        }
+
+        .mycolor {
+            color: $colorBase;
+        }
+    }
+}
+
+// 搜索  首页  美食首页
+.search-header {
+    position: fixed;
+    top: 0;
+    z-index: 2000;
+    @include flex-common(flex-start);
+    width: px2rem(750);
+    padding: px2rem(14) px2rem(37);
+    box-sizing: border-box;
+
+    &__area {
+        @include flex-common(flex-start);
+        font-size: px2rem(28);
+        font-weight: 400;
+        color: #FFF;
+
+        i {
+            margin-left: px2rem(12);
+        }
+    }
+
+    &__link {
+        margin-left: px2rem(12);
+        padding-left: px2rem(96);
+        width: px2rem(444);
+        box-sizing: border-box;
+        @include flex-common(flex-start);
+        height: px2rem(60);
+        border-radius: px2rem(30);
+        font-size: px2rem(28);
+        font-weight: 400;
+        background-color: #FFF;
+        text-decoration: none;
+
+        i {
+            margin-right: px2rem(12);
+            color: $__font__color_two;
+        }
+
+        span {
+            color: $__font__color_three;
+        }
+    }
+}
+
+.search-header_active {
+    background-color: $colorBase;
+}
+
+// 滑动到顶部后定位
+.position-sticky {
+    position: sticky;
+	top: px2rem(88);
+	z-index: 200;
+}
+
+
+// 推荐美食
+.recommond-food {
+    margin: 0 0 px2rem(20);
+
+    // 热销榜，推荐图片
+    &__header {
+        width: 100%;
+        @include flex-common;
+        padding: px2rem(14) px2rem(30);
+        display: block;
+        box-sizing: border-box;
+        background-color: #FFF;
+        text-align: center;
+
+        img {
+            width: px2rem(80);
+            height: px2rem(44);
+        }
+
+        span {
+            margin: 0 px2rem(20);
+            font-size: px2rem(34);
+            font-weight: bold;
+            color: $colorBase;
+        }
+
+        i {
+            float: right;
+            font-size: px2rem(30);
+            color: $__font__color_three;
+        }
+    }
+
+    &__nav {
+        @include flex-common(space-between);
+        padding: 0 px2rem(70);
+        background-color: #FFF;
+        border-top: px2rem(2) solid $__base__bg__color;
+
+        &_li {
+            line-height: px2rem(72);
+            font-size: px2rem(28);
+            font-weight: 500;
+            color: $__font__color_three;
+        }
+
+        &_li_active {
+            color: $__font__color_one;
+        }
+    }
+
+    &__item {
+        position: relative;
+        border-top: px2rem(2) solid $__base__bg__color;
+        padding: px2rem(24) px2rem(24) px2rem(24) px2rem(200);
+        width: 100%;
+        height: px2rem(200);
+        box-sizing: border-box;
+        background-color: #FFF;
+
+        .title {
+            margin-top: px2rem(-10);
+            width: px2rem(400);
+            @include overflow-hiding;
+            font-size: px2rem(32);
+            font-weight: 500;
+            color: $__font__color_one;
+        }
+
+        .cell {
+            @include flex-common(flex-start);
+
+            span {
+                margin-right: px2rem(15);
+                padding: 0 px2rem(12);
+                font-size: px2rem(24);
+                border-radius: px2rem(26);
+                border: px2rem(2) solid $colorBase;
+                color: $colorBase;
+            }
+        }
+
+        .time {
+            position: absolute;
+            bottom: px2rem(55);
+            font-size: px2rem(24);
+            font-weight: 400;
+            color: $__font__color_three;
+        }
+
+        .price {
+            position: absolute;
+            bottom: px2rem(15);
+            @include flex-common(flex-start);
+            // margin-top: px2rem(15);
+            font-size: px2rem(26);
+            font-weight: 400;
+            color: $__font__color_two;
+
+            span {
+                margin-right: px2rem(35);
+                font-size: px2rem(26);
+                font-weight: 400;
+                color: $__font__color_two;
+            }
+        }
+
+        img {
+            position: absolute;
+            top: px2rem(20);
+            left: px2rem(20);
+            width: px2rem(160);
+            height: px2rem(160);
+        }
+
+        .comment {
+            position: absolute;
+            top: px2rem(20);
+            right: px2rem(20);
+            font-size: px2rem(24);
+            font-weight: 400;
+            color: $colorBase;
+        }
+
+        .distance {
+            position: absolute;
+            bottom: px2rem(20);
+            right: px2rem(20);
+            font-size: px2rem(26);
+            font-weight: 400;
+            color: $__font__color_three;
+        }
+
+        .iconfont {
+            position: absolute;
+            top: 0;
+            right: px2rem(20);
+            font-size: px2rem(134);
+            color: rgba($__font__color_three, 0.6);
+        }
+    }
+}
+
+.scroll-x {
+    // margin-top: px2rem(20);
+    width: px2rem(750);
+    background-color: #ffffff;
+    // padding: px2rem(33) 0;
+
+    .scroll-x__header {
+        line-height: px2rem(88);
+        box-sizing: border-box;
+        padding: 0 px2rem(20);
+        background-color: #FFF;
+        font-size: px2rem(30);
+        font-weight: 600;
+        color: $__font__color_one;
+    }
+
+    .scroll-x__box {
+        width: px2rem(750);
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+
+        .scroll-list {
+            padding: 0 px2rem(20);
+            box-sizing: border-box;
+            @include flex-common(flex-start);
+        }
+    }
+
+    .scroll-list__line {
+        height: px2rem(8);
+
+        p {
+            width: px2rem(2);
+        }
+    }
+}
+
+// 选择数量
+.setting-cell {
+    position: absolute;
+    width: px2rem(30);
+    height: px2rem(30);
+    line-height: px2rem(30);
+    text-align: center;
+    border-radius: 50%;
+    background-color: $colorBase;
+    color: #FFF;
+    font-size: px2rem(22);
+    font-weight: 400;
+}
+
+//无边框输入样式
+.data-input {
+    input {
+        outline: none;
+        border: none;
+    }
+}
+
+// 形式图片
+.toast-show-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    width: 100vw;
+    height: 100vh;
+    line-height: 100vh;
+    background-color: #000;
+    
+    img {
+        width: 100%;
+    }
+}

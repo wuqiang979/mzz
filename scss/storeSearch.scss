@@ -1,0 +1,83 @@
+@import './function.scss';
+
+body{
+  display: block;
+  background: #F2F2F2;
+}
+// 顶部搜索栏
+.store-index-search {
+  width: px2rem(750);
+  height: px2rem(88);
+  background: #fff;
+  @include flex-common(space-between);
+  padding: 0 px2rem(20);
+
+  .input-box {
+    @include flex-common(space-between);
+    height: px2rem(55);
+    background: #F2F2F2;
+    border-radius: px2rem(28);
+    padding: 0 px2rem(20);
+    width: px2rem(560);
+    padding: 0 px2rem(20);
+    .icon-sousuo-copy {
+      font-size: px2rem(30);
+    }
+
+    input {
+      @include resetInput;
+      flex: 1;
+      color: $__font__color_three;
+      margin-left: px2rem(11);
+      font-size: px2rem(28);
+    }
+
+    input::-webkit-input-placeholder {
+      color: $__font__color_three;
+      font-size: px2rem(28);
+    }
+    .btn-close{
+      padding: 0 px2rem(10) 0 px2rem(20);
+      display: none;
+    }
+  }
+}
+
+// 内容区域
+.content-box{
+  margin-top: px2rem(20);
+  width: px2rem(750);
+  background: #fff;
+  .history-search{
+    .title{
+      @include flex-common(space-between);
+      padding: 0 px2rem(20);
+      height: px2rem(64);
+      border-bottom: 1px solid #F2F2F2;
+      .left{
+        font-size: px2rem(30);
+        color: #333;
+      }
+      .right{
+        font-size: px2rem(24);
+        color: #A0A0A0;
+        i{
+          color: #A0A0A0;
+          font-size: px2rem(24);
+          margin-right: px2rem(10);
+        }
+      }
+    }
+    .words-box{
+      p{
+        border-bottom: 1px solid #F2F2F2;
+        padding: 0 px2rem(20);
+        height: px2rem(88);
+        line-height: px2rem(88);
+        font-size: px2rem(28);
+        color: #999;
+      }
+    }
+  }
+
+}

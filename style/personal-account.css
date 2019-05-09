@@ -1,0 +1,28 @@
+body {
+  background-color: #f2f2f2;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 0.26667rem; }
+
+.account-list {
+  height: 4.66667rem;
+  width: 100%;
+  background-color: white;
+  display: block; }
+  .account-list a .title {
+    margin-left: 0.26667rem;
+    font-size: 0.4rem; }
+  .account-list a .value {
+    font-size: 0.32rem;
+    color: #666; }
+  .account-list a li {
+    line-height: 1.13333rem;
+    height: 1.17333rem;
+    border-bottom: 0.01333rem solid #F2F2F2; }
+    .account-list a li img {
+      width: 0.32rem;
+      height: 0.32rem;
+      float: right;
+      display: inline-block;
+      margin-top: 0.42667rem;
+      margin-right: 0.26667rem; }

@@ -1,0 +1,60 @@
+body {
+  background-color: #f2f2f2;
+  min-height: 100vh; }
+
+.star-icon {
+  display: inline-block;
+  color: red;
+  margin-top: -0.26667rem; }
+
+.data-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 0.24rem;
+  height: 8.21333rem;
+  background-color: white; }
+  .data-input li {
+    height: 1.17333rem;
+    border-bottom: 0.02667rem solid #F2F2F2;
+    color: #222222;
+    width: 100%;
+    font-size: 0.4rem;
+    padding-top: 0.4rem; }
+    .data-input li span {
+      vertical-align: middle; }
+    .data-input li ::-webkit-input-placeholder {
+      direction: rtl;
+      font-size: 0.32rem; }
+    .data-input li :-ms-input-placeholder {
+      direction: rtl;
+      font-size: 0.32rem; }
+    .data-input li :-moz-placeholder {
+      direction: rtl;
+      font-size: 0.32rem; }
+    .data-input li ::-moz-placeholder {
+      direction: rtl;
+      font-size: 0.32rem; }
+    .data-input li input {
+      display: inline-block;
+      float: right;
+      direction: rtl; }
+
+.submit-button {
+  margin-top: 4.70667rem;
+  text-align: center; }
+  .submit-button button {
+    color: white;
+    background-color: transparent;
+    width: 8.30667rem;
+    height: 1.48rem;
+    margin: 0;
+    padding: 0;
+    border: 0px solid transparent;
+    outline: none;
+    background-image: url("../images/submit_button.png");
+    background-size: cover; }

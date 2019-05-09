@@ -1,0 +1,34 @@
+@import './function.scss';
+// 顶部搜索栏
+.store-index-search {
+  width: px2rem(750);
+  height: px2rem(88);
+  background: #FF6C00;
+  @include flex-common();
+
+  .input-box {
+    @include flex-common(flex-start);
+    width: px2rem(600);
+    height: px2rem(55);
+    background: #F2F2F2;
+    border-radius: px2rem(28);
+    padding: 0 px2rem(20);
+
+    .icon-sousuo-copy {
+      font-size: px2rem(30);
+    }
+
+    input {
+      @include resetInput;
+      flex: 1;
+      color: $__font__color_three;
+      margin-left: px2rem(11);
+      font-size: px2rem(28);
+    }
+
+    input::-webkit-input-placeholder {
+      color: $__font__color_three;
+      font-size: px2rem(28);
+    }
+  }
+}

@@ -1,0 +1,70 @@
+body {
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f2f2f2;
+  height: 4.73333rem; }
+
+.add-adress {
+  background-color: white; }
+  .add-adress div {
+    height: 1.17333rem;
+    border-bottom: 0.01333rem solid #F2F2F2; }
+    .add-adress div #area {
+      display: block;
+      padding-top: 0.4rem;
+      font-size: 0.32rem;
+      color: #999999; }
+    .add-adress div span {
+      position: relative;
+      font-size: 0.42667rem;
+      color: #222222;
+      top: 0.38667rem; }
+    .add-adress div input {
+      float: right;
+      direction: rtl;
+      outline: none;
+      border: none;
+      font-size: 0.32rem;
+      display: block;
+      margin-top: 0.4rem;
+      color: #999999; }
+    .add-adress div .area-selected {
+      float: right;
+      height: 0.4rem;
+      display: block;
+      text-align: center; }
+
+.submit-button {
+  position: absolute;
+  bottom: 1.02667rem;
+  left: 1.06667rem;
+  text-align: center; }
+  .submit-button button {
+    color: white;
+    width: 7.86667rem;
+    height: 1.17333rem;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background: linear-gradient(243deg, #ff6c00 0%, #ff9600 100%);
+    -webkit-box-shadow: 0 0.08rem 0.12rem 0.01333rem #FF6C00;
+    box-shadow: 0 0.08rem 0.12rem 0.01333rem #FF6C00;
+    border-radius: 44px; }
+
+::-webkit-input-placeholder {
+  direction: rtl;
+  font-size: 0.32rem; }
+
+:-ms-input-placeholder {
+  direction: rtl;
+  font-size: 0.32rem; }
+
+:-moz-placeholder {
+  direction: rtl;
+  font-size: 0.32rem; }
+
+::-moz-placeholder {
+  direction: rtl;
+  font-size: 0.32rem; }
